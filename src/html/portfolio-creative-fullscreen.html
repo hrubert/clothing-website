@@ -1,0 +1,31 @@
+{% set header_show = false %}
+{% set header_title = 'Portfolio Fullscreen' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <div class="nk-fullpage">
+        {% for i in [3, 0, 1, 2, 4, 5, 6] %}
+            <div class="nk-fullpage-item" style="background-image: url('{{ portfolio[i].thumb_full }}');">
+                <div>
+                    <div class="container">
+                        <div class="nk-portfolio-text-box">
+                            <h2 class="nk-portfolio-title h3"><a href="{{ portfolio[i].url }}">{{ portfolio[i].title }}</a></h2>
+                            <div class="nk-portfolio-links">{{ portfolio[i].date }}</div>
+                            <div class="nk-gap"></div>
+                            {{ portfolio[i].excerpt | safe }}
+                            <div class="nk-gap"></div>
+                            <div class="text-dark-1">
+                                <a href="{{ portfolio[i].url }}" class="nk-btn nk-btn-sm nk-btn-effect-2-right nk-btn-circle nk-btn-outline nk-btn-color-dark-4">
+                                    <span>More Info</span>
+                                    <span class="icon"><i class="ion-ios-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,373 @@
+{% set header_title = 'Multipurpose Bootstrap 4 Template' %}
+{% set header_title_show = false %}
+{% set header_text = '
+<h1 class="nk-title display-4">
+    Khaki - Multipurpose Template
+</h1>
+
+<div class="nk-gap-2"></div>
+<a href="#demos" class="nk-btn nk-btn-lg nk-btn-effect-1-bottom nk-btn-rounded nk-btn-circle-hover nk-btn-color-dark-2">
+    <span class="icon"><i class="ion-ios-gear"></i></span>
+    <span>Demos</span>
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://themeforest.net/item/khaki-multiconcept-bootstrap-4-html-template/16826910?ref=_nK" target="_blank" class="nk-btn nk-btn-lg nk-btn-effect-1-bottom nk-btn-rounded nk-btn-circle-hover nk-btn-color-white text-dark-1">
+    <span class="icon"><span class="ion-bag"></span></span>
+    <span>Purchase</span>
+</a>
+' %}
+{% set header_image = 'assets/images/image-22.jpg' %}
+{% set header_size = 'md' %}
+{% set header_visible = 5 %}
+{% set footer = false %}
+{% set custom_styles = '
+/* Demo Styles */
+.demo-image {
+margin: 5px;
+box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.08);
+}
+' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+<!-- START: Demo List -->
+<div class="nk-box" id="demos">
+    <div class="nk-gap-5"></div>
+
+    {% set demo_list = [
+    {
+    "name": "Corporate",
+    "url": "demo-corporate.html",
+    "img": "demo-corporate.jpg",
+    "description": "You can try this demo to view how the site of your company can look. Explain why your work is important, show the result of your work, and let your customers see what you do to make it better. Visual and interactive elements, a well-designed organization of content and a remarkable appearance of this landing page will help you."
+    }, {
+    "name": "Barber",
+    "url": "demo-barber.html",
+    "img": "demo-barber.jpg",
+    "invert": true,
+    "description": "Hey, barbers should know that a good-looking appearance is a result. If you need a lovely site to show the process of your work, your workers' presentations, your prices, the info where your customers can find you, and your customers' reviews, you can check this demo. Surely, you can add other elements as well."
+    }, {
+    "name": "Quadrocopter",
+    "url": "demo-drone.html",
+    "img": "demo-drone.jpg",
+    "description": "Check this demo if you want to represent a product. It can be a quadrocopter or something else, of course. Media elements for a full demonstration are added. This page is perfect for selling."
+    }, {
+    "name": "Music Label",
+    "url": "demo-music-label.html",
+    "img": "demo-music-label.jpg",
+    "invert": true,
+    "description": "Are you a music label owner? Do you have some releases you want to promote? I guess, you can try to view this demo. All needed elements are available, there are promo blocks and pages for video clips, sliders and the list of latest releases, an events list and a blog for latest news. And don't forget about the Instagram feed! Keep your fans informed, they will be really happy."
+    }, {
+    "name": "Band",
+    "url": "demo-band.html",
+    "img": "demo-band.jpg",
+    "description": "Don't let a band sink in the sea of chaotic information, give it a fine page with the info about future events and music - a nice audio player is available. Video and photo galleries are added too."
+    }, {
+    "name": "Gaming",
+    "url": "demo-gaming.html",
+    "img": "demo-gaming.jpg",
+    "invert": true,
+    "description": "This demo is good for promoting your games - it can be visually spectacular. Use it to promote your games or gaming communities."
+    }, {
+    "name": "App Landing",
+    "url": "demo-app-2.html",
+    "img": "demo-app-2.jpg",
+    "description": "A site for an application shall be cool as this application is. Or even cooler if it can be compared... Anyway, with eCommerce features, a video demo, and nice mock-ups, your site will be cool enough."
+    }, {
+    "name": "App Showcase",
+    "url": "demo-app.html",
+    "img": "demo-app.jpg",
+    "invert": true,
+    "description": "Whoa, you need a page for your mobile app? Check this demo, it has various elements to describe features, make a representation, show your stats and users' testimonials. This page can be easily shared."
+    }, {
+    "name": "Gallery",
+    "url": "demo-gallery.html",
+    "img": "demo-gallery.jpg",
+    "description": "You need to show some photos or illustrations? This demo is for you. A nice gallery with a lightbox with a zooming option. Of course, there are many other ways to show your images are supported in this template. Go to the Gallery menu item to view them all."
+    }
+    ] %}
+
+    <div class="container">
+        <div class="row md-gap vertical-gap">
+            {% for demo in demo_list %}
+            <div class="col-lg-4 col-md-6">
+                <div class="nk-image-box-1-a nk-no-effect demo-image">
+                    <a href="{{ demo.url }}" class="nk-image-box-link"></a>
+                    <img src="assets/images/{{ demo.img }}" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h2 class="nk-image-box-title nk-portfolio-title h3">{{ demo.name }}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="sr-only">
+                    <div class="nk-gap"></div>
+                    <small>{{ demo.description }}</small>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="nk-gap-5"></div>
+</div>
+<!-- END: Demo List -->
+
+<!-- START: Blog -->
+<div class="nk-box text-center">
+    <div class="bg-image bg-image-parallax op-5">
+        <img class="jarallax-img" src="assets/images/image-28.jpg" alt="">
+    </div>
+    <div class="nk-gap-5"></div>
+    <h2 class="nk-title h1">Blog</h2>
+    <div class="nk-gap"></div>
+    <div class="container">
+        <p>
+            Blogs are still actual because the text is universal. It is a great feature for anyone who wants to share their news and stories. These blogs can contain any media content you need: galleries, sliders, lists, stand-alone images, videos, and audio. So it will be good for bloggers or just someone who wants to share some information partially. It will be also good for small articles and long-reads.
+        </p>
+    </div>
+    <div class="nk-gap"></div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <a href="blog-list.html" target="_blank"><img src="assets/images/demo-blog-page.jpg" class="nk-img demo-image" alt=""></a>
+        </div>
+    </div>
+    <div class="nk-gap-3"></div>
+    <a href="blog-list.html" target="_blank" class="nk-btn nk-btn-lg nk-btn-rounded nk-btn-circle-hover nk-btn-color-dark-2">
+        <span>See Live</span>
+    </a>
+    <div class="nk-gap-5"></div>
+</div>
+<!-- END: Blog -->
+
+<!-- START: eCommerce -->
+<div class="nk-box bg-dark-2 text-white text-center">
+    <div class="bg-image bg-image-parallax op-2">
+        <img class="jarallax-img" src="assets/images/image-12.jpg" alt="">
+    </div>
+    <div class="nk-gap-5"></div>
+    <h2 class="nk-title h1">eCommerce</h2>
+    <div class="nk-gap"></div>
+    <div class="container">
+        <p class="op-8">
+            It isn't revolutionary to buy something online, it is so natural today, we don't even notice it. The Khaki template has eCommerce features that are needed for everyone who wants to sell something online. There is a cart, a page with billing details, products lists, of course, and single pages with products reviews. So you can use them for a store site, and simply add additions to your site to sell some merchandise, for example.
+        </p>
+    </div>
+    <div class="nk-gap"></div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <a href="store.html" target="_blank"><img src="assets/images/demo-store-page.jpg" class="nk-img demo-image" alt=""></a>
+        </div>
+    </div>
+    <div class="nk-gap-3"></div>
+    <a href="store.html" target="_blank" class="nk-btn nk-btn-lg nk-btn-rounded nk-btn-circle-hover nk-btn-color-white text-dark-1">
+        <span>See Live</span>
+    </a>
+    <div class="nk-gap-5"></div>
+</div>
+<!-- END: eCommerce -->
+
+<!-- START: Portfolio -->
+<div class="nk-box text-center bg-gray-2">
+    <div class="nk-gap-5"></div>
+    <h2 class="nk-title h1">Portfolio</h2>
+    <div class="nk-gap"></div>
+    <div class="container">
+        <p class="op-8">
+            Many elements are available in the Khaki template to present projects. You can show your texts, photos, some inventions, apps, adventures with well-designed means. It is possible to tell a whole story of creation, choose any layout for your content to make this story complete. You can get some feedback, add some options for sharing your pages.
+        </p>
+    </div>
+    <div class="nk-gap"></div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <a href="portfolio-1-gap.html" target="_blank"><img src="assets/images/demo-portfolio-page.jpg" class="nk-img demo-image" alt=""></a>
+        </div>
+    </div>
+    <div class="nk-gap-3"></div>
+    <a href="portfolio-1-gap.html" target="_blank" class="nk-btn nk-btn-lg nk-btn-rounded nk-btn-circle-hover nk-btn-color-dark-2">
+        <span>See Live</span>
+    </a>
+    <div class="nk-gap-5"></div>
+</div>
+<!-- END: Portfolio -->
+
+<!-- START: Why Khaki -->
+<div class="nk-box">
+    <div class="nk-gap-5"></div>
+    <div class="nk-gap-1"></div>
+
+    <div class="container">
+        <h2 class="nk-title h1 text-center">Why Choose Khaki</h2>
+        <div class="nk-gap"></div>
+        <p class="op-6 text-center">
+            The main reasons to use this template
+        </p>
+        <div class="nk-gap"></div>
+
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="nk-ibox-1 nk-ibox-inverted nk-ibox-hover">
+                    <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-hover-bg-color-dark-2">
+                        <span class="ion-grid"></span>
+                    </div>
+                    <div class="nk-ibox-cont">
+                        <h3 class="nk-ibox-title"><a href="#">Swipe Side Navigations</a></h3>
+                        The real swipe mobile navigations like in native applications
+                    </div>
+                </div>
+                <div class="nk-gap-3"></div>
+
+                <div class="nk-ibox-1 nk-ibox-inverted nk-ibox-hover">
+                    <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-hover-bg-color-dark-2">
+                        <span class="ion-social-buffer"></span>
+                    </div>
+                    <div class="nk-ibox-cont">
+                        <h3 class="nk-ibox-title"><a href="#">Unlimited Layouts</a></h3>
+                        Unlimited number of layout variations that you've ever seen
+                    </div>
+                </div>
+                <div class="nk-gap-3"></div>
+
+                <div class="nk-ibox-1 nk-ibox-inverted nk-ibox-hover">
+                    <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-hover-bg-color-dark-2">
+                        <span class="ion-navicon"></span>
+                    </div>
+                    <div class="nk-ibox-cont">
+                        <h3 class="nk-ibox-title"><a href="#">Mega Menu</a></h3>
+                        Not only dropdown, but also mega menus with background images
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="nk-img-fit" src="assets/images/mock-iphone-1.jpg" alt="">
+                <div class="nk-gap d-md-none"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="nk-ibox-1 nk-ibox-hover">
+                    <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-hover-bg-color-dark-2">
+                        <span class="ion-wand"></span>
+                    </div>
+                    <div class="nk-ibox-cont">
+                        <h3 class="nk-ibox-title"><a href="#">Smooth Animations</a></h3>
+                        Background scroll and mouse parallaxes that impress you
+                    </div>
+                </div>
+                <div class="nk-gap-3"></div>
+
+                <div class="nk-ibox-1 nk-ibox-hover">
+                    <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-hover-bg-color-dark-2">
+                        <span class="ion-code-working"></span>
+                    </div>
+                    <div class="nk-ibox-cont">
+                        <h3 class="nk-ibox-title"><a href="#">Tons of predefined elements</a></h3>
+                        All available shortcodes showed in demo pages
+                    </div>
+                </div>
+                <div class="nk-gap-3"></div>
+
+                <div class="nk-ibox-1 nk-ibox-hover">
+                    <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-hover-bg-color-dark-2">
+                        <strong>B</strong>
+                    </div>
+                    <div class="nk-ibox-cont">
+                        <h3 class="nk-ibox-title"><a href="#">Bootstrap 4</a></h3>
+                        How to be in trend? Use Khaki with latest Bootstrap
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-5"></div>
+
+    <div class="container">
+        <div class="row vertical-gap align-items-center">
+            <div class="col-md-5 order-md-2">
+                <div class="nk-gif">
+                    <img src="assets/images/mock-iphone-animated.jpg" data-gif="assets/images/mock-iphone-animated.gif" alt="">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h2 class="nk-title h1">Parallaxed Backgrounds</h2>
+                <div class="nk-gap"></div>
+                <p class="lead">Background images can be shown with a parallax, and the position of an image can be changed not only by just scrolling up and down but also with the cursor position and by the way you hold your device. So you can avoid the feeling of a static page and make it alive.</p>
+            </div>
+        </div>
+        <div class="nk-gap-1"></div>
+        <div class="row vertical-gap align-items-center">
+            <div class="col-md-5">
+                <div class="nk-gif">
+                    <img src="assets/images/mock-iphone-animated-2.jpg" data-gif="assets/images/mock-iphone-animated-2.gif" alt="">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h2 class="nk-title h1">Swipe Side Navigations</h2>
+                <div class="nk-gap"></div>
+                <p class="lead">Side menus became popular when developers started using it in their mobile apps where there is no much space on the screen. It is natural for any device right now, and can be also intuitive. And it will look amazing for a desktop version of your site too.</p>
+            </div>
+        </div>
+        <div class="nk-gap-1"></div>
+        <div class="row vertical-gap align-items-center">
+            <div class="col-md-5 order-md-2">
+                <div class="nk-gif">
+                    <img src="assets/images/mock-iphone-animated-3.jpg" data-gif="assets/images/mock-iphone-animated-3.gif" alt="">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <h2 class="nk-title h1">Smooth Animations</h2>
+                <div class="nk-gap"></div>
+                <p class="lead">You can see that animations look really smooth. It is provided by the Khaki core, and it is also included in this template. Slidings, counters, buttons animations, a parallax, appearing and disappearing - these features are some kind of a language your site can talk.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="nk-gap-5"></div>
+</div>
+<!-- END: Why Khaki -->
+
+<!-- START: Subscribe -->
+<div class="nk-box bg-dark-3 text-white">
+    <div class="nk-gap-5"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                <h2 class="nk-title text-center h1">Want WordPress Theme?</h2>
+                <div class="nk-gap-1"></div>
+
+                <!-- START: MailChimp Signup Form -->
+                <form action="//nkdev.us11.list-manage.com/subscribe/post?u=d433160c0c43dcf8ecd52402f&amp;id=7eafafe8f0" method="post" class="nk-mchimp validate" target="_blank">
+                    <div class="input-group">
+                        <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email *">
+                        <button class="nk-btn nk-btn-color-dark-1">Subscribe</button>
+                    </div>
+                    <div class="nk-form-response-success"></div>
+                    <div class="nk-form-response-error"></div>
+                    <small>We'll never share your email with anyone else.</small>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d433160c0c43dcf8ecd52402f_7eafafe8f0" tabindex="-1" value=""></div>
+                </form>
+                <!-- END: MailChimp Signup Form -->
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-5"></div>
+</div>
+<!-- END: Subscribe -->
+
+<!--
+    START: Footer
+
+    Additional Classes:
+        .nk-footer-parallax
+        .nk-footer-parallax-opacity
+-->
+<footer class="nk-footer">
+    <div class="nk-copyright">
+        <div class="container text-center">
+            <a href="http://nkdev.info" target="_blank">nK</a> &copy; 2018. All rights reserved
+        </div>
+    </div>
+</footer>
+<!-- END: Footer -->
+
+{% endblock %}

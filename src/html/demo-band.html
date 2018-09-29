@@ -1,0 +1,376 @@
+{% set header_title = 'Before I Forget' %}
+{% set header_sub_title = 'The premiere of the clip - 20th September' %}
+{% set header_size = 'full' %}
+{% set audio_player = true %}
+{% set header_video = 'https://www.youtube.com/watch?v=qw2LU1yS7aw' %}
+{% set header_image = 'assets/images/image-10.jpg' %}
+{% set nav_logo_url = 'demo-band.html' %}
+{% set nav_contacts = false %}
+{% set nav_cart = false %}
+{% set navigation_side = navigation %}
+{% set navigation = {
+    "#tour": {
+        "name": "Tour"
+    },
+    "#albums": {
+        "name": "Albums"
+    },
+    "#gallery": {
+        "name": "Gallery"
+    },
+    "#videos": {
+        "name": "Videos"
+    }
+} %}
+{% set footer = 3 %}
+{% set footer_bg = 'assets/images/bg-footer-2.jpg' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <!-- START: Featured Album -->
+    <div class="nk-box bg-dark-1 text-white">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+            <h3 class="nk-sub-title text-center text-main-5">Featured Album</h3>
+            <h2 class="nk-title h1 text-center">Forever in Darkness</h2>
+            <div class="nk-gap-2"></div>
+            <div class="row vertical-gap align-items-center">
+                <div class="col-md-4">
+                    <img class="nk-img-fit" src="assets/images/cover-2.jpg" alt="">
+                </div>
+                <div class="col-md-8">
+                    <!--
+                        START: Playlist
+
+                        Available classes:
+                            nk-audio-playlist-hidden
+                            nk-audio-playlist-dark
+                            active
+
+                        ID attribute needs to automatically detect playlist after page reload
+                     -->
+                    <ul class="nk-audio-playlist nk-audio-playlist-dark" id="playlist-before-i-forget">
+                        <li data-src="assets/mp3/soundroll-fight-no-more.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Fight No More
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:43
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-driving-in-my-car.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Driving in My Car
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:41
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-total-overdrive.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Total Overdrive
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                03:59
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-rock.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Rock
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:41
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-extreme-driving.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Extreme Driving
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:57
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-wrong-way.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Wrong Way
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                05:34
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- END: Playlist  -->
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Featured Album -->
+
+    <!-- START: About -->
+    <div class="nk-box bg-dark-2 text-white" id="about">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+
+            <h3 class="nk-sub-title text-center text-main-5">About</h3>
+            <h2 class="nk-title h1 text-center">Khaki Band</h2>
+            <div class="nk-gap-2"></div>
+
+            <p class="lead text-center">Slipknot is an American heavy metal band from Des Moines, Iowa. The band was founded in September 1995 by percussionist Shawn Crahan and bassist Paul Gray. Slipknot is well known for its attention-grabbing image, aggressive style of music, and energetic and chaotic live shows. The band rapidly rose to success following the release of their eponymous debut album in 1999. The 2001 follow-up album, Iowa, made the band more popular. After a brief hiatus.</p>
+
+            <div class="nk-gap"></div>
+            <dl class="lead strong text-center">
+                <dd><strong>Shawn Crahan</strong> - back vocals</dd>
+                <dd><strong>Craig Jones</strong> - synthezisers</dd>
+                <dd><strong>Mick Thomson</strong> - rhythm guitars</dd>
+                <dd><strong>Corey Taylor</strong> - lead vocals</dd>
+                <dd><strong>Sid Wilson</strong> - turntables</dd>
+            </dl>
+
+            <div class="nk-gap-1"></div>
+            <div class="text-center">
+                <a href="https://en.wikipedia.org/wiki/Slipknot_(band)" target="_blank" class="nk-btn nk-btn-x2 nk-btn-effect-5-left nk-btn-rounded nk-btn-color-dark-1">
+                    Read More
+                </a>
+            </div>
+
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: About -->
+
+    <!-- START: Events -->
+    <div class="nk-box bg-dark-1 text-white" id="tour">
+        <div class="bg-image bg-image-parallax op-6">
+            <img class="jarallax-img" src="assets/images/image-11.jpg" alt="">
+        </div>
+        <div class="nk-gap-5"></div>
+        <div class="container">
+            <h2 class="nk-title h1 text-center">Tour Dates</h2>
+            <div class="nk-gap-2"></div>
+            <ul class="nk-events-list">
+                <li>
+                    <a href="events-single-1.html" class="nk-event-date">
+                        17 Sep
+                        <span>2018</span>
+                    </a>
+                    <a href="events-single-1.html" class="nk-event-name">
+                        <strong>Rock 'N Derby</strong>
+                        <span>Shaghticoke, NY</span>
+                    </a>
+                    <a href="events-single-1.html" class="nk-event-price">
+                        $20
+                        <span>Ticket</span>
+                    </a>
+                    <div class="nk-event-button nk-event-button-sold">
+                        Sold Out
+                    </div>
+                </li>
+                <li>
+                    <a href="events-single-2.html" class="nk-event-date">
+                        5 Oct
+                        <span>2018</span>
+                    </a>
+                    <a href="events-single-2.html" class="nk-event-name">
+                        <strong>Governors Ball Music Festival</strong>
+                        <span>New York City, NY</span>
+                    </a>
+                    <a href="events-single-2.html" class="nk-event-price">
+                        $16
+                        <span>Ticket</span>
+                    </a>
+                    <div class="nk-event-button">
+                        <a href="#!" class="nk-btn nk-btn-xs nk-btn-effect-2-right nk-btn-outline nk-btn-color-white nk-btn-circle">
+                            <span>Buy Ticket</span>
+                            <span class="icon"><span class="fa fa-ticket"></span></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="events-single-3.html" class="nk-event-date">
+                        24 Oct
+                        <span>2018</span>
+                    </a>
+                    <a href="events-single-3.html" class="nk-event-name">
+                        <strong>Mountain Jam</strong>
+                        <span>Hunter Mountain, NY</span>
+                    </a>
+                    <a href="events-single-3.html" class="nk-event-price">
+                        $35
+                        <span>Extra ticket</span>
+                    </a>
+                    <div class="nk-event-button">
+                        Buy on 30 September
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="nk-event-date">
+                        1 Nov
+                        <span>2018</span>
+                    </a>
+                    <a href="#" class="nk-event-name">
+                        <strong>Taste of Country</strong>
+                        <span>Hunter Mountain, NY</span>
+                    </a>
+                    <a href="#" class="nk-event-price">
+                        $14
+                        <span>Ticket</span>
+                    </a>
+                    <div class="nk-event-button">
+                        <a href="#!" class="nk-btn nk-btn-xs nk-btn-effect-2-right nk-btn-outline nk-btn-color-white nk-btn-circle">
+                            <span>Buy Ticket</span>
+                            <span class="icon"><span class="fa fa-ticket"></span></span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div class="nk-gap-2"></div>
+            <div class="text-center">
+                <a href="events.html" class="nk-btn nk-btn-sm nk-btn-outline nk-btn-color-white nk-btn-circle">
+                    <span>All Tours</span>
+                </a>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Events -->
+
+    <!-- START: Gallery -->
+    <div class="nk-box bg-dark-1 text-white" id="gallery">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+            <h3 class="nk-sub-title text-center text-main-5">Gallery</h3>
+            <h2 class="nk-title h1 text-center">Memorable Moments</h2>
+            <div class="nk-gap"></div>
+            <div class="nk-isotope nk-isotope-gap nk-isotope-3-cols nk-popup-gallery">
+                <div class="nk-isotope-item">
+                    <div class="nk-image-box-1">
+                        <a href="assets/images/gallery-1.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/gallery-1-thumb.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="nk-isotope-item">
+                    <div class="nk-image-box-1">
+                        <a href="assets/images/gallery-2.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/gallery-2-thumb.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="nk-isotope-item">
+                    <div class="nk-image-box-1">
+                        <a href="assets/images/gallery-3.jpg" class="nk-gallery-item" data-size="1280x1920"><img src="assets/images/gallery-3-thumb.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="nk-isotope-item">
+                    <div class="nk-image-box-1">
+                        <a href="assets/images/gallery-4.jpg" class="nk-gallery-item" data-size="1920x1272"><img src="assets/images/gallery-4-thumb.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="nk-isotope-item">
+                    <div class="nk-image-box-1">
+                        <a href="assets/images/gallery-5.jpg" class="nk-gallery-item" data-size="1920x1440"><img src="assets/images/gallery-5-thumb.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="nk-isotope-item">
+                    <div class="nk-image-box-1">
+                        <a href="assets/images/gallery-6.jpg" class="nk-gallery-item" data-size="1920x1440"><img src="assets/images/gallery-6-thumb.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="nk-isotope-item">
+                    <div class="nk-image-box-1">
+                        <a href="assets/images/gallery-7.jpg" class="nk-gallery-item" data-size="1920x1285"><img src="assets/images/gallery-7-thumb.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="nk-isotope-item">
+                    <div class="nk-image-box-1">
+                        <a href="assets/images/gallery-8.jpg" class="nk-gallery-item" data-size="1920x1203"><img src="assets/images/gallery-8-thumb.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- START: Gallery -->
+
+    <!-- START: Latest Albums -->
+    <div class="nk-box bg-dark-2 text-white" id="albums">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+
+            <h3 class="nk-sub-title text-center text-main-5">Discography</h3>
+            <h2 class="nk-title h1 text-center">Latest Albums</h2>
+            <div class="nk-gap-2"></div>
+            <div class="row vertical-gap">
+                <div class="col-md-4">
+                    <div class="nk-image-box-4">
+                        <a href="demo-band-single-album.html" class="nk-image-box-link"></a>
+                        <img src="assets/images/cover-1.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-center">
+                            <div>
+                                <h3 class="nk-image-box-title mb-20">Before I Forget</h3>
+                                <div class="nk-btn nk-btn-xs nk-btn-color-white nk-btn-outline">See More</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-image-box-4">
+                        <a href="demo-band-single-album.html" class="nk-image-box-link"></a>
+                        <img src="assets/images/cover-2.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-center">
+                            <div>
+                                <h3 class="nk-image-box-title mb-20">Forever in Darkness</h3>
+                                <div class="nk-btn nk-btn-xs nk-btn-color-white nk-btn-outline">See More</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-image-box-4">
+                        <a href="demo-band-single-album.html" class="nk-image-box-link"></a>
+                        <img src="assets/images/cover-3.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-center">
+                            <div>
+                                <h3 class="nk-image-box-title mb-20">All Hope is Gone</h3>
+                                <div class="nk-btn nk-btn-xs nk-btn-color-white nk-btn-outline">See More</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Latest Albums -->
+
+    <!-- START: Videos -->
+    <div class="nk-box bg-dark-1 text-white" id="videos">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+            <h2 class="nk-title h1 text-center">Official Videos</h2>
+            <div class="nk-gap-2"></div>
+            <div class="row vertical-gap multi-columns">
+                <div class="col-md-4">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=XEEasR7hVhA"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=mhJh5_6MuCk"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=5abamRO41fE"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=6fVE8kSM43I"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=LXEKuttVRIo"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=D1jQKpse7Yw"></div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- START: Videos -->
+
+{% endblock %}

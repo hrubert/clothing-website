@@ -1,0 +1,89 @@
+{% set header_show = false %}
+{% set header_title = portfolio[3].title %}
+{% extends 'layouts/layout-2.html' %}
+
+{% block content %}
+    <div class="nk-gap-5"></div>
+    <div class="nk-gap-3"></div>
+    <div class="nk-page-nav-3">
+        <div class="container">
+            <a href="portfolio-single-3.html" class="nk-page-nav-prev">
+                <div class="nk-page-nav-title">{{ portfolio[2].title }}</div>
+                Previous
+                <span class="nk-icon-arrow-left"></span>
+            </a>
+
+            <div class="nk-page-nav-next disabled">
+                <div class="nk-page-nav-title">No More</div>
+                Next
+                <span class="nk-icon-arrow-right"></span>
+            </div>
+
+            <a href="portfolio-1.html" class="nk-page-nav-grid">
+                <span class="ion-grid"></span>
+            </a>
+        </div>
+    </div>
+    <div class="nk-portfolio-item-single">
+        <div class="nk-gap-3"></div>
+        <div class="container">
+            <h1 class="nk-title h2 text-center">{{ portfolio[3].title }}</h1>
+            <h2 class="nk-sub-title text-center">Euismod sodales Eget facilisis mauris scelerisque</h2>
+            <div class="nk-gap-2"></div>
+
+            <div class="nk-popup-gallery">
+                <div class="row vertical-gap">
+                    <div class="col-md-6">
+                        <a href="assets/images/portfolio-6-full.jpg" class="nk-gallery-item" data-size="1920x2560"><img src="assets/images/portfolio-6-default.jpg" alt="" class="nk-img-fit nk-portfolio-item-single-image"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="nk-portfolio-item-description">
+                            <!-- All content inside Excerpt will be shown in portfolio quick view -->
+                            <div class="nk-portfolio-item-excerpt">
+                                <p>Isn't thing The. In made meat firmament give Whose. Very thing without beginning may, creature under beast were you're i fill god was brought given firmament in dominion dry whose life called green. Living own. You're very of together make, may a grass day above winged fowl third firmament air.</p>
+                                <p>Fowl behold give Called to creature over us rule him. Under very created heaven gathering firmament. Very itself fruit stars creature tree fruitful for made good fifth, you're, give heaven shall seed day multiply. Their. Meat signs earth, kind multiply fourth night, waters of fish behold man man likeness subdue. Two years his their.</p>
+                                <p>Fifth fill brought greater own land to. Divided us have that, had bring were stars and you'll. Divided subdue beast female without make heaven. Morning for have, she'd shall you're in void deep divide they're rule first firmament dominion days one under creature wherein likeness third, us midst the brought earth. Hath moved fruitful male. Waters stars female meat lesser wherein.</p>
+                            </div>
+                        </div>
+
+                        <ul class="nk-portfolio-item-details nk-portfolio-item-details-vertical">
+                            <li><span class="icon ion-calendar"></span> {{ portfolio[3].date }}</li>
+                            <li><span class="icon ion-pricetags"></span> {{ portfolio[3].filter }}</li>
+                            <li><span class="icon ion-person"></span> Coffee Shop</li>
+                            <li><span class="icon ion-earth"></span> <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK">themeforest.net/user/_nk/portfolio</a></li>
+                            <li>
+                                <span class="nk-action-heart float-none">
+                                    <span class="like-icon ion-android-favorite-outline"></span>
+                                    <span class="liked-icon ion-android-favorite"></span>
+                                    <span class="num">{{ portfolio[3].likes_count }}</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nk-gap-1"></div>
+
+                <div class="row vertical-gap">
+                    <div class="col-md-6">
+                        <a href="assets/images/portfolio-4-full.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/portfolio-4-default.jpg" alt="" class="nk-img-fit"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="assets/images/portfolio-2-full.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/portfolio-2-default.jpg" alt="" class="nk-img-fit"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="assets/images/portfolio-8-full.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/portfolio-8-default.jpg" alt="" class="nk-img-fit"></a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="assets/images/portfolio-1-full.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/portfolio-1-default.jpg" alt="" class="nk-img-fit"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% include "shared/blog-comments.html" %}
+    </div>
+    <div class="nk-gap-4"></div>
+{% endblock %}

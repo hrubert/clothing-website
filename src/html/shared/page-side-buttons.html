@@ -1,0 +1,11 @@
+<!--
+    START: Side Buttons
+        .nk-side-buttons-visible
+-->
+<div class="nk-side-buttons{{ ' nk-side-buttons-visible' if side_buttons_visible }}">
+    <ul>
+        <li><a href="https://themeforest.net/item/khaki-multiconcept-bootstrap-4-html-template/16826910?ref=_nK" target="_blank"{{ (' class="' + side_buttons_classes + '"') | safe if side_buttons_classes }}><span class="ion-bag"></span></a></li>
+        <li><span class="nk-scroll-top{{ ' ' + side_buttons_classes if side_buttons_classes }}"><span class="ion-ios-arrow-up"></span></span></li>
+    </ul>
+</div>
+<!-- END: Side Buttons -->

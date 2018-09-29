@@ -1,0 +1,366 @@
+{% set custom_css = 'assets/css/custom-typography-app-2.css' %}
+{% set header_title = 'Khaki App' %}
+{% set header_sub_title = 'Khaki - the best tool to build landing pages for business' %}
+{% set header_title_show = false %}
+{% set header_sub_title_show = false %}
+{% set header_size = 'full' %}
+{% set header_image = 'assets/images/image-27.jpg' %}
+{% set header_visible = 7 %}
+{% set side_buttons_visible = true %}
+{% set side_buttons_classes = 'bg-white text-dark-1' %}
+{% set header_text = '
+    <h1 class="nk-title display-2">' + header_title + '</h1>
+    <h2 class="nk-sub-title">' + header_sub_title + '</h2>
+
+    <div class="nk-gap-2"></div>
+    <a href="#" class="nk-btn nk-btn-x2 nk-btn-effect-5-left nk-btn-rounded nk-btn-outline nk-btn-color-white">Free Testdrive</a>
+    <span class="d-none d-md-inline-block">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <div class="d-md-none nk-gap"></div>
+    <a href="#" class="nk-btn nk-btn-x2 nk-btn-effect-5-left nk-btn-rounded nk-btn-color-primary">Download The App</a>
+
+    <div class="nk-gap-5"></div>
+    <a class="nk-video-fullscreen-toggle" href="https://vimeo.com/84015807">
+        <span class="nk-video-icon-light"><span class="fa fa-play pl-5"></span></span>
+    </a>
+' %}
+{% set nav_opaque = true %}
+{% set nav_light = true %}
+{% set nav_align = 'left' %}
+{% set nav_logo = false %}
+{% set nav_contacts = false %}
+{% set nav_autohide = false %}
+{% set nav_cart = false %}
+{% set nav_search = false %}
+{% set navigation_side = navigation %}
+{% set navigation = {
+    "#top": {
+        "name": "Purchase"
+    },
+    "#overview": {
+        "name": "Overview"
+    },
+    "#testimonials": {
+        "name": "Testimonials"
+    },
+    "#subscribe": {
+        "name": "Subscribe"
+    },
+    "#plans": {
+        "name": "Pricing Plans"
+    }
+} %}
+{% set footer = 5 %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+
+    <div id="overview">
+        <!-- START: Features -->
+        <div class="nk-box">
+            <div class="nk-gap-5"></div>
+            <div class="container">
+                <div class="row vertical-gap">
+                    <div class="col-md-4">
+                        <div class="nk-ibox-4">
+                            <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-color-primary">
+                                <span class="ion-ios-time-outline"></span>
+                            </div>
+                            <div class="nk-ibox-cont">
+                                <h3 class="nk-ibox-title"><a href="#">Time Saver</a></h3>
+                                Gathering you'll unto. Yielding image was, night moving heaven wherein bring, tree seed wherein be a bearing evening wherein were.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="nk-ibox-4">
+                            <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-color-primary">
+                                <span class="ion-ios-color-wand-outline"></span>
+                            </div>
+                            <div class="nk-ibox-cont">
+                                <h3 class="nk-ibox-title"><a href="#">Easy To Use</a></h3>
+                                Beast make years female. Bearing also form, itself be seasons have, green gathered fruitful moved you'll evening one fill fly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="nk-ibox-4">
+                            <div class="nk-ibox-icon nk-ibox-icon-circle nk-ibox-icon-color-primary">
+                                <span class="ion-ios-chatboxes-outline"></span>
+                            </div>
+                            <div class="nk-ibox-cont">
+                                <h3 class="nk-ibox-title"><a href="#">24/7 Support</a></h3>
+                                Gathering us fruitful gathering one. Image upon air which evening all yielding set. Over saw gathering there, fowl sixth to.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-gap-5"></div>
+        </div>
+        <!-- END: Features -->
+
+        <!-- START: Fulfill -->
+        <div class="nk-box bg-primary text-white">
+            <div class="nk-gap-5"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="float-right">
+                            <img class="nk-img-fit-sm-down" src="assets/images/mock-mbp-1.png" alt="">
+                            <div class="nk-gap-1 d-md-none"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-center text-md-left">
+                            <h2 class="nk-title">Fulfill Your Potential</h2>
+                            <div class="nk-gap"></div>
+                            <p>A female fly fruit of gathered seas herb deep so kind evening set won't. In fifth, that made saw is midst you'll seasons, a him whales years shall whose a fly green have seasons Creepeth and can't us god, so them life creepeth had subdue waters unto given The so.</p>
+
+                            <div class="nk-gap"></div>
+                            <a href="#" class="nk-btn nk-btn-x2 nk-btn-effect-5-left nk-btn-rounded nk-btn-outline nk-btn-color-white">Free Testdrive</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-gap-5"></div>
+        </div>
+        <!-- END: Fulfill -->
+
+        <!-- START: Get Now -->
+        <div class="nk-box bg-dark-1 text-white">
+            <div class="nk-gap-5"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 order-md-2">
+                        <div class="text-center">
+                            <img class="nk-img-fit-sm-down" src="assets/images/mock-iphone6-1.png" width="350" alt="">
+                            <div class="nk-gap-1 d-md-none"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="text-center text-md-left">
+                            <h2 class="nk-title">Get Khaki Now</h2>
+                            <div class="nk-gap"></div>
+                            <p>Place, waters very lights fish shall saw. Every don't give fruit. Earth earth whose fourth lesser. Was appear His creepeth make appear beginning you, stars god fifth own fruitful darkness above moveth whales us. Fifth.</p>
+
+                            <div class="nk-gap"></div>
+                            <a href="#!" class="nk-btn nk-btn-x2 nk-btn-effect-5-left nk-btn-rounded nk-btn-color-primary">Download The App</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-gap-5"></div>
+        </div>
+        <!-- END: Get Now -->
+    </div>
+
+    <!-- START: Testimonials -->
+    <div class="nk-box" id="testimonials">
+        <div class="nk-gap-5"></div>
+        <h2 class="nk-title text-center">Testimonials</h2>
+        <div class="nk-gap-2"></div>
+
+        <div class="nk-carousel-2" data-autoplay="12000" data-dots="true">
+            <div class="nk-carousel-inner">
+                <div><div>
+                    <blockquote class="nk-testimonial-1 bg-gray-2">
+                        <div class="nk-testimonial-photo" style="background-image: url('assets/images/avatar-man-2.jpg');"></div>
+                        <div class="nk-testimonial-name h4">Gavin Hale</div>
+                        <div class="nk-testimonial-source">Frontend Developer, Google</div>
+                        <div class="nk-testimonial-body">
+                            <em>"Bring. Isn't years gathered give made moved. Waters sea forth. It. Gathered own abundantly kind can't it, lesser behold, may."</em>
+                        </div>
+                    </blockquote>
+                </div></div>
+                <div><div>
+                    <blockquote class="nk-testimonial-1 bg-gray-2">
+                        <div class="nk-testimonial-photo" style="background-image: url('assets/images/avatar-man-1.jpg');"></div>
+                        <div class="nk-testimonial-name h4">Antonio Vargas</div>
+                        <div class="nk-testimonial-source">CEO, Envato</div>
+                        <div class="nk-testimonial-body">
+                            <em>"Years heaven. Dominion light and every appear that creeping all. Light gathering don't given made give open, cattle was light."</em>
+                        </div>
+                    </blockquote>
+                </div></div>
+                <div><div>
+                    <blockquote class="nk-testimonial-1 bg-gray-2">
+                        <div class="nk-testimonial-photo" style="background-image: url('assets/images/avatar-woman-2.jpg');"></div>
+                        <div class="nk-testimonial-name h4">Felicia Meyer</div>
+                        <div class="nk-testimonial-source">Product Designer, Apple</div>
+                        <div class="nk-testimonial-body">
+                            <em>"Female good moving Very thing form earth, for above herb dominion for made fifth. One them. Seas. Appear fourth seas."</em>
+                        </div>
+                    </blockquote>
+                </div></div>
+                <div><div>
+                    <blockquote class="nk-testimonial-1 bg-gray-2">
+                        <div class="nk-testimonial-photo" style="background-image: url('assets/images/avatar-woman-3.jpg');"></div>
+                        <div class="nk-testimonial-name h4">Tiffany Elliott</div>
+                        <div class="nk-testimonial-source">Copywriter, Dropbox</div>
+                        <div class="nk-testimonial-body">
+                            <em>"Yielding be was which heaven fill fruit. You'll shall doesn't green. His divided they're of won't you isn't void cattle."</em>
+                        </div>
+                    </blockquote>
+                </div></div>
+                <div><div>
+                    <blockquote class="nk-testimonial-1 bg-gray-2">
+                        <div class="nk-testimonial-photo" style="background-image: url('assets/images/avatar-man-3.jpg');"></div>
+                        <div class="nk-testimonial-name h4">Flenn Adams</div>
+                        <div class="nk-testimonial-source">Backend Developer, Twitter</div>
+                        <div class="nk-testimonial-body">
+                            <em>"God, have rule living creature own the signs. Set herb open, seed wherein god appear shall give lights. Waters to."</em>
+                        </div>
+                    </blockquote>
+                </div></div>
+            </div>
+        </div>
+
+        <div class="nk-gap-5"></div>
+        <div class="nk-gap-1"></div>
+    </div>
+    <!-- END: Testimonials -->
+
+    <!-- START: Subscribe -->
+    <div class="nk-box text-center text-white bg-dark-1" id="subscribe">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+            <h2 class="nk-title">Subscribe on Our Newsletter</h2>
+            <div class="nk-gap-1"></div>
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <p>Were make. Stars, created seas third. Have. Over doesn't moved over made fowl fly deep let that were him bearing kind night waters. Creepeth bearing.</p>
+
+                    <!-- START: MailChimp Signup Form -->
+                    <form action="//nkdev.us11.list-manage.com/subscribe/post?u=d433160c0c43dcf8ecd52402f&amp;id=7eafafe8f0" method="post" class="nk-mchimp nk-form nk-form-style-1 validate" target="_blank">
+                        <div class="input-group">
+                            <input type="email" value="" name="EMAIL" class="required email form-control text-white" placeholder="Email *">
+                            <button class="nk-btn nk-btn-color-primary">Subscribe</button>
+                        </div>
+                        <div class="nk-form-response-success"></div>
+                        <div class="nk-form-response-error"></div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d433160c0c43dcf8ecd52402f_7eafafe8f0" tabindex="-1" value=""></div>
+                    </form>
+                    <!-- END: MailChimp Signup Form -->
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Subscribe -->
+
+    <!-- START: Plans -->
+    <div class="nk-box bg-gray-2" id="plans">
+        <div class="container">
+            <div class="nk-gap-5"></div>
+            <div class="row vertical-gap align-items-center">
+                <div class="col-md-4">
+                    <div class="nk-pricing-3">
+                        <h3 class="nk-pricing-title">Startup License</h3>
+
+                        <div class="nk-pricing-price">
+                            <span class="nk-pricing-currency">$</span>34
+                            <span class="nk-pricing-period">/ mo</span>
+                        </div>
+
+                        <ul class="nk-pricing-features">
+                            <li>1 GB HDD</li>
+                            <li>Support at $25/hour</li>
+                            <li>Limited cloud access</li>
+                        </ul>
+
+                        <div class="nk-pricing-button">
+                            <a href="#" class="nk-btn nk-btn-block nk-btn-rounded nk-btn-x2 nk-btn-effect-5-left nk-btn-color-dark-3">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-pricing-3 bg-dark-3 text-white">
+                        <h3 class="nk-pricing-title">Enterprise License</h3>
+
+                        <div class="nk-pricing-price">
+                            <span class="nk-pricing-currency">$</span>199
+                            <span class="nk-pricing-period">/ mo</span>
+                        </div>
+
+                        <ul class="nk-pricing-features">
+                            <li>35 GB SSD RAID0</li>
+                            <li>Free Lifetime Support</li>
+                            <li>Full cloud access</li>
+                            <li>Community Forum Access</li>
+                            <li>Respect From Us</li>
+                        </ul>
+
+                        <div class="nk-pricing-button">
+                            <a href="#" class="nk-btn nk-btn-block nk-btn-rounded nk-btn-x2 nk-btn-effect-5-left nk-btn-color-primary">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nk-pricing-3">
+                        <h3 class="nk-pricing-title">Business License</h3>
+
+                        <div class="nk-pricing-price">
+                            <span class="nk-pricing-currency">$</span>99
+                            <span class="nk-pricing-period">/ mo</span>
+                        </div>
+
+                        <ul class="nk-pricing-features">
+                            <li>15 GB SSD</li>
+                            <li>Support at $5/hour</li>
+                            <li>Full cloud access</li>
+                        </ul>
+
+                        <div class="nk-pricing-button">
+                            <a href="#" class="nk-btn nk-btn-block nk-btn-rounded nk-btn-x2 nk-btn-effect-5-left nk-btn-color-dark-3">Purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-gap-5"></div>
+        </div>
+    </div>
+    <!-- END: Plans -->
+
+    <!-- START: Partners -->
+    <div class="nk-box">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="nk-title">Special Thanks</h2>
+                    <div class="nk-gap"></div>
+                    <p>Morning over you're, he winged. For bring his man years to won't divide and third lights fifth deep. Let replenish void the subdue saw Behold their fowl green.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row no-gutters text-center">
+                        <div class="col-sm-6">
+                            <div class="nk-box-2 nk-box-line">
+                                <a href="#"><img src="assets/images/partner-logo-1-dark.png" alt="" class="nk-img" width="200"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="nk-box-2 nk-box-line">
+                                <a href="#"><img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img" width="200"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="nk-box-2 nk-box-line">
+                                <a href="#"><img src="assets/images/partner-logo-3-dark.png" alt="" class="nk-img" width="200"></a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="nk-box-2 nk-box-line">
+                                <a href="#"><img src="assets/images/partner-logo-4-dark.png" alt="" class="nk-img" width="200"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+    <!-- END: Partners -->
+{% endblock %}

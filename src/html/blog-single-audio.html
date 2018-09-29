@@ -1,0 +1,109 @@
+{% set header_title = posts[3].title %}
+{% set header_image = posts[3].thumb_full %}
+{% set header_size = 'sm' %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 order-lg-2">
+                <div class="nk-gap-4"></div>
+
+                <!-- START: Post -->
+                <div class="nk-blog-post nk-blog-post-single">
+                    <!-- START: Post Text -->
+                    <div class="nk-post-text mt-0">
+                        <div class="nk-post-meta nk-post-meta-top">
+                            <div class="nk-post-date">
+                                {{ posts[3].date }}
+                                <span class="nk-post-by">by {{ posts[3].by | safe }}</span>
+                                <span class="nk-post-category">in {{ posts[3].cat | safe }}</span>
+                            </div>
+                        </div>
+                        <div class="nk-post-audio">
+                            <a href="{{ posts[3].url }}"><img src="{{ posts[3].thumb_lg }}" alt="" class="nk-img-stretch"></a>
+                            <div>
+                                <div class="nk-audio-plain nk-audio-plain-dark" data-src="assets/mp3/OctoSound-sport.mp3">
+                                    <div class="nk-audio-plain-title">
+                                        <strong>OctoSound</strong> - Sport
+                                        <div class="nk-audio-progress">
+                                            <div class="nk-audio-progress-current"></div>
+                                        </div>
+                                    </div>
+                                    <div class="nk-audio-plain-duration">
+                                        05:34
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-gap"></div>
+                        {% include "shared/blog-content.html" %}
+                    </div>
+                    <!-- END: Post Text -->
+
+                    <!-- START: Post Meta -->
+                    <div class="nk-post-meta">
+                        <div class="nk-post-meta-right">
+                            <a class="nk-post-comments-count" href="#comments">{{ posts[3].comments_count }}</a>
+                            <span class="nk-action-heart">
+                                <span class="like-icon ion-android-favorite-outline"></span>
+                                <span class="liked-icon ion-android-favorite"></span>
+                                <span class="num">{{ posts[3].likes_count }}</span>
+                            </span>
+                        </div>
+                        <div class="nk-post-tags">
+                            <a href="#">Audio</a>
+                            <a href="#">Demonstrate</a>
+                            <a href="#">Tags</a>
+                        </div>
+                    </div>
+                    <!-- END: Post Meta -->
+
+                    {% include "shared/blog-author.html" %}
+
+                    <!-- START: posts nav -->
+                    <div class="nk-page-nav-3">
+                        <div class="container">
+                            <a href="{{ posts[2].url }}" class="nk-page-nav-prev">
+                                <div class="nk-page-nav-title">{{ posts[2].title }}</div>
+                                Previous
+                                <span class="nk-icon-arrow-left"></span>
+                            </a>
+
+                            <a href="{{ posts[4].url }}" class="nk-page-nav-next">
+                                <div class="nk-page-nav-title">{{ posts[4].title }}</div>
+                                Next
+                                <span class="nk-icon-arrow-right"></span>
+                            </a>
+
+                            <a href="blog.html" class="nk-page-nav-grid">
+                                <span class="ion-grid"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END: posts nav -->
+
+                    {% include "shared/blog-comments.html" %}
+                </div>
+                <!-- END: Post -->
+
+                <div class="nk-gap-4"></div>
+            </div>
+            <div class="col-lg-4">
+                <!--
+                    START: Sidebar
+
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+                -->
+                <aside class="nk-sidebar nk-sidebar-left">
+                    {% include "shared/sidebar-blog.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

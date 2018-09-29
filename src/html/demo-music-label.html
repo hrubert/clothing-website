@@ -1,0 +1,248 @@
+{% set custom_css = 'assets/css/custom-typography-music-label.css' %}
+{% set header_title = 'Music Label' %}
+{% set header_show = false %}
+{% set nav_logo = 'assets/images/logo-music-label-light.png' %}
+{% set nav_logo_url = 'demo-music-label.html' %}
+{% set nav_light = true %}
+{% set nav_logo_top_light = true %}
+{% set nav_sticky = false %}
+{% set navigation = {
+    "demo-music-label-about.html": {
+        "name": "ABOUT"
+    },
+    "demo-music-label-artists.html": {
+        "name": "ARTISTS"
+    },
+    "demo-music-label-releases.html": {
+        "name": "RELEASES"
+    },
+    "demo-music-label-videos.html": {
+        "name": "VIDEOS"
+    },
+    "demo-music-label-agenda.html": {
+        "name": "AGENDA"
+    },
+    "demo-music-label-news.html": {
+        "name": "NEWS"
+    }
+} %}
+{% set page_boxed = true %}
+{% set footer = 6 %}
+{% set footer_bg = false %}
+{% extends 'layouts/layout-8.html' %}
+
+{% block content %}
+
+    {% include "shared/revolution-music-label.html" %}
+
+    <!-- START: Videos -->
+    <div class="nk-box">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <h2 class="nk-title h3 d-inline-block">Popular Videos</h2>
+            <a href="demo-music-label-videos.html" class="nk-btn nk-btn-xs nk-btn-circle nk-btn-outline nk-btn-color-dark-1 float-right">All Videos</a>
+            <div class="nk-gap-1"></div>
+
+            <div class="row sm-gap vertical-gap">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=xo1VInw-SKc"></div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=CHV6BjuQOZQ"></div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=cmSbXsFE3l8"></div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=bMpFmHSgC4Q"></div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+    <!-- END: Videos -->
+
+    <!-- START: Releases -->
+    <div class="nk-box">
+        <div class="container">
+            <h2 class="nk-title h3 d-inline-block">Latest Releases</h2>
+            <a href="demo-music-label-releases.html" class="nk-btn nk-btn-xs nk-btn-circle nk-btn-outline nk-btn-color-dark-1 float-right">All Releases</a>
+            <div class="nk-gap-1"></div>
+
+            <div class="row sm-gap vertical-gap">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="nk-image-box-2 hover">
+                        <a href="#" class="nk-image-box-link"></a>
+                        <img src="assets/images/label-cover-4-square.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-bottom">
+                            <div>
+                                <h3 class="nk-image-box-title h4">Discover The World</h3>
+                                <div class="mt-8">
+                                    <em>by <strong>Carrie</strong></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="nk-image-box-2 hover">
+                        <a href="#" class="nk-image-box-link"></a>
+                        <img src="assets/images/label-cover-3-square.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-bottom">
+                            <div>
+                                <h3 class="nk-image-box-title h4">Pure Pleasure</h3>
+                                <div class="mt-8">
+                                    <em>by <strong>Cherly</strong></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="nk-image-box-2 hover">
+                        <a href="#" class="nk-image-box-link"></a>
+                        <img src="assets/images/label-cover-2-square.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-bottom">
+                            <div>
+                                <h3 class="nk-image-box-title h4">Play on The Nerves</h3>
+                                <div class="mt-8">
+                                    <em>by <strong>Bryan</strong></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="nk-image-box-2 hover">
+                        <a href="#" class="nk-image-box-link"></a>
+                        <img src="assets/images/label-cover-1-square.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-bottom">
+                            <div>
+                                <h3 class="nk-image-box-title h4">Parallel Voices</h3>
+                                <div class="mt-8">
+                                    <em>by <strong>Ella</strong></em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+    <!-- END: Releases -->
+
+    <!-- START: News + Agenda -->
+    <div class="nk-box">
+        <div class="container">
+
+            <div class="row vertical-gap">
+                <div class="col-lg-6">
+                    <h2 class="nk-title h3 d-inline-block">Latest News</h2>
+                    <a href="demo-music-label-news.html" class="nk-btn nk-btn-xs nk-btn-circle nk-btn-outline nk-btn-color-dark-1 float-right">All News</a>
+                    <div class="nk-gap-2"></div>
+
+                    <div class="nk-blog-list">
+                        <div class="nk-blog-post">
+                            <div class="nk-post-category">
+                                In <a href="#">Artists</a>
+                            </div>
+                            <h2 class="nk-post-title h5"><a href="blog-single-standard.html">Our New Artists</a></h2>
+
+                            <div class="nk-post-text">
+                                <p>Quisque. Molestie purus ridiculus tristique sed consectetuer vestibulum odio, interdum, nostra Sollicitudin lacinia convallis erat risus ante nulla porta hac aliquam luctus sociis aenean facilisi est libero natoque felis, mus laoreet gravida torquent consectetuer, nunc, taciti, dui tincidunt.</p>
+                            </div>
+                        </div>
+                        <div class="nk-blog-post">
+                            <div class="nk-post-category">
+                                In <a href="#">News</a>
+                            </div>
+                            <h2 class="nk-post-title h5"><a href="blog-single-image.html">Added Videos Category</a></h2>
+
+                            <div class="nk-post-text">
+                                <p>Amet tempor orci non nam porta felis. Viverra porta. Sociosqu parturient. Dictum malesuada tortor orci praesent conubia dapibus sociosqu leo mauris rutrum montes laoreet consequat habitant per taciti amet platea dui.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="nk-title h3 d-inline-block">Agenda</h2>
+                    <a href="demo-music-label-agenda.html" class="nk-btn nk-btn-xs nk-btn-circle nk-btn-outline nk-btn-color-dark-1 float-right">All Agenda</a>
+                    <div class="nk-gap-1"></div>
+
+                    <ul class="nk-events-list">
+                        <li>
+                            <a href="events-single-1.html" class="nk-event-date">
+                                17 Sep
+                                <span>2018</span>
+                            </a>
+                            <a href="events-single-1.html" class="nk-event-name">
+                                <strong>Rock 'N Derby</strong>
+                                <span>Shaghticoke, NY</span>
+                            </a>
+                            <div class="nk-event-button nk-event-button-sold">
+                                Sold Out
+                            </div>
+                        </li>
+                        <li>
+                            <a href="events-single-2.html" class="nk-event-date">
+                                5 Oct
+                                <span>2018</span>
+                            </a>
+                            <a href="events-single-2.html" class="nk-event-name">
+                                <strong>Governors Ball Music Festival</strong>
+                                <span>New York City, NY</span>
+                            </a>
+                            <div class="nk-event-button">
+                                <a href="#!" class="nk-btn nk-btn-xs nk-btn-effect-2-right nk-btn-outline nk-btn-color-dark-1 nk-btn-circle">
+                                    <span>Buy Ticket</span>
+                                    <span class="icon"><span class="fa fa-ticket"></span></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="events-single-3.html" class="nk-event-date">
+                                24 Oct
+                                <span>2018</span>
+                            </a>
+                            <a href="events-single-3.html" class="nk-event-name">
+                                <strong>Mountain Jam</strong>
+                                <span>Hunter Mountain, NY</span>
+                            </a>
+                            <div class="nk-event-button">
+                                Buy on 30 September
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="nk-event-date">
+                                1 Nov
+                                <span>2018</span>
+                            </a>
+                            <a href="#" class="nk-event-name">
+                                <strong>Taste of Country</strong>
+                                <span>Hunter Mountain, NY</span>
+                            </a>
+                            <div class="nk-event-button">
+                                <a href="#!" class="nk-btn nk-btn-xs nk-btn-effect-2-right nk-btn-outline nk-btn-color-dark-1 nk-btn-circle">
+                                    <span>Buy Ticket</span>
+                                    <span class="icon"><span class="fa fa-ticket"></span></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-3"></div>
+    </div>
+    <!-- END: News + Agenda -->
+
+    {% set instagram_template = '<div class="col-4 col-md-2"><a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="nk-img-stretch"></a></div>' %}
+    <!-- START: Instagram -->
+    <div class="nk-box text-center">
+        <div class="nk-instagram row no-gutters multi-column" data-instagram-template='{{ instagram_template | safe }}' data-instagram-quality="md"
+        ></div>
+    </div>
+    <!-- END: Instagram -->
+
+{% endblock %}

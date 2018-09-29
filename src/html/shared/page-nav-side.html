@@ -1,0 +1,82 @@
+{% macro submenu(nav) -%}
+    {% for file, item in nav %}
+        <li{% if isActiveMenuItem(file, item, filename) or item.sub %} class="{{ 'active' if isActiveMenuItem(file, item, filename) }}{{ ' nk-drop-item' if item.sub }}"{% endif %}>
+            <a href="{{file | safe}}">
+                {{item.name | safe}}
+                {% if item.description -%}
+                    <span class="nk-item-descr">{{item.description | safe}}</span>
+                {%- endif %}
+            </a>
+            {%- if item.sub -%}
+                <ul class="dropdown">
+                    {{ submenu(item.sub) }}
+                </ul>
+            {%- endif %}
+        </li>
+    {%- endfor %}
+{%- endmacro %}
+
+<!--
+    START: Right Navbar
+
+    Additional Classes:
+        .nk-navbar-right-side
+        .nk-navbar-left-side
+        .nk-navbar-lg
+        .nk-navbar-align-center
+        .nk-navbar-align-right
+        .nk-navbar-overlay-content
+        .nk-navbar-light
+        .nk-navbar-blur
+-->
+{% if navigation_side == 'from navigation' %}
+    {% set navigation_side = navigation %}
+{% endif %}
+<nav class="nk-navbar nk-navbar-side nk-navbar-right-side nk-navbar-lg nk-navbar-align-center nk-navbar-overlay-content{{ ' nk-navbar-light' if nav_side_light }} nk-navbar-blur" id="nk-side">
+    {% if nav_side_bg %}
+    <div class="nk-navbar-bg">
+        <div class="bg-image">
+            <img class="jarallax-img" src="{{ nav_side_bg }}" alt="">
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="nano">
+        <div class="nano-content">
+            <div class="nk-nav-table">
+                {% if nav_side_logo %}
+                <div class="nk-nav-row">
+                    <a href="{{ nav_logo_url }}" class="nk-nav-logo">
+                        <img src="{{ nav_side_logo_light if nav_side_light else nav_side_logo }}" alt="" width="130">
+                    </a>
+                </div>
+                {% endif %}
+                <!--
+                    Additional Classes:
+                        .nk-nav-row-top
+                        .nk-nav-row-center
+                        .nk-nav-row-bottom
+                -->
+                <div class="nk-nav-row nk-nav-row-full nk-nav-row-center">
+                    <ul class="nk-nav">
+                        {{ submenu(navigation_side) }}
+                    </ul>
+                </div>
+                <div class="nk-nav-row">
+                    <div class="nk-nav-social">
+                        <ul>
+                            <li><a href="#" class="no-link-effect"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#" class="no-link-effect"><i class="ion-social-instagram-outline"></i></a></li>
+                            <li><a href="#" class="no-link-effect"><i class="ion-social-dribbble-outline"></i></a></li>
+                            <li><a href="#" class="no-link-effect"><i class="ion-social-pinterest"></i></a></li>
+                        </ul>
+                        <footer>
+                            <a href="http://nkdev.info" target="_blank">nK</a> &copy; 2018. All rights reserved
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- END: Right Navbar -->

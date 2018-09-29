@@ -1,0 +1,268 @@
+.nk-navbar-full {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: .2s visibility;
+    z-index: 999;
+
+    // background
+    &::after {
+        background-color: transparent;
+    }
+    &.nk-navbar-blur:not(.open)::after {
+        backdrop-filter: blur(0) saturate(1);
+    }
+
+    &.open {
+        visibility: visible;
+
+        &::after {
+            background-color: rgba($color_dark_1, 1);
+        }
+        &.nk-navbar-light::after {
+            background-color: rgba(#fff, 1);
+        }
+        &.nk-navbar-blur {
+            &::after,
+            &.nk-navbar-solid::after {
+                background-color: rgba($color_dark_1, .75);
+            }
+            &.nk-navbar-light::after,
+            &.nk-navbar-light.nk-navbar-solid::after {
+                background-color: rgba(#fff, .85);
+            }
+        }
+    }
+
+    // navigation
+    .nano {
+        display: table-cell;
+        height: 100%;
+        overflow-y: auto;
+
+        // fix for IE
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            display: block;
+        }
+    }
+    .nk-nav {
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+
+        // item descriptions
+        li > a .nk-item-descr {
+            font-size: .5em;
+        }
+
+        .dropdown > li,
+        > li {
+            position: static;
+            display: block;
+            max-width: 400px;
+            margin: 0 auto;
+
+            > a {
+                padding: 10px 40px;
+                font-size: 2rem;
+                line-height: 1.85;
+                color: rgba(#fff, .6);
+
+                &,
+                .link-effect-shade {
+                    white-space: normal;
+                }
+
+                @media (max-width: 400px) {
+                    font-size: 1.3rem;
+                }
+                @media (max-width: 550px) {
+                    padding-right: 40px;
+                    padding-left: 40px;
+                }
+
+                &::before {
+                    top: 2px;
+                    left: 45px;
+                }
+                &::after {
+                    right: 45px;
+                    bottom: 2px;
+                }
+            }
+
+            > a::before,
+            > a::after {
+                content: none;
+            }
+        }
+
+        // drop item icon
+        .nk-drop-item > a,
+        > .nk-drop-item > a,
+        .bropdown-back > a {
+            position: relative;
+        }
+        .nk-drop-item > a::after,
+        .nk-drop-item .nk-drop-item > a::after,
+        > .nk-drop-item > a::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: 30px;
+            left: auto;
+            width: 0;
+            height: 0;
+            margin-top: -2px;
+            color: inherit;
+            border: none;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 4px solid;
+            opacity: .6 !important; // stylelint-disable-line
+            transition: .3s opacity;
+            transform: none;
+            will-change: opacity;
+        }
+        .nk-drop-item > a:hover::after,
+        .nk-drop-item > a.hover::after,
+        > .nk-drop-item > a:hover::after,
+        > .nk-drop-item > a.hover::after {
+            width: 0;
+            height: 0;
+            opacity: 1 !important; // stylelint-disable-line
+        }
+    }
+
+    // dropdown
+    .nk-nav .dropdown {
+        display: block;
+        padding: 0;
+        background-color: transparent;
+        opacity: 1;
+
+        &::before {
+            content: none;
+        }
+        > li > a {
+            display: none;
+        }
+    }
+    .nk-nav .nk-drop-item .dropdown,
+    .nk-nav .nk-drop-item .nk-drop-item .dropdown {
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    // back icon
+    .dropdown > .bropdown-back > a::after {
+        content: "" !important; // stylelint-disable-line
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 30px;
+        width: 0;
+        height: 0;
+        margin-top: -2px;
+        color: inherit;
+        border: none;
+        border-top: 4px solid transparent;
+        border-right: 4px solid;
+        border-bottom: 4px solid transparent;
+        opacity: .6;
+        transition: .3s opacity;
+        transform: none;
+        will-change: opacity;
+    }
+    .dropdown > .bropdown-back > a:hover::after,
+    .dropdown > .bropdown-back > a.hover::after {
+        opacity: 1;
+    }
+
+
+    // social block
+    .nk-nav-social {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        opacity: 0;
+        transition: .3s .3s opacity, .3s .3s transform;
+        transform: translateY(10px);
+
+        ul li {
+            display: inline-block;
+            text-align: center;
+
+            > a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin: 2px 4px;
+                font-size: 1.15rem;
+                line-height: 40px;
+                color: rgba(#fff, .6);
+                border: 1px solid rgba(#fff, .6);
+                border-radius: 20px;
+                transition: .3s color, .3s background-color, .3s border;
+                will-change: color, background-color, border;
+
+                &:hover,
+                &.hover {
+                    color: $color_dark_1;
+                    background-color: #fff;
+                    border-color: #fff;
+                }
+            }
+        }
+        footer {
+            padding-top: 14px;
+            color: rgba(#fff, .6);
+        }
+    }
+    &.open .nk-nav-social {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    // light navbar
+    &.nk-navbar-light {
+        .nk-nav {
+            .dropdown > li,
+            > li {
+                > a {
+                    color: rgba($color_dark_4, .85);
+                }
+            }
+            .dropdown {
+                background-color: transparent;
+            }
+        }
+
+        // social
+        .nk-nav-social {
+            ul li {
+                > a {
+                    color: rgba($color_dark_4, .85);
+                    border: 1px solid rgba($color_dark_4, .85);
+
+                    &:hover,
+                    &.hover {
+                        color: #fff;
+                        background-color: $color_dark_4;
+                        border-color: $color_dark_4;
+                    }
+                }
+            }
+            footer {
+                color: rgba($color_dark_4, .85);
+            }
+        }
+    }
+}

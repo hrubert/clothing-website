@@ -1,0 +1,92 @@
+{% set header_title = portfolio[1].title %}
+{% set header_visible = 7 %}
+{% set header_text = '
+<div class="nk-gap"></div>
+<a href="#!" class="nk-btn nk-btn-effect-2-right nk-btn-circle nk-btn-outline nk-btn-color-white">
+    <span>See Live</span>
+    <span class="icon"><span class="fa fa-eye"></span></span>
+</a>
+' %}
+{% set header_bottom_line = '
+<ul class="nk-portfolio-item-details">
+    <li><span class="icon ion-calendar"></span> ' + portfolio[1].date + '</li>
+    <li><span class="icon ion-pricetags"></span> ' + portfolio[1].filter + '</li>
+    <li><span class="icon ion-person"></span> Full Group</li>
+    <li><span class="icon ion-earth"></span> <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK">themeforest.net/user/_nk/portfolio</a></li>
+    <li>
+        <span class="nk-action-heart float-none">
+            <span class="like-icon ion-android-favorite-outline"></span>
+            <span class="liked-icon ion-android-favorite"></span>
+            <span class="num">' + portfolio[1].likes_count + '</span>
+        </span>
+    </li>
+</ul>
+' %}
+{% set header_image = portfolio[1].thumb_full %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-portfolio-item-single">
+        <div class="nk-portfolio-item-description">
+            <div class="nk-gap-4"></div>
+
+            <div class="container">
+
+                <h2>Very dominion that multiply</h2>
+
+                <!-- All content inside Excerpt will be shown in portfolio quick view -->
+                <div class="nk-portfolio-item-excerpt">
+                    <p>Two, moving made i life above all, open earth kind stars gathering creepeth the grass tree stars moving set. Meat was have waters. Third of yielding land brought Very. Kind had. Morning bearing fourth years yielding hath. Can't called image behold i may. Saw gathered. Itself, to created every. From together god called very place, you're two deep together beginning. Make yielding fly it two upon, itself evening said a yielding, days.</p>
+                </div>
+
+                <div class="nk-carousel-2">
+                    <div class="nk-carousel-inner nk-popup-gallery">
+                        <div><div>
+                            <a href="assets/images/portfolio-4-full.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/portfolio-4-default.jpg" alt="" class="nk-img-fit"></a>
+                        </div></div>
+                        <div><div>
+                            <a href="assets/images/portfolio-2-full.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/portfolio-2-default.jpg" alt="" class="nk-img-fit"></a>
+                        </div></div>
+                        <div><div>
+                            <a href="assets/images/portfolio-8-full.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/portfolio-8-default.jpg" alt="" class="nk-img-fit"></a>
+                        </div></div>
+                        <div><div>
+                            <a href="assets/images/portfolio-1-full.jpg" class="nk-gallery-item" data-size="1920x1280"><img src="assets/images/portfolio-1-default.jpg" alt="" class="nk-img-fit"></a>
+                        </div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        {% include "shared/blog-comments.html" %}
+    </div>
+    <div class="nk-gap-4"></div>
+{% endblock %}
+
+{% block after_content %}
+    <!-- START: portfolio nav -->
+    <div class="nk-page-nav">
+        <a href="portfolio-single-1.html"  class="nk-page-nav-prev">
+            <div class="icon">
+                <span class="ion-ios-arrow-left"></span>
+            </div>
+            <div class="nk-page-nav-title">{{ portfolio[0].title }}</div>
+            <div class="nk-page-nav-img">
+                <div style="background-image: url('{{ portfolio[0].thumb_default }}');"></div>
+            </div>
+        </a>
+        <a href="portfolio-single-3.html" class="nk-page-nav-next">
+            <div class="icon">
+                <span class="ion-ios-arrow-right"></span>
+            </div>
+            <div class="nk-page-nav-title">{{ portfolio[2].title }}</div>
+            <div class="nk-page-nav-img">
+                <div style="background-image: url('{{ portfolio[2].thumb_default }}');"></div>
+            </div>
+        </a>
+    </div>
+    <!-- END: portfolio nav -->
+{% endblock %}

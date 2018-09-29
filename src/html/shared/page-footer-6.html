@@ -1,0 +1,40 @@
+<!-- START: Footer -->
+<!--
+    Additional Classes:
+        .nk-footer-parallax
+        .nk-footer-parallax-opacity
+        .nk-footer-parallax-blur
+-->
+<footer class="nk-footer{{ ' nk-footer-parallax' if footer_parallax }}{{ ' nk-footer-parallax-opacity' if footer_parallax_opacity }}{{ ' nk-footer-parallax-blur' if footer_parallax_blur }}">
+    {% if footer_bg %}
+    <div class="bg-image">
+        <img class="jarallax-img" src="{{ footer_bg }}" alt="">
+    </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="nk-gap-4"></div>
+
+        <div class="nk-footer-social-2">
+            <a href="#">
+                <i class="icon ion-social-twitter"></i>
+                <span class="h5">Twitter</span>
+            </a>
+            <a href="#">
+                <i class="icon ion-social-instagram-outline"></i>
+                <span class="h5">Instagram</span>
+            </a>
+            <a href="#">
+                <i class="icon ion-social-dribbble-outline"></i>
+                <span class="h5">Dribbble</span>
+            </a>
+            <a href="#">
+                <i class="icon ion-social-pinterest"></i>
+                <span class="h5">Pinterest</span>
+            </a>
+        </div>
+
+        <div class="nk-gap-4"></div>
+    </div>
+</footer>
+<!-- END: Footer -->

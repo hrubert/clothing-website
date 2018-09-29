@@ -1,0 +1,127 @@
+{% set header_title = 'Blog Classic' %}
+{% set header_image = 'assets/images/image-28.jpg' %}
+{% set header_class = 'bg-white text-dark-1' %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="nk-gap-4"></div>
+
+                <!-- START: Posts List -->
+                <div class="nk-blog-list">
+
+                    {% for post in posts %}
+                        <!-- START: Post -->
+                        <div class="nk-blog-post">
+                            <div class="nk-post-category">
+                                In {{ post.cat | safe}}
+                            </div>
+                            <h2 class="nk-post-title h3"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+                            {% if post.type == 'image' %}
+                                <a href="{{ post.url }}"><img src="{{ post.thumb_lg }}" alt="" class="nk-img-stretch"></a>
+                            {% elif post.type == 'video' %}
+                                <div class="nk-plain-video" data-video="{{ post.video }}"></div>
+                            {% elif post.type == 'audio' %}
+                                <div class="nk-post-audio">
+                                    <a href="{{ post.url }}"><img src="{{ post.thumb_lg }}" alt="" class="nk-img-stretch"></a>
+                                    <div>
+                                        <div class="nk-audio-plain nk-audio-plain-dark" data-src="assets/mp3/OctoSound-sport.mp3">
+                                            <div class="nk-audio-plain-title">
+                                                <strong>OctoSound</strong> - Sport
+                                                <div class="nk-audio-progress">
+                                                    <div class="nk-audio-progress-current"></div>
+                                                </div>
+                                            </div>
+                                            <div class="nk-audio-plain-duration">
+                                                05:34
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% elif post.type == 'gallery' %}
+                                <div class="nk-carousel-3" data-arrows="true" data-size="1" data-autoplay="8000">
+                                    <div class="nk-carousel-inner nk-popup-gallery">
+                                        {% for galleryItem in post.gallery %}
+                                            <div><div>
+                                                <a href="{{ galleryItem.full }}" class="nk-gallery-item" data-size="{{ galleryItem.size }}"><img src="{{ galleryItem.thumb }}" alt=""></a>
+                                            </div></div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% elif post.type == 'quote' %}
+                                <blockquote class="nk-blockquote nk-blockquote-styled">
+                                    <div class="bg-image op-6">
+                                        <img class="jarallax-img" src="{{ post.thumb_lg }}" alt="">
+                                    </div>
+                                    <a class="nk-blockquote-cont" href="{{ post.url }}">
+                                        <div class="nk-blockquote-icon">“</div>
+                                        <em>{{ post.excerpt | safe }}</em>
+                                        <div class="nk-blockquote-author">{{ post.quote_author }}</div>
+                                    </a>
+                                </blockquote>
+                            {% endif %}
+
+                            {% if post.type != 'quote' %}
+                                <div class="nk-post-text">
+                                    {{ post.excerpt | safe }}
+                                </div>
+
+                                <div class="nk-post-continue">
+                                    <a href="{{ post.url }}">Continue Reading <span class="ion-ios-arrow-thin-right"></span></a>
+                                </div>
+                            {% endif %}
+
+                            <div class="nk-post-meta">
+                                <div class="nk-post-meta-right">
+                                    <a class="nk-post-comments-count" href="{{ post.url }}#comments">{{ post.comments_count }}</a>
+                                    <span class="nk-action-heart">
+                                        <span class="like-icon ion-android-favorite-outline"></span>
+                                        <span class="liked-icon ion-android-favorite"></span>
+                                        <span class="num">{{ post.likes_count }}</span>
+                                    </span>
+                                </div>
+                                <div class="nk-post-date">
+                                    {{ post.date }} <span class="nk-post-by">by {{ post.by | safe }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Post -->
+                    {% endfor %}
+
+                    <!-- START: Pagination -->
+                    <div class="nk-pagination nk-pagination-left">
+                        <nav>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a class="nk-pagination-current" href="#">3</a>
+                            <a href="#">4</a>
+                            <span>...</span>
+                        </nav>
+                    </div>
+                    <!-- END: Pagination -->
+                </div>
+                <!-- END: Posts List -->
+
+                <div class="nk-gap-4"></div>
+            </div>
+            <div class="col-lg-4">
+                <!--
+                    START: Sidebar
+
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+                -->
+                <aside class="nk-sidebar nk-sidebar-right">
+                    {% include "shared/sidebar-blog.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

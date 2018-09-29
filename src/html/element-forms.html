@@ -1,0 +1,115 @@
+{% set header_title = 'Forms' %}
+{% set header_sub_title = 'Working AJAX Forms' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-gap-4"></div>
+
+    <div class="container">
+
+        <div class="row vertical-gap">
+            <div class="col-md-6">
+                <div class="nk-box-2 bg-dark-4 text-white">
+                    <h2 class="nk-title">Contact Form</h2>
+                    <h3 class="nk-sub-title">Drop us a line</h3>
+                    <div class="nk-gap"></div>
+
+                    <!-- START: Form 1 -->
+                    <form action="php/ajax-contact-form.php" class="nk-form nk-form-ajax">
+                        <input type="email" class="form-control required" name="email" placeholder="Email *">
+                        <div class="nk-gap"></div>
+                        <input type="text" class="form-control required" name="name" placeholder="Name *">
+                        <div class="nk-gap"></div>
+                        <textarea class="form-control required" name="message" rows="5" placeholder="Message *"></textarea>
+                        <div class="nk-gap"></div>
+                        <div class="nk-form-response-success"></div>
+                        <div class="nk-form-response-error"></div>
+                        <button class="nk-btn nk-btn-effect-2-right nk-btn-color-dark-1">
+                            <span>Send</span>
+                            <span class="icon"><i class="ion-paper-airplane"></i></span>
+                        </button>
+                    </form>
+                    <!-- END: Form 1 -->
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="nk-box-2 bg-gray-4">
+                    <h2 class="nk-title">Contact Form</h2>
+                    <h3 class="nk-sub-title">Drop us a line</h3>
+                    <div class="nk-gap"></div>
+
+                    <!-- START: Form 2 -->
+                    <form action="php/ajax-contact-form.php" class="nk-form nk-form-ajax nk-form-style-1">
+                        <input type="email" class="form-control required" name="email" placeholder="Email *">
+                        <div class="nk-gap"></div>
+                        <input type="text" class="form-control required" name="name" placeholder="Name *">
+                        <div class="nk-gap"></div>
+                        <textarea class="form-control required" name="message" rows="5" placeholder="Message *"></textarea>
+                        <div class="nk-gap"></div>
+                        <div class="nk-form-response-success"></div>
+                        <div class="nk-form-response-error"></div>
+                        <button class="nk-btn nk-btn-effect-2-right nk-btn-color-dark-1">
+                            <span>Send</span>
+                            <span class="icon"><i class="ion-paper-airplane"></i></span>
+                        </button>
+                    </form>
+                    <!-- END: Form 2 -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="nk-gap-1"></div>
+
+        <!-- START: Mailchimp Subscribe Form -->
+        <div class="row vertical-gap">
+            <div class="col-md-6">
+                <div class="nk-box-2 bg-dark-4 text-white">
+                    <h2 class="nk-title">MailChimp Subscribe Form</h2>
+                    <h3 class="nk-sub-title">This is working form, you will be subscribed on _nK newsletters</h3>
+                    <div class="nk-gap"></div>
+
+                    <!-- START: MailChimp Signup Form -->
+                    <form action="//nkdev.us11.list-manage.com/subscribe/post?u=d433160c0c43dcf8ecd52402f&amp;id=7eafafe8f0" method="post" class="nk-mchimp validate" target="_blank">
+                        <div class="input-group">
+                            <input type="email" value="" name="EMAIL" class="required email form-control text-center" placeholder="Email *">
+                        </div>
+                        <button class="nk-btn nk-btn-block nk-btn-color-dark-1">Subscribe</button>
+                        <div class="nk-form-response-success"></div>
+                        <div class="nk-form-response-error"></div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d433160c0c43dcf8ecd52402f_7eafafe8f0" tabindex="-1" value=""></div>
+                    </form>
+                    <!-- END: MailChimp Signup Form -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="nk-box-2 bg-gray-4">
+                    <h2 class="nk-title">Alternate Style for Subscribe Form</h2>
+                    <h3 class="nk-sub-title">This is working form, you will be subscribed on _nK newsletters</h3>
+                    <div class="nk-gap"></div>
+
+                    <!-- START: MailChimp Signup Form -->
+                    <form action="//nkdev.us11.list-manage.com/subscribe/post?u=d433160c0c43dcf8ecd52402f&amp;id=7eafafe8f0" method="post" class="nk-mchimp nk-form nk-form-style-1 validate" target="_blank">
+                        <div class="input-group">
+                            <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email *">
+                            <button class="nk-btn nk-btn-color-dark-1">Subscribe</button>
+                        </div>
+                        <div class="nk-form-response-success"></div>
+                        <div class="nk-form-response-error"></div>
+                        <small>We'll never share your email with anyone else.</small>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d433160c0c43dcf8ecd52402f_7eafafe8f0" tabindex="-1" value=""></div>
+                    </form>
+                    <!-- END: MailChimp Signup Form -->
+
+                </div>
+            </div>
+        </div>
+        <!-- END: Mailchimp Subscribe Form -->
+
+    </div>
+
+    <div class="nk-gap-4"></div>
+{% endblock %}

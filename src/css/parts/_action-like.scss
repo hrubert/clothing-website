@@ -1,0 +1,157 @@
+/* Like / Dislike Animation */
+.nk-like-animation,
+.nk-dislike-animation {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 300px;
+    margin-top: -150px;
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 300px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: default;
+    visibility: hidden;
+    user-select: none;
+    background-color: $color_success;
+    opacity: 0;
+    z-index: 2000;
+
+    @media #{$media_xs} {
+        font-size: 5rem;
+    }
+    @media #{$media_xxs} {
+        font-size: 3rem;
+    }
+    @media (max-height: 500px) {
+        height: 200px;
+        margin-top: -100px;
+        line-height: 200px;
+    }
+
+    &.active {
+        animation: nk-like-animation .4s linear;
+    }
+}
+.nk-dislike-animation {
+    background-color: $color_danger;
+}
+
+// like animation
+@keyframes nk-like-animation {
+    0% {
+        visibility: visible;
+        opacity: 0;
+        transform: scale(1);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        opacity: .5;
+        transform: scale(1.1);
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(1.2);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* Heart */
+.nk-action-heart {
+    float: right;
+    font-style: italic;
+    cursor: pointer;
+    user-select: none;
+    opacity: .8;
+    transition: .3s opacity;
+
+    &:hover,
+    &.hover {
+        opacity: 1;
+    }
+
+    &,
+    &:focus,
+    &:hover,
+    &:active {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    > span {
+        display: inline-block;
+        margin-top: -3px;
+        font-size: 1rem;
+        vertical-align: middle;
+    }
+    > .num {
+        font-size: .7rem;
+    }
+
+    // icons
+    .liked-icon {
+        display: none;
+    }
+
+    &.liked {
+        .liked-icon {
+            display: inline-block;
+        }
+        .like-icon {
+            display: none;
+        }
+    }
+}
+
+/* Like / Dislike */
+.nk-action-like {
+    float: right;
+    margin-left: 13px;
+    font-style: italic;
+    user-select: none;
+
+    &,
+    &:focus,
+    &:hover,
+    &:active {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    > span {
+        display: inline-block;
+        margin-top: -3px;
+        font-size: 1rem;
+        vertical-align: middle;
+    }
+    > .num {
+        margin-right: 3px;
+        font-size: .7rem;
+    }
+    > .like-icon,
+    > .dislike-icon {
+        margin: 0 5px;
+        cursor: pointer;
+        opacity: .8;
+        transition: .3s opacity;
+
+        &:hover,
+        &.hover {
+            opacity: 1;
+        }
+    }
+
+    &.disliked > .like-icon,
+    &.liked > .dislike-icon {
+        opacity: .4;
+    }
+    &.disliked > .dislike-icon,
+    &.liked > .like-icon {
+        opacity: 1;
+    }
+}

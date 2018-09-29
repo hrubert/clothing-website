@@ -1,0 +1,156 @@
+{% set custom_css = 'assets/css/custom-typography-gaming.css' %}
+{% set header_title = 'Gaming Khaki' %}
+{% set header_size = 'xl' %}
+{% set header_title_show = false %}
+{% set header_visible = 7 %}
+{% set header_parallax = false %}
+{% set header_parallax_opacity = false %}
+{% set header_image = 'assets/images/gaming-banner.jpg' %}
+{% set side_buttons_classes = 'bg-white text-dark-1' %}
+{% set header_text = '
+    <h1 class="nk-title display-2">CALL OF SHOOTER</h1>
+
+    <div class="nk-gap-1"></div>
+    <a href="https://www.youtube.com/watch?v=c7nRTF2SowQ" class="nk-btn nk-btn-lg nk-btn-effect-5-left nk-btn-color-white text-dark-1 nk-video-fullscreen-toggle">
+        <span class="icon"><span class="fa fa-play-circle"></span></span>
+        Watch The Trailer
+    </a>
+    <div class="nk-gap"></div>
+    <small>The most powerful <strong>gaming</strong> theme find here - <a href="http://themeforest.net/item/youplay-gaming-wordpress-theme/11959042?ref=_nK" target="_blank" class="text-white">Youplay</a></small>
+' %}
+{% set navigation = {
+    "#preorder": {
+        "name": "PRE-ORDER"
+    },
+    "demo-gaming-news.html": {
+        "name": "NEWS"
+    },
+    "#": {
+        "name": "COMMUNITY"
+    }
+} %}
+{% set nav_contacts = false %}
+{% set nav_cart = false %}
+{% set nav_side = false %}
+{% set nav_logo = 'assets/images/logo-gaming.png' %}
+{% set nav_logo_size = 100 %}
+{% set nav_logo_url = 'demo-gaming.html' %}
+{% set footer = 1 %}
+{% extends 'layouts/layout-6.html' %}
+
+{% block content %}
+
+    <!-- START: Carousel with images and links -->
+    <div class="nk-box bg-black text-white">
+        <div class="nk-gap-2"></div>
+        <div class="container">
+            <div class="nk-carousel-2 nk-carousel-x3 nk-carousel-no-margin nk-carousel-all-visible text-center" data-cell-align="left">
+                <div class="nk-carousel-inner">
+                    <div><div class="nk-box-1">
+                        <a href="#">
+                            <img src="assets/images/gaming-3-thumb.jpg" alt="" class="nk-img">
+                        </a>
+                        <div class="nk-gap"></div>
+                        <h3 class="nk-title h5"><strong>Join Community</strong></h3>
+                        <div>Be the part of huge gaming community.</div>
+                    </div></div>
+                    <div><div class="nk-box-1">
+                        <a href="https://twitter.com/nkdevv">
+                            <img src="assets/images/gaming-4-thumb.jpg" alt="" class="nk-img">
+                        </a>
+                        <div class="nk-gap"></div>
+                        <h3 class="nk-title h5"><strong>Follow on Twitter</strong></h3>
+                        <div>We love and use this social network for smart people.</div>
+                    </div></div>
+                    <div><div class="nk-box-1">
+                        <a href="#">
+                            <img src="assets/images/gaming-1-thumb.jpg" alt="" class="nk-img">
+                        </a>
+                        <div class="nk-gap"></div>
+                        <h3 class="nk-title h5"><strong>Preorder Today</strong></h3>
+                        <div>We will send you Early Edition of Call of Shooter.</div>
+                    </div></div>
+                    <div><div class="nk-box-1">
+                        <a href="#">
+                            <img src="assets/images/gaming-6-thumb.jpg" alt="" class="nk-img">
+                        </a>
+                        <div class="nk-gap"></div>
+                        <h3 class="nk-title h5"><strong>Our News</strong></h3>
+                        <div>Get news from the source, and you don't miss anything important.</div>
+                    </div></div>
+                    <div><div class="nk-box-1">
+                        <a href="#">
+                            <img src="assets/images/gaming-2-thumb.jpg" alt="" class="nk-img">
+                        </a>
+                        <div class="nk-gap"></div>
+                        <h3 class="nk-title h5"><strong>Realistic Battles</strong></h3>
+                        <div>Get a charge of emotions with us.</div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-2"></div>
+    </div>
+    <!-- END: Carousel with images and links -->
+
+    <!-- START: Realistic Battles -->
+    <div class="nk-box bg-black text-white">
+        <div class="bg-image op-7">
+            <img class="jarallax-img" src="assets/images/gaming-2.jpg" alt="">
+        </div>
+        <div class="nk-gap-5"></div>
+        <div class="nk-gap-5"></div>
+        <div class="nk-gap-1"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="nk-title h1">REALISTIC BATTLES</h2>
+                    <div class="nk-gap"></div>
+                    <p class="lead">Eleifend sem ipsum conubia euismod potenti ante ad sem sed, dictumst hymenaeos torquent quis. Class leo. Odio orci velit nulla habitasse conubia tempor eleifend dui suscipit mauris eget mollis</p>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-1"></div>
+        <div class="nk-gap-5"></div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Realistic Battles -->
+
+    <!-- START: The True Emotions -->
+    <div class="nk-box bg-black text-white">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+            <img src="assets/images/gaming-7.jpg" alt="" class="nk-img">
+            <div class="nk-gap-2"></div>
+            <h2 class="nk-title h1 mb-0">The True Emotions</h2>
+            <div class="nk-gap-1"></div>
+            <p class="lead">Vivamus maecenas, praesent. Sociosqu laoreet risus purus. Sed mus vivamus. Pede metus rutrum dui Aliquet ac auctor nulla montes Donec fermentum penatibus feugiat elementum interdum Consequat ipsum turpis proin taciti cursus senectus urna ultrices orci dui id vitae massa hendrerit consectetuer lectus augue inceptos viverra erat. Vitae nostra fames neque.</p>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: The True Emotions -->
+
+    <!-- START: Realistic Battles -->
+    <div class="nk-box bg-black text-white" id="preorder">
+        <div class="bg-image op-7">
+            <img class="jarallax-img" src="assets/images/gaming-5.jpg" alt="">
+        </div>
+        <div class="nk-gap-5"></div>
+        <div class="nk-gap-5"></div>
+        <div class="nk-gap-1"></div>
+        <div class="container text-center">
+            <h2 class="nk-title display-4">PRE-ORDER TODAY</h2>
+            <div class="nk-gap"></div>
+            <h3 class="nk-title h4">Xbox One and Play Station 4</h3>
+            <div class="nk-gap-1"></div>
+            <a href="#" class="nk-btn nk-btn-x2 nk-btn-effect-5-left nk-btn-color-white text-dark-1">
+                Pre-Order
+            </a>
+        </div>
+        <div class="nk-gap-1"></div>
+        <div class="nk-gap-5"></div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Realistic Battles -->
+
+{% endblock %}

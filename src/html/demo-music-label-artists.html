@@ -1,0 +1,141 @@
+{% set custom_css = 'assets/css/custom-typography-music-label.css' %}
+{% set header_title = 'Artists' %}
+{% set header_show = false %}
+{% set nav_logo = 'assets/images/logo-music-label-light.png' %}
+{% set nav_logo_url = 'demo-music-label.html' %}
+{% set nav_light = true %}
+{% set nav_logo_top_light = true %}
+{% set nav_sticky = false %}
+{% set navigation = {
+    "demo-music-label-about.html": {
+        "name": "ABOUT"
+    },
+    "demo-music-label-artists.html": {
+        "name": "ARTISTS"
+    },
+    "demo-music-label-releases.html": {
+        "name": "RELEASES"
+    },
+    "demo-music-label-videos.html": {
+        "name": "VIDEOS"
+    },
+    "demo-music-label-agenda.html": {
+        "name": "AGENDA"
+    },
+    "demo-music-label-news.html": {
+        "name": "NEWS"
+    }
+} %}
+{% set page_boxed = true %}
+{% set footer = 6 %}
+{% set footer_bg = false %}
+{% extends 'layouts/layout-8.html' %}
+
+{% block content %}
+
+    <!-- START: Artists -->
+    <div class="nk-gap-2"></div>
+    <div class="container">
+        <div class="row vertical-gap">
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-image-box-1-a">
+                    <a href="page-about-me.html" class="nk-image-box-link"></a>
+                    <img src="assets/images/label-cover-4-v.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h3 class="nk-title text-white h5">Carrie</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-image-box-1-a">
+                    <a href="page-about-me.html" class="nk-image-box-link"></a>
+                    <img src="assets/images/label-cover-3-v.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h3 class="nk-title text-white h5">Cherly</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-image-box-1-a">
+                    <a href="page-about-me.html" class="nk-image-box-link"></a>
+                    <img src="assets/images/label-cover-2-v.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h3 class="nk-title text-white h5">Bryan</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-image-box-1-a">
+                    <a href="page-about-me.html" class="nk-image-box-link"></a>
+                    <img src="assets/images/label-cover-1-v.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h3 class="nk-title text-white h5">Ella</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-image-box-1-a">
+                    <a href="page-about-me.html" class="nk-image-box-link"></a>
+                    <img src="assets/images/label-cover-5-v.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h3 class="nk-title text-white h5">Jane</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-image-box-1-a">
+                    <a href="page-about-me.html" class="nk-image-box-link"></a>
+                    <img src="assets/images/label-cover-6-v.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h3 class="nk-title text-white h5">Paula</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-image-box-1-a">
+                    <a href="page-about-me.html" class="nk-image-box-link"></a>
+                    <img src="assets/images/label-cover-7-v.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h3 class="nk-title text-white h5">Tyrone</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-image-box-1-a">
+                    <a href="page-about-me.html" class="nk-image-box-link"></a>
+                    <img src="assets/images/label-cover-8-v.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h3 class="nk-title text-white h5">Marion</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-4"></div>
+    <!-- END: Artists -->
+
+    {% set instagram_template = '<div class="col-4 col-md-2"><a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="nk-img-stretch"></a></div>' %}
+    <!-- START: Instagram -->
+    <div class="nk-box text-center">
+        <div class="nk-instagram row no-gutters multi-column" data-instagram-template='{{ instagram_template | safe }}' data-instagram-quality="md"
+        ></div>
+    </div>
+    <!-- END: Instagram -->
+
+{% endblock %}

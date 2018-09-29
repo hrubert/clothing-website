@@ -1,0 +1,229 @@
+/* Placeholders */
+::placeholder,
+.form-control::placeholder {
+    color: inherit;
+    opacity: .5;
+}
+
+
+/* Ratings */
+.nk-rating {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 1.2rem;
+    color: $color_main_1;
+
+    input {
+        display: none;
+
+        &:checked ~ label {
+            span:first-child {
+                display: none;
+            }
+            span:last-child {
+                display: block;
+            }
+        }
+    }
+    label {
+        position: relative;
+        display: block;
+        float: right;
+        padding-right: 2px;
+        padding-left: 2px;
+        margin: 0;
+        clear: none;
+        line-height: 1;
+        cursor: default;
+        cursor: pointer;
+
+        span:first-child {
+            display: none;
+            display: block;
+        }
+        span:last-child {
+            display: none;
+        }
+
+        &::after,
+        &::before {
+            content: none;
+            display: none;
+        }
+
+        &:hover,
+        &:hover ~ label {
+            span:first-child {
+                display: none;
+            }
+            span:last-child {
+                display: block;
+            }
+        }
+    }
+}
+
+/* From Style 1 */
+.form-control {
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #fff;
+    background-color: rgba(#000, .2);
+    border: none;
+    border-radius: 0;
+    transition: .3s background-color;
+
+    &:focus,
+    &.focus {
+        color: #fff;
+        background-color: rgba(#000, .4);
+    }
+}
+select.form-control {
+    padding: 6px 20px;
+}
+
+/* From Style 2 */
+.nk-form-style-1 {
+    .form-control {
+        color: $color_dark_1;
+        background-color: rgba(#ccc, .3);
+
+        &:focus,
+        &.focus {
+            background-color: rgba(#ccc, .5);
+        }
+    }
+}
+
+
+/* Input Number */
+.nk-form-control-number {
+    position: relative;
+    padding-right: 25px;
+    white-space: nowrap;
+
+    > * {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+
+    .nk-form-control-number-down,
+    .nk-form-control-number-up {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 50%;
+        font-family: sans-serif;
+        font-size: 12px;
+        line-height: 100%;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        background-color: rgba(#ccc, .3);
+        border-left: 1px solid rgba(#ccc, .4);
+        transition: .3s background-color;
+
+        &:hover {
+            background-color: rgba(#ccc, .5);
+        }
+    }
+    .nk-form-control-number-down {
+        top: 50%;
+        &::after {
+            content: "-";
+            flex: 1;
+            vertical-align: middle;
+        }
+    }
+    .nk-form-control-number-up {
+        border-bottom: 1px solid rgba(#ccc, .4);
+        &::after {
+            content: "+";
+            flex: 1;
+            vertical-align: middle;
+        }
+    }
+
+    input {
+        text-align: center;
+        -moz-appearance: textfield; // stylelint-disable-line
+
+        &:focus,
+        &.focus,
+        &:active {
+            border-color: #fff;
+        }
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        margin: 0;
+        -webkit-appearance: none; // stylelint-disable-line
+    }
+}
+
+
+/* Sign Form */
+.nk-sign-form {
+    width: 354px;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    overflow: hidden;
+    font-size: 1rem;
+
+    .nk-sign-form-container {
+        position: relative;
+    }
+
+    h4 {
+        margin-bottom: 25px;
+    }
+
+    // forms
+    .nk-sign-form-login,
+    .nk-sign-form-lost,
+    .nk-sign-form-register {
+        display: none;
+        width: 100%;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+
+/* Validation */
+div.nk-error {
+    padding: 0;
+    margin: 5px 0;
+    font-weight: 400;
+    color: $color_danger;
+    background-color: transparent;
+    z-index: 1;
+}
+.form-control.nk-error,
+.nk-form-style-1 .form-control.nk-error {
+    background-color: rgba($color_danger, .4);
+}
+
+.nk-form-response-success {
+    display: none;
+    margin-bottom: 10px;
+    color: $color_success;
+}
+.nk-form-response-error {
+    display: none;
+    margin-bottom: 10px;
+    color: $color_danger;
+}

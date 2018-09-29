@@ -1,0 +1,160 @@
+
+@mixin set-page-border($size: 35px) {
+    .nk-page-border-t,
+    .nk-page-border-b {
+        height: $size;
+    }
+    .nk-page-border-r,
+    .nk-page-border-l {
+        width: $size;
+    }
+    & ~ {
+        .nk-main {
+            margin: $size;
+        }
+
+        // navbar
+        .nk-header,
+        .nk-header .nk-navbar.nk-navbar-fixed {
+            top: $size;
+            margin-right: $size;
+            margin-left: $size;
+        }
+
+        // navbar left
+        .nk-navbar-left.nk-navbar-side {
+            top: $size;
+            bottom: $size;
+            left: $size;
+        }
+
+        // side navbar
+        .nk-navbar-side {
+            top: $size;
+            bottom: $size;
+        }
+        .nk-navbar-side.nk-navbar-right-side {
+            right: $size;
+        }
+        .nk-navbar-side.nk-navbar-left-side {
+            left: $size;
+        }
+
+        // full navbar
+        .nk-navbar-full {
+            top: $size;
+            right: $size;
+            bottom: $size;
+            left: $size;
+        }
+
+        // nav togglers
+        .nk-nav-toggler-right {
+            top: $size + 20px;
+            right: $size + 20px;
+        }
+        .nk-nav-toggler-left {
+            top: $size + 20px;
+            left: $size + 20px;
+        }
+
+        // search
+        .nk-search {
+            right: $size;
+            bottom: $size;
+            left: $size;
+        }
+
+        // share
+        .nk-share-place {
+            top: -$share_place_height + $size;
+            right: $size;
+            left: $size;
+        }
+
+        // audio player
+        .nk-audio-player-main {
+            right: $size;
+            bottom: $size - $audio_player_height;
+            left: $size;
+        }
+
+        // side buttons
+        .nk-side-buttons {
+            right: $size;
+            bottom: $size;
+        }
+
+        // page nav
+        .nk-page-nav {
+            .nk-page-nav-prev {
+                left: -$page_nav_width + $size;
+            }
+            .nk-page-nav-next {
+                right: -$page_nav_width + $size;
+            }
+        }
+        .nk-page-nav-2 {
+            .nk-page-nav-prev {
+                left: -$page_nav_2_width + $size;
+            }
+            .nk-page-nav-next {
+                right: -$page_nav_2_width + $size;
+            }
+        }
+
+        // bootstrap modal
+        .nk-main .nk-modal.modal,
+        .nk-modal.modal {
+            top: $size;
+            right: $size;
+            bottom: $size;
+            left: $size;
+        }
+    }
+}
+
+@media #{$media_larger_xs} {
+    .nk-page-border {
+        .nk-page-border-t,
+        .nk-page-border-r,
+        .nk-page-border-b,
+        .nk-page-border-l {
+            position: fixed;
+            background-color: $page_border_color;
+            z-index: 2000;
+        }
+        .nk-page-border-t,
+        .nk-page-border-b {
+            left: 0;
+            width: 100%;
+        }
+        .nk-page-border-t {
+            top: 0;
+        }
+        .nk-page-border-b {
+            bottom: 0;
+        }
+        .nk-page-border-r,
+        .nk-page-border-l {
+            top: 0;
+            height: 100%;
+        }
+        .nk-page-border-r {
+            right: 0;
+        }
+        .nk-page-border-l {
+            left: 0;
+        }
+
+
+        @include set-page-border($page_border_size);
+
+        &.nk-page-border-md {
+            @include set-page-border($page_border_size_md);
+        }
+        &.nk-page-border-sm {
+            @include set-page-border($page_border_size_sm);
+        }
+    }
+}

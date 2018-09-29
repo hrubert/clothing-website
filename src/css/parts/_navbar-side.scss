@@ -1,0 +1,333 @@
+.nk-navbar-side {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: .2s transform ease-in-out;
+    transform: translateX(0);
+    z-index: 1002;
+
+    // background
+    &::after {
+        background-color: rgba($color_dark_1, 1);
+    }
+    &.nk-navbar-light::after {
+        background-color: rgba(#fff, 1);
+    }
+    &.nk-navbar-blur {
+        &::after,
+        &.nk-navbar-solid::after {
+            background-color: rgba($color_dark_1, .75);
+        }
+        &.nk-navbar-light::after,
+        &.nk-navbar-light.nk-navbar-solid::after {
+            background-color: rgba(#fff, .85);
+        }
+    }
+
+    @mixin rightSideSize($width) {
+        width: $width;
+        margin-right: -$width;
+    }
+    @mixin leftSideSize($width) {
+        width: $width;
+        margin-left: -$width;
+    }
+
+    // left side
+    &.nk-navbar-left-side {
+        left: 0;
+        @include leftSideSize(250px);
+
+        @media (max-width: 400px) {
+            @include leftSideSize(200px);
+        }
+    }
+
+    // right side
+    &.nk-navbar-right-side {
+        right: 0;
+        @include rightSideSize(250px);
+
+        @media (max-width: 400px) {
+            @include rightSideSize(200px);
+        }
+    }
+
+    // large size
+    &.nk-navbar-lg {
+        // left side
+        &.nk-navbar-left-side {
+            @include leftSideSize(350px);
+            @media (max-width: 550px) {
+                @include leftSideSize(300px);
+            }
+            @media (max-width: 450px) {
+                @include leftSideSize(250px);
+            }
+        }
+
+        // right side
+        &.nk-navbar-right-side {
+            @include rightSideSize(350px);
+            @media (max-width: 550px) {
+                @include rightSideSize(300px);
+            }
+            @media (max-width: 450px) {
+                @include rightSideSize(250px);
+            }
+        }
+    }
+
+    // open
+    &.open {
+        transform: translateX(100%);
+
+        &.nk-navbar-right-side {
+            transform: translateX(-100%);
+        }
+    }
+
+    // logo
+    .nk-nav-logo {
+        display: block;
+        width: 100%;
+        padding: 15px 35px;
+    }
+    // logo for lg side
+    &.nk-navbar-lg .nk-nav-logo {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    // navigation
+    .nano {
+        height: 100%;
+        overflow-y: auto;
+    }
+    .nk-nav {
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+
+        .dropdown > li,
+        > li {
+            position: static;
+            display: block;
+
+            > a {
+                padding: 12px 40px;
+                color: rgba(#fff, .8);
+
+                &,
+                .link-effect-shade {
+                    white-space: normal;
+                }
+            }
+
+            > a::before,
+            > a::after {
+                content: none;
+            }
+        }
+
+        // drop item icon
+        .nk-drop-item > a,
+        > .nk-drop-item > a,
+        .bropdown-back > a {
+            position: relative;
+        }
+        .nk-drop-item .nk-drop-item > a::after,
+        .nk-drop-item > a::after,
+        > .nk-drop-item > a::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: 40px;
+            left: auto;
+            width: 0;
+            height: 0;
+            margin-top: -1px;
+            color: inherit;
+            border: none;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-left: 2px solid;
+            opacity: .6 !important; // stylelint-disable-line
+            transition: .3s opacity;
+            transform: none;
+            will-change: opacity;
+        }
+        .nk-drop-item > a:hover::after,
+        .nk-drop-item > a.hover::after,
+        > .nk-drop-item > a:hover::after,
+        > .nk-drop-item > a.hover::after {
+            width: 0;
+            height: 0;
+            opacity: 1 !important; // stylelint-disable-line
+        }
+    }
+
+    // dropdown
+    .nk-nav .dropdown {
+        display: block;
+        padding: 0;
+        background-color: transparent;
+        opacity: 1;
+
+        &::before {
+            content: none;
+        }
+    }
+    .nk-nav .nk-drop-item > .dropdown,
+    .nk-nav .nk-drop-item .nk-drop-item > .dropdown {
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+
+        > li > a {
+            display: none;
+        }
+    }
+    // back icon
+    .dropdown > .bropdown-back > a::after {
+        content: "" !important; // stylelint-disable-line
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 30px;
+        width: 0;
+        height: 0;
+        margin-top: -1px;
+        color: inherit;
+        border: none;
+        border-top: 2px solid transparent;
+        border-right: 2px solid;
+        border-bottom: 2px solid transparent;
+        opacity: .6;
+        transition: .3s opacity;
+        transform: none;
+        will-change: opacity;
+    }
+    .dropdown > .bropdown-back > a:hover::after,
+    .dropdown > .bropdown-back > a.hover::after {
+        opacity: 1;
+    }
+
+    // icons
+    .nk-nav-icons {
+        list-style: none;
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+
+            > a {
+                display: inline-block;
+                padding: 0 15px;
+
+                > i,
+                > span {
+                    height: 32px;
+                    font-size: 1.2rem;
+                    line-height: 32px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    // social
+    .nk-nav-social {
+        padding: 30px 40px;
+
+        > ul li {
+            display: inline-block;
+            text-align: center;
+
+            > a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin: 2px 4px;
+                font-size: 1.15rem;
+                line-height: 40px;
+                color: rgba(#fff, .8);
+                border: 1px solid rgba(#fff, .8);
+                border-radius: 20px;
+                transition: .3s color, .3s background-color, .3s border;
+                will-change: color, background-color, border;
+
+                &:hover,
+                &.hover {
+                    color: $color_dark_1;
+                    background-color: #fff;
+                    border-color: #fff;
+                }
+            }
+        }
+        > footer {
+            padding-top: 30px;
+            color: rgba(#fff, .8);
+        }
+    }
+
+    // light navbar
+    &.nk-navbar-light {
+        .nk-nav {
+            .dropdown > li,
+            > li {
+                > a {
+                    color: rgba($color_dark_4, .85);
+                }
+            }
+            .dropdown {
+                background-color: transparent;
+            }
+        }
+
+        // social
+        .nk-nav-social {
+            > ul li {
+                > a {
+                    color: rgba($color_dark_4, .85);
+                    border: 1px solid rgba($color_dark_4, .85);
+
+                    &:hover,
+                    &.hover {
+                        color: #fff;
+                        background-color: $color_dark_4;
+                        border-color: $color_dark_4;
+                    }
+                }
+            }
+            > footer {
+                color: rgba($color_dark_4, .85);
+            }
+        }
+    }
+}
+
+// overlay
+.nk-navbar-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: url("../images/nav-close-cursor.png") 15 15, pointer;
+    visibility: hidden;
+    background-color: rgba($color_dark_1, .6);
+    opacity: 0;
+    transition: .2s opacity ease-in-out, .2s visibility;
+    z-index: 1001;
+
+    .nk-navbar-side.open ~ & {
+        visibility: visible;
+        opacity: 1;
+    }
+}

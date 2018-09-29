@@ -1,0 +1,168 @@
+<!--
+    START: Audio Player
+
+    Additional Classes:
+        nk-audio-player-autoplay
+        nk-audio-player-pin
+-->
+<div class="nk-audio-player-main nk-audio-player-pin">
+    <div class="container">
+        <div class="nk-audio-inner">
+            <div class="nk-audio-controls">
+                <div class="nk-audio-prev">
+                    <span class="ion-ios-rewind"></span>
+                </div>
+                <div class="nk-audio-play-pause">
+                    <div class="nk-audio-play">
+                        <span class="ion-play ml-3"></span>
+                    </div>
+                    <div class="nk-audio-pause">
+                        <span class="ion-pause"></span>
+                    </div>
+                </div>
+                <div class="nk-audio-next">
+                    <span class="ion-ios-fastforward"></span>
+                </div>
+            </div>
+            <div class="nk-audio-title">
+                <div>
+                </div>
+            </div>
+            <div class="nk-audio-time"></div>
+            <!-- Volume controller will be automatically removed on iOs devices, because of limitation of volume control -->
+            <div class="nk-audio-volume">
+                <div class="nk-audio-volume-icon">
+                    <div class="nk-audio-volume-icon-muted">
+                        <span class="ion-android-volume-off"></span>
+                    </div>
+                    <div class="nk-audio-volume-icon-small">
+                        <span class="ion-android-volume-mute"></span>
+                    </div>
+                    <div class="nk-audio-volume-icon-half">
+                        <span class="ion-android-volume-down"></span>
+                    </div>
+                    <div class="nk-audio-volume-icon-full">
+                        <span class="ion-android-volume-up"></span>
+                    </div>
+                </div>
+                <div class="nk-audio-volume-inner">
+                    <div class="nk-audio-volume-current"></div>
+                </div>
+            </div>
+            <div class="nk-audio-settings">
+                <div class="nk-audio-loop" title="Loop">
+                    <span class="ion-loop"></span>
+                </div>
+                <div class="nk-audio-shuffle" title="Shuffle">
+                    <span class="ion-shuffle"></span>
+                </div>
+                <div class="nk-audio-playlist" title="Show/Hide Playlist">
+                    <span class="ion-android-list"></span>
+                </div>
+                <div class="nk-audio-pin" title="Pin/Unpin Player">
+                    <span class="ion-pin"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nk-audio-progress">
+        <div class="nk-audio-progress-current"></div>
+    </div>
+    <div class="nk-audio-player-playlist">
+        <div class="nano">
+            <div class="nano-content">
+                <ul class="nk-audio-player-playlist-inner"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nk-side-buttons nk-side-buttons-left d-md-none">
+    <ul>
+        <li><a href="#" class="nk-audio-pin"><span class="ion-ios-musical-notes"></span></a></li>
+    </ul>
+</div>
+<!-- END: Audio Player -->
+
+<!-- START: Default hidden playlist (will not be shown on page)  -->
+<ul class="nk-audio-playlist nk-audio-playlist-hidden active">
+    <li data-src="assets/mp3/soundroll-fight-no-more.mp3">
+        <div class="nk-audio-playlist-title">
+            <strong>soundroll</strong> - Fight No More
+        </div>
+        <div class="nk-audio-playlist-buttons">
+            <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK" target="_blank">
+                <span class="ion-bag"></span>
+            </a>
+            <a href="assets/mp3/soundroll-fight-no-more.mp3" download>
+                <span class="fa fa-download"></span>
+            </a>
+        </div>
+        <div class="nk-audio-playlist-duration">
+            02:43
+        </div>
+    </li>
+    <li data-src="assets/mp3/soundroll-driving-in-my-car.mp3">
+        <div class="nk-audio-playlist-title">
+            <strong>soundroll</strong> - Driving in My Car
+        </div>
+        <div class="nk-audio-playlist-duration">
+            02:41
+        </div>
+    </li>
+    <li data-src="assets/mp3/soundroll-total-overdrive.mp3">
+        <div class="nk-audio-playlist-title">
+            <strong>soundroll</strong> - Total Overdrive
+        </div>
+        <div class="nk-audio-playlist-buttons">
+            <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK" target="_blank">
+                <span class="ion-bag"></span>
+            </a>
+        </div>
+        <div class="nk-audio-playlist-duration">
+            03:59
+        </div>
+    </li>
+    <li data-src="assets/mp3/soundroll-rock.mp3">
+        <div class="nk-audio-playlist-title">
+            <strong>soundroll</strong> - Rock
+        </div>
+        <div class="nk-audio-playlist-buttons">
+            <a href="assets/mp3/soundroll-rock.mp3" download>
+                <span class="fa fa-download"></span>
+            </a>
+        </div>
+        <div class="nk-audio-playlist-duration">
+            02:41
+        </div>
+    </li>
+    <li data-src="assets/mp3/soundroll-extreme-driving.mp3">
+        <div class="nk-audio-playlist-title">
+            <strong>soundroll</strong> - Extreme Driving
+        </div>
+        <div class="nk-audio-playlist-buttons">
+            <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK" target="_blank">
+                <span class="ion-bag"></span>
+            </a>
+            <a href="assets/mp3/soundroll-extreme-driving.mp3" download>
+                <span class="fa fa-download"></span>
+            </a>
+        </div>
+        <div class="nk-audio-playlist-duration">
+            02:57
+        </div>
+    </li>
+    <li data-src="assets/mp3/soundroll-wrong-way.mp3">
+        <div class="nk-audio-playlist-title">
+            <strong>soundroll</strong> - Wrong Way
+        </div>
+        <div class="nk-audio-playlist-buttons">
+            <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK" target="_blank">
+                <span class="ion-bag"></span>
+            </a>
+        </div>
+        <div class="nk-audio-playlist-duration">
+            05:34
+        </div>
+    </li>
+</ul>
+<!-- END: Default hidden playlist  -->

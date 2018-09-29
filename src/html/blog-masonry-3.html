@@ -1,0 +1,62 @@
+{% set header_title = 'Blog Masonry' %}
+{% set header_image = 'assets/images/image-28.jpg' %}
+{% set header_class = 'bg-white text-dark-1' %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="nk-gap-4"></div>
+
+                <!-- START: Posts List -->
+                <div class="nk-blog-isotope nk-isotope nk-isotope-gap nk-isotope-3-cols">
+
+                    {% for post in posts %}
+                        <!-- START: Post -->
+                        <div class="nk-isotope-item">
+                            <div class="nk-blog-post">
+                                <div class="nk-post-category">
+                                    In {{ post.cat | safe}}
+                                </div>
+                                <h2 class="nk-post-title h4"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+                                <a href="{{ post.url }}"><img src="{{ post.thumb_lg }}" alt="" class="nk-img-stretch"></a>
+
+                                <div class="nk-post-text">
+                                    {{ post.excerpt_sm | safe }}
+                                </div>
+
+                                <div class="nk-post-meta">
+                                    <div class="nk-post-meta-right">
+                                        <a class="nk-post-comments-count" href="{{ post.url }}#comments">{{ post.comments_count }}</a>
+                                        <span class="nk-action-heart">
+                                            <span class="like-icon ion-android-favorite-outline"></span>
+                                            <span class="liked-icon ion-android-favorite"></span>
+                                            <span class="num">{{ post.likes_count }}</span>
+                                        </span>
+                                    </div>
+                                    <div class="nk-post-date">
+                                        {{ post.date }} <span class="nk-post-by">by {{ post.by | safe }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Post -->
+                    {% endfor %}
+
+                </div>
+                <!-- END: Posts List -->
+
+                <!-- START: Pagination -->
+                <div class="nk-pagination nk-pagination-center">
+                    <a href="#!" class="nk-btn nk-btn-sm nk-btn-circle nk-btn-color-dark-1">Load More ...</a>
+                </div>
+                <!-- END: Pagination -->
+
+                <div class="nk-gap-4"></div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

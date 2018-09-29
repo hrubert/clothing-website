@@ -1,0 +1,93 @@
+{% set custom_css = 'assets/css/custom-typography-music-label.css' %}
+{% set header_title = 'News' %}
+{% set header_show = false %}
+{% set nav_logo = 'assets/images/logo-music-label-light.png' %}
+{% set nav_logo_url = 'demo-music-label.html' %}
+{% set nav_light = true %}
+{% set nav_logo_top_light = true %}
+{% set nav_sticky = false %}
+{% set navigation = {
+    "demo-music-label-about.html": {
+        "name": "ABOUT"
+    },
+    "demo-music-label-artists.html": {
+        "name": "ARTISTS"
+    },
+    "demo-music-label-releases.html": {
+        "name": "RELEASES"
+    },
+    "demo-music-label-videos.html": {
+        "name": "VIDEOS"
+    },
+    "demo-music-label-agenda.html": {
+        "name": "AGENDA"
+    },
+    "demo-music-label-news.html": {
+        "name": "NEWS"
+    }
+} %}
+{% set page_boxed = true %}
+{% set footer = 6 %}
+{% set footer_bg = false %}
+{% extends 'layouts/layout-8.html' %}
+
+{% block content %}
+
+    <!-- START: News -->
+    <div class="nk-gap-2"></div>
+    <div class="container">
+        <div class="nk-blog-isotope nk-isotope nk-isotope-gap nk-isotope-3-cols">
+
+            {% for post in posts %}
+                <!-- START: Post -->
+                <div class="nk-isotope-item">
+                    <div class="nk-blog-post">
+                        <div class="nk-post-category">
+                            In {{ post.cat | safe}}
+                        </div>
+                        <h2 class="nk-post-title h5"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+                        <a href="{{ post.url }}"><img src="{{ post.thumb_lg }}" alt="" class="nk-img-stretch"></a>
+
+                        <div class="nk-post-text">
+                            {{ post.excerpt | safe }}
+                        </div>
+
+                        <div class="nk-post-meta">
+                            <div class="nk-post-meta-right">
+                                <a class="nk-post-comments-count" href="{{ post.url }}#comments">{{ post.comments_count }}</a>
+                                <span class="nk-action-heart">
+                                    <span class="like-icon ion-android-favorite-outline"></span>
+                                    <span class="liked-icon ion-android-favorite"></span>
+                                    <span class="num">{{ post.likes_count }}</span>
+                                </span>
+                            </div>
+                            <div class="nk-post-date">
+                                {{ post.date }} <span class="nk-post-by">by {{ post.by | safe }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Post -->
+            {% endfor %}
+
+        </div>
+
+        <!-- START: Pagination -->
+        <div class="nk-pagination nk-pagination-center">
+            <a href="#!" class="nk-btn nk-btn-sm nk-btn-circle nk-btn-color-dark-1">Load More ...</a>
+        </div>
+        <!-- END: Pagination -->
+    </div>
+    <div class="nk-gap-4"></div>
+    <!-- END: News -->
+
+    {% set instagram_template = '<div class="col-4 col-md-2"><a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="nk-img-stretch"></a></div>' %}
+    <!-- START: Instagram -->
+    <div class="nk-box text-center">
+        <div class="nk-instagram row no-gutters multi-column" data-instagram-template='{{ instagram_template | safe }}' data-instagram-quality="md"
+        ></div>
+    </div>
+    <!-- END: Instagram -->
+
+{% endblock %}

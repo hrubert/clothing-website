@@ -1,0 +1,106 @@
+{% set header_title = 'Portfolio 1 With Filter' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="nk-gap-4"></div>
+
+        <ul class="nk-isotope-filter">
+            <li class="active" data-filter="*">All</li>
+            <li data-filter="Forest">Forest</li>
+            <li data-filter="Mountains">Mountains</li>
+            <li data-filter="Water">Water</li>
+            <li data-filter="Road">Road</li>
+            <li data-filter="Custom">Custom</li>
+        </ul>
+        <div class="nk-isotope nk-isotope-gap-small">
+            <div class="nk-portfolio-item nk-isotope-item" data-filter="Custom">
+                <div class="nk-image-box">
+                    <img src="assets/images/portfolio-0-primary.jpg" alt="">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h2 class="nk-image-box-title h3">Custom Content Here</h2>
+                            <div class="nk-image-box-sub-title">See below for big content place</div>
+                            <div class="nk-gap"></div>
+                            <a href="#!" class="nk-btn nk-btn-sm nk-btn-effect-2-right nk-btn-outline nk-btn-circle nk-btn-color-dark-1">
+                                <span>Some Action</span>
+                                <span class="icon"><i class="ion-paper-airplane"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-portfolio-item nk-isotope-item" data-filter="{{ portfolio[0].filter }}">
+                <div class="nk-image-box-1">
+                    <a href="{{ portfolio[0].url }}" class="nk-image-box-link"></a>
+                    <img class="nk-portfolio-image" src="{{ portfolio[0].thumb_primary }}" alt="{{ portfolio[0].title }}">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h2 class="nk-image-box-title nk-portfolio-title h3">{{ portfolio[0].title }}</h2>
+                            <div class="nk-image-box-sub-title">{{ portfolio[0].date }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-portfolio-item nk-isotope-item nk-isotope-item-x2" data-filter="{{ portfolio[1].filter }}">
+                <div class="nk-image-box-1">
+                    <a href="{{ portfolio[1].url }}" class="nk-image-box-link"></a>
+                    <img class="nk-portfolio-image" src="{{ portfolio[1].thumb_hwide_gap }}" alt="{{ portfolio[1].title }}">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h2 class="nk-image-box-title nk-portfolio-title h3">{{ portfolio[1].title }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-portfolio-item nk-isotope-item" data-filter="{{ portfolio[2].filter }}">
+                <div class="nk-image-box-1">
+                    <a href="{{ portfolio[2].url }}" class="nk-image-box-link"></a>
+                    <img class="nk-portfolio-image" src="{{ portfolio[2].thumb_primary }}" alt="{{ portfolio[2].title }}">
+                </div>
+            </div>
+            <div class="nk-portfolio-item nk-isotope-item" data-filter="{{ portfolio[3].filter }}">
+                <div class="nk-image-box-1">
+                    <a href="{{ portfolio[3].url }}" class="nk-image-box-link"></a>
+                    <img class="nk-portfolio-image" src="{{ portfolio[3].thumb_vwide_gap }}" alt="{{ portfolio[3].title }}">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h2 class="nk-image-box-title nk-portfolio-title h3">{{ portfolio[3].title }}</h2>
+                            <div class="nk-image-box-sub-title">{{ portfolio[3].date }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-portfolio-item nk-isotope-item nk-isotope-item-x2" data-filter="{{ portfolio[8].filter }}">
+                <div class="nk-image-box bg-dark-1 text-white">
+                    <img class="op-2" src="{{ portfolio[8].thumb_primary }}" alt="{{ portfolio[8].title }}">
+                    <div class="nk-image-box-overlay nk-image-box-center text-center">
+                        <div>
+                            <div class="nk-box-3">
+                                <h2 class="nk-image-box-big-title">{{ portfolio[8].title }}</h2>
+                                <div class="nk-gap-2"></div>
+                                <a href="{{ portfolio[8].url }}" class="nk-btn nk-btn-effect-5-left nk-btn-color-main-2">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-portfolio-item nk-isotope-item" data-filter="{{ portfolio[4].filter }}">
+                <div class="nk-image-box-1 hover">
+                    <a href="{{ portfolio[4].url }}" class="nk-image-box-link"></a>
+                    <img class="nk-portfolio-image" src="{{ portfolio[4].thumb_primary }}" alt="{{ portfolio[4].title }}">
+                    <div class="nk-image-box-overlay nk-image-box-center">
+                        <div>
+                            <h2 class="nk-image-box-title nk-portfolio-title h3">{{ portfolio[4].title }}</h2>
+                            <div class="nk-image-box-sub-title">{{ portfolio[4].date }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nk-gap-4"></div>
+    </div>
+
+{% endblock %}

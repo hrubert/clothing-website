@@ -1,0 +1,137 @@
+.xdsoft_datetimepicker.xdsoft_nk {
+    display: table;
+    width: 100%;
+    padding: 20px;
+    font-family: inherit;
+    color: inherit;
+    background: rgba($color_dark_1, .4);
+    border: none;
+
+    > .xdsoft_datepicker,
+    > .xdsoft_timepicker,
+    > .xdsoft_datepicker.active,
+    > .xdsoft_timepicker.active {
+        display: table-cell;
+        float: none;
+        margin: 0;
+        vertical-align: top;
+    }
+    > .xdsoft_datepicker {
+        width: 99%;
+    }
+    > .xdsoft_timepicker {
+        min-width: 70px + 10px;
+        padding-top: 36px;
+        padding-left: 10px;
+    }
+
+    .xdsoft_label {
+        float: none;
+        padding: 0 4px;
+        padding-bottom: 12px;
+        background-color: transparent;
+    }
+    .xdsoft_calendar td,
+    .xdsoft_calendar th,
+    .xdsoft_timepicker .xdsoft_time_box > div > div {
+        padding: 5px;
+        color: inherit;
+        text-align: center;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    .xdsoft_timepicker .xdsoft_time_box {
+        height: 180px;
+        border: none;
+    }
+    .xdsoft_timepicker .xdsoft_time_box > div > div {
+        height: auto;
+        line-height: inherit;
+    }
+
+    .xdsoft_calendar th:nth-child(6),
+    .xdsoft_calendar th:nth-child(7),
+    .xdsoft_calendar td.xdsoft_day_of_week5,
+    .xdsoft_calendar td.xdsoft_day_of_week6 {
+        color: $color_main_5;
+
+        &.xdsoft_disabled,
+        &.xdsoft_disabled:hover {
+            color: $color_main_5 !important; // stylelint-disable-line
+        }
+    }
+    .xdsoft_calendar td > div {
+        padding: 0;
+    }
+    .xdsoft_timepicker .xdsoft_prev,
+    .xdsoft_timepicker .xdsoft_next {
+        display: none;
+    }
+    .xdsoft_calendar td.xdsoft_default,
+    .xdsoft_calendar td.xdsoft_current,
+    .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current,
+    .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+        color: #fff;
+        background-color: $color_main_1;
+    }
+    .xdsoft_calendar td:hover,
+    .xdsoft_timepicker .xdsoft_time_box > div > div:hover,
+    .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
+        background: $color_dark_1 !important; // stylelint-disable-line
+    }
+    .xdsoft_calendar td.xdsoft_disabled,
+    .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_disabled,
+    .xdsoft_calendar td.xdsoft_disabled:hover,
+    .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_disabled:hover {
+        color: inherit !important; // stylelint-disable-line
+        background: inherit !important; // stylelint-disable-line
+        box-shadow: none !important; // stylelint-disable-line
+    }
+
+    .xdsoft_label > .xdsoft_select > div > .xdsoft_option {
+        padding: 5px 25px 5px 19px;
+    }
+    .xdsoft_label > .xdsoft_select {
+        background: $color_dark_1;
+        border-color: $color_dark_1;
+    }
+    .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+        box-shadow: none;
+    }
+}
+
+.nk-form-style-1 .xdsoft_datetimepicker.xdsoft_nk {
+    color: $color_dark_1;
+    background: rgba(#ccc, .3);
+
+    .xdsoft_calendar th:nth-child(6),
+    .xdsoft_calendar th:nth-child(7),
+    .xdsoft_calendar td.xdsoft_day_of_week5,
+    .xdsoft_calendar td.xdsoft_day_of_week6 {
+        color: $color_main_5;
+
+        &.xdsoft_disabled,
+        &.xdsoft_disabled:hover {
+            color: $color_main_5 !important; // stylelint-disable-line
+        }
+    }
+    .xdsoft_calendar td:hover,
+    .xdsoft_timepicker .xdsoft_time_box > div > div:hover,
+    .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover {
+        color: #fff;
+        background: #ccc !important; // stylelint-disable-line
+    }
+    .xdsoft_calendar td.xdsoft_disabled,
+    .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_disabled,
+    .xdsoft_calendar td.xdsoft_disabled:hover,
+    .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_disabled:hover {
+        color: inherit !important; // stylelint-disable-line
+        background: inherit !important; // stylelint-disable-line
+        box-shadow: none !important; // stylelint-disable-line
+    }
+    .xdsoft_label > .xdsoft_select {
+        background: #fff;
+        border-color: #fff;
+    }
+}

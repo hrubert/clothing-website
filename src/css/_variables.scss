@@ -1,0 +1,93 @@
+// main colors
+$color_main_1: #bea175 !default;
+$color_main_2: #8c9176 !default;
+$color_main_3: #7d88ab !default;
+$color_main_4: #77b0b3 !default;
+$color_main_5: #c18d8d !default;
+
+// bootstrap colors
+$color_primary: #0275d8 !default;
+$color_success: #5cb85c !default;
+$color_info: #5bc0de !default;
+$color_warning: #f0ad4e !default;
+$color_danger: #d9534f !default;
+
+// dark colors
+$color_dark_1: #1c1c1c !default;
+$color_dark_2: lighten($color_dark_1, 4%) !default;
+$color_dark_3: lighten($color_dark_1, 8%) !default;
+$color_dark_4: lighten($color_dark_1, 12%) !default;
+
+// gray colors
+$color_gray_1: #fafafa !default;
+$color_gray_2: darken($color_gray_1, 1%) !default;
+$color_gray_3: darken($color_gray_1, 2%) !default;
+$color_gray_4: darken($color_gray_1, 3%) !default;
+
+// main colors list
+$colors: (
+    "main-1"  : $color_main_1,
+    "main-2"  : $color_main_2,
+    "main-3"  : $color_main_3,
+    "main-4"  : $color_main_4,
+    "main-5"  : $color_main_5,
+    "primary" : $color_primary,
+    "success" : $color_success,
+    "info"    : $color_info,
+    "warning" : $color_warning,
+    "danger"  : $color_danger,
+    "white"   : #fff,
+    "black"   : #000,
+    "dark-1"  : $color_dark_1,
+    "dark-2"  : $color_dark_2,
+    "dark-3"  : $color_dark_3,
+    "dark-4"  : $color_dark_4,
+    "gray-1"  : $color_gray_1,
+    "gray-2"  : $color_gray_2,
+    "gray-3"  : $color_gray_3,
+    "gray-4"  : $color_gray_4
+) !default;
+
+// Page Border
+$page_border_size: 35px !default;
+$page_border_size_md: 25px !default;
+$page_border_size_sm: 15px !default;
+$page_border_color: $color_dark_1 !default;
+
+// Share Place
+$share_place_height: 200px !default;
+
+// page nav
+$page_nav_width: 190px !default;
+$page_nav_height: 130px !default;
+$page_nav_arrow_width: 30px !default;
+$page_nav_2_width: 340px !default;
+$page_nav_2_height: 130px !default;
+$page_nav_2_arrow_width: 30px !default;
+
+// audio player
+$audio_player_height: 62px !default;
+$audio_player_playlist_height: 250px !default;
+$audio_player_mobile_height: 170px !default;
+
+// fonts
+$font_headings: "Montserrat", sans-serif !default;
+$font_body: "Muli", sans-serif !default;
+$html_font_size: 15px !default;
+$body_line_height: 1.7 !default;
+
+// media variables
+$media_xxs:           "(max-width: 575px)" !default;
+$media_xs:            "(max-width: 767px)" !default;
+$media_sm:            "(min-width: 767px) and (max-width: 991px)" !default;
+$media_md:            "(min-width: 992px) and (max-width: 1199px)" !default;
+$media_lg:            "(min-width: 1200)" !default;
+
+// additional variables
+$media_smaller_xs:    "(max-width: 767px)" !default;
+$media_smaller_sm:    "(max-width: 991px)" !default;
+$media_smaller_md:    "(max-width: 1199px)" !default;
+$media_larger_xs:     "(min-width: 576px)" !default;
+$media_larger_sm:     "(min-width: 768px)" !default;
+$media_larger_md:     "(min-width: 992px)" !default;
+$media_larger_lg:     "(min-width: 1200px)" !default;

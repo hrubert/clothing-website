@@ -1,0 +1,162 @@
+{% set header_title = 'Contact Us' %}
+{% set header_show = false %}
+{% set footer = 4 %}
+{% set footer_bg_color = 'bd-dark-1' %}
+{% extends 'layouts/layout-2.html' %}
+
+{% block content %}
+
+    <div class="row no-gutters bg-dark-2 text-white">
+        <div class="col-lg-8">
+            <!-- START: Google Map -->
+            <div id="google-map-contact" class="nk-gmaps nk-gmaps-lg"></div>
+            <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+            <script>
+                function initializeGmaps() {
+                    var LatLng = {lat: 47.496474, lng: 19.0484679};
+                    var mapCanvas = document.getElementById('google-map-contact');
+                    var mapOptions = {
+                        center      : LatLng,
+                        scrollwheel : false,
+                        zoom        : 14,
+                        mapTypeId   : google.maps.MapTypeId.ROADMAP,
+                        backgroundColor: 'none',
+                        mapTypeId   : 'KhakiStyle'
+                    }
+                    var map = new google.maps.Map(mapCanvas, mapOptions);
+                    var marker = new google.maps.Marker({
+                        position: LatLng,
+                        map: map,
+                        icon: 'assets/images/marker-2.png',
+                        title: 'Khaki Office'
+                    });
+
+                    // style from https://snazzymaps.com/style/151/ultra-light-with-labels
+                    var styledMapType = new google.maps.StyledMapType([{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3d3d3"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}], { name: 'KhakiStyle' });
+                    map.mapTypes.set('KhakiStyle', styledMapType);
+                }
+                if(typeof google !== 'undefined') {
+                    google.maps.event.addDomListener(window, 'load', initializeGmaps);
+                }
+            </script>
+            <!-- END: Google Map -->
+        </div>
+        <div class="col-lg-4 align-self-center">
+            <div class="nk-box-3">
+                <div class="nk-gap-5 d-none d-lg-block"></div>
+                <div class="nk-gap-1"></div>
+                <h1 class="nk-title h2">Feel Free to Contact Us</h1>
+                <h2 class="nk-sub-title">Better to call us during business hours</h2>
+
+                <div class="nk-gap"></div>
+                <div>Tree. Herb wherein lights thing yielding subdue isn't had it to wherein. Land shall sea thing.</div>
+                <div class="nk-gap-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- START: Contacts -->
+    <div class="nk-box">
+        <div class="nk-gap d-none d-lg-block"></div>
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <div class="nk-box-3 nk-box-line">
+                    <div class="nk-gap-2 d-none d-lg-block"></div>
+                    <div class="nk-ibox-1">
+                        <div class="nk-ibox-icon nk-ibox-icon-circle">
+                            <span class="ion-ios-telephone"></span>
+                        </div>
+                        <div class="nk-ibox-cont">
+                            <h3 class="nk-ibox-title pt-5 mb-0">Phone</h3>
+                            <div>+ 3 (700) 123 10 78</div>
+                        </div>
+                    </div>
+                    <div class="nk-gap-2 d-none d-lg-block"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="nk-box-3 nk-box-line">
+                    <div class="nk-gap-2 d-none d-lg-block"></div>
+                    <div class="nk-ibox-1">
+                        <div class="nk-ibox-icon nk-ibox-icon-circle">
+                            <span class="ion-ios-email"></span>
+                        </div>
+                        <div class="nk-ibox-cont">
+                            <h3 class="nk-ibox-title pt-5 mb-0">Email</h3>
+                            <div>contact@khaki.com</div>
+                        </div>
+                    </div>
+                    <div class="nk-gap-2 d-none d-lg-block"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="nk-box-3 nk-box-line">
+                    <div class="nk-gap-2 d-none d-lg-block"></div>
+                    <div class="nk-ibox-1">
+                        <div class="nk-ibox-icon nk-ibox-icon-circle">
+                            <span class="ion-ios-home"></span>
+                        </div>
+                        <div class="nk-ibox-cont">
+                            <h3 class="nk-ibox-title pt-5 mb-0">Address</h3>
+                            <div>Budapest, 1051 Hungary</div>
+                        </div>
+                    </div>
+                    <div class="nk-gap-2 d-none d-lg-block"></div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap d-none d-lg-block"></div>
+    </div>
+    <!-- END: Contacts -->
+
+    <!-- START: Partners -->
+    <div class="nk-box">
+        <div class="bg-image bg-image-parallax op-2">
+            <img class="jarallax-img" src="assets/images/image-23-a.jpg" alt="">
+        </div>
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="nk-box-2">
+                        <div class="nk-gap-1 d-none d-lg-block"></div>
+                        <h2 class="nk-title">Social Networks</h2>
+                        <div class="nk-gap"></div>
+                        <p>Every fowl. Called beginning male. Replenish air two make land a so tree, after also yielding.</p>
+                        <div class="nk-widget-social nk-widget-social-inverted text-left">
+                            <a href="#"><i class="ion-social-twitter"></i></a>
+                            <a href="#"><i class="ion-social-instagram-outline"></i></a>
+                            <a href="#"><i class="ion-social-dribbble-outline"></i></a>
+                            <a href="#"><i class="ion-social-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="nk-box-2 bg-white">
+                        <div class="nk-gap-1"></div>
+                        <h2 class="nk-title">Drop Us a Line</h2>
+                        <div class="nk-gap"></div>
+                        <form action="php/ajax-contact-form.php" class="nk-form nk-form-ajax nk-form-style-1">
+                            <input type="email" class="form-control required" name="email" placeholder="Email *">
+                            <div class="nk-gap"></div>
+                            <input type="text" class="form-control required" name="name" placeholder="Name *">
+                            <div class="nk-gap"></div>
+                            <textarea class="form-control required" name="message" rows="5" placeholder="Message *"></textarea>
+                            <div class="nk-gap"></div>
+                            <div class="nk-form-response-success"></div>
+                            <div class="nk-form-response-error"></div>
+                            <button class="nk-btn nk-btn-effect-2-right nk-btn-color-dark-1">
+                                <span>Send</span>
+                                <span class="icon"><i class="ion-paper-airplane"></i></span>
+                            </button>
+                        </form>
+                        <div class="nk-gap-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+    <!-- END: Partners -->
+
+{% endblock %}

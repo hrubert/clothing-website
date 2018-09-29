@@ -1,0 +1,111 @@
+{% set custom_css = 'assets/css/custom-typography-music-label.css' %}
+{% set header_title = 'Agenda' %}
+{% set header_show = false %}
+{% set nav_logo = 'assets/images/logo-music-label-light.png' %}
+{% set nav_logo_url = 'demo-music-label.html' %}
+{% set nav_light = true %}
+{% set nav_logo_top_light = true %}
+{% set nav_sticky = false %}
+{% set navigation = {
+    "demo-music-label-about.html": {
+        "name": "ABOUT"
+    },
+    "demo-music-label-artists.html": {
+        "name": "ARTISTS"
+    },
+    "demo-music-label-releases.html": {
+        "name": "RELEASES"
+    },
+    "demo-music-label-videos.html": {
+        "name": "VIDEOS"
+    },
+    "demo-music-label-agenda.html": {
+        "name": "AGENDA"
+    },
+    "demo-music-label-news.html": {
+        "name": "NEWS"
+    }
+} %}
+{% set page_boxed = true %}
+{% set footer = 6 %}
+{% set footer_bg = false %}
+{% extends 'layouts/layout-8.html' %}
+
+{% block content %}
+
+    <!-- START: Agenda -->
+    <div class="nk-gap-2"></div>
+    <div class="container">
+        <ul class="nk-events-list">
+            <li>
+                <a href="events-single-1.html" class="nk-event-date">
+                    17 Sep
+                    <span>2018</span>
+                </a>
+                <a href="events-single-1.html" class="nk-event-name">
+                    <strong>Rock 'N Derby</strong>
+                    <span>Shaghticoke, NY</span>
+                </a>
+                <div class="nk-event-button nk-event-button-sold">
+                    Sold Out
+                </div>
+            </li>
+            <li>
+                <a href="events-single-2.html" class="nk-event-date">
+                    5 Oct
+                    <span>2018</span>
+                </a>
+                <a href="events-single-2.html" class="nk-event-name">
+                    <strong>Governors Ball Music Festival</strong>
+                    <span>New York City, NY</span>
+                </a>
+                <div class="nk-event-button">
+                    <a href="#!" class="nk-btn nk-btn-xs nk-btn-effect-2-right nk-btn-outline nk-btn-color-dark-1 nk-btn-circle">
+                        <span>Buy Ticket</span>
+                        <span class="icon"><span class="fa fa-ticket"></span></span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="events-single-3.html" class="nk-event-date">
+                    24 Oct
+                    <span>2018</span>
+                </a>
+                <a href="events-single-3.html" class="nk-event-name">
+                    <strong>Mountain Jam</strong>
+                    <span>Hunter Mountain, NY</span>
+                </a>
+                <div class="nk-event-button">
+                    Buy on 30 September
+                </div>
+            </li>
+            <li>
+                <a href="#" class="nk-event-date">
+                    1 Nov
+                    <span>2018</span>
+                </a>
+                <a href="#" class="nk-event-name">
+                    <strong>Taste of Country</strong>
+                    <span>Hunter Mountain, NY</span>
+                </a>
+                <div class="nk-event-button">
+                    <a href="#!" class="nk-btn nk-btn-xs nk-btn-effect-2-right nk-btn-outline nk-btn-color-dark-1 nk-btn-circle">
+                        <span>Buy Ticket</span>
+                        <span class="icon"><span class="fa fa-ticket"></span></span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="nk-gap-4"></div>
+    <!-- END: Agenda -->
+
+    {% set instagram_template = '<div class="col-4 col-md-2"><a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="nk-img-stretch"></a></div>' %}
+    <!-- START: Instagram -->
+    <div class="nk-box text-center">
+        <div class="nk-instagram row no-gutters multi-column" data-instagram-template='{{ instagram_template | safe }}' data-instagram-quality="md"
+        ></div>
+    </div>
+    <!-- END: Instagram -->
+
+{% endblock %}

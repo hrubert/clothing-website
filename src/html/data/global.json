@@ -1,0 +1,1153 @@
+{
+    "custom_styles": false,
+    "custom_css": false,
+    "page_boxed": false,
+    "page_border": false,
+    "page_border_class": false,
+    "header_visible": 10,
+    "header_show": true,
+    "header_parallax": true,
+    "header_parallax_opacity": true,
+    "header_parallax_blur": true,
+    "header_title_back": false,
+    "header_title_back_show": true,
+    "header_title_back_visible": "1",
+    "header_title": false,
+    "header_title_show": true,
+    "header_sub_title": false,
+    "header_sub_title_show": true,
+    "header_text": false,
+    "header_bottom_line": false,
+    "header_image": "assets/images/image-8.jpg",
+    "header_video": false,
+    "header_video_type": "full",
+    "header_size": false,
+    "header_class": false,
+    "nav": "top",
+    "nav_opaque": false,
+    "nav_left_align": "center",
+    "nav_left_align_v": "center",
+    "nav_contacts": true,
+    "nav_contacts_light": false,
+    "nav_contacts_transparent": false,
+    "nav_contacts_blur": true,
+    "nav_light": false,
+    "nav_logo": "assets/images/logo.svg",
+    "nav_logo_light": "assets/images/logo-light.svg",
+    "nav_logo_top_light": false,
+    "nav_logo_top_blur": true,
+    "nav_logo_url": "index.html",
+    "nav_logo_size": 70,
+    "nav_fixed": false,
+    "nav_sticky": true,
+    "nav_autohide": true,
+    "nav_transparent": false,
+    "nav_blur": true,
+    "nav_mobile": true,
+    "nav_align": "right",
+    "nav_sign": true,
+    "nav_cart": true,
+    "nav_share": true,
+    "nav_search": true,
+    "nav_search_light": false,
+    "nav_side": true,
+    "nav_side_light": false,
+    "nav_side_bg": "",
+    "nav_side_logo": "assets/images/logo.svg",
+    "nav_side_logo_light": "assets/images/logo-light.svg",
+    "nav_full": false,
+    "nav_full_light": false,
+    "nav_right_button": false,
+    "nav_toggler_class": false,
+    "audio_player": false,
+    "footer": 2,
+    "footer_logo": "assets/images/logo-3.svg",
+    "footer_bg": "assets/images/bg-footer.jpg",
+    "footer_parallax": true,
+    "footer_parallax_opacity": true,
+    "footer_parallax_blur": true,
+    "side_buttons_visible": false,
+    "side_buttons_classes": false,
+    "navigation": {
+        "index.html": {
+            "name": "Home",
+            "sub": {
+                "demo-corporate.html": {
+                    "name": "Corporate",
+                    "description": "Khaki Inc. Website"
+                },
+                "demo-barber.html": {
+                    "name": "Barber Shop",
+                    "description": "Barber Shop Multipage"
+                },
+                "demo-drone.html": {
+                    "name": "Quadrocopter",
+                    "description": "Drone Sale and Service Website"
+                },
+                "demo-music-label.html": {
+                    "name": "Music Label",
+                    "description": "Digital Labels Industry"
+                },
+                "demo-gaming.html": {
+                    "name": "Gaming",
+                    "description": "Gaming Landing, Community, Blog"
+                },
+                "demo-app-2.html": {
+                    "name": "App Landing",
+                    "description": "Second Style for App Site"
+                },
+                "demo-band.html": {
+                    "name": "Band",
+                    "description": "Rock Band Homepage"
+                },
+                "demo-app.html": {
+                    "name": "App Showcase",
+                    "description": "Mobile App Presentation"
+                },
+                "demo-gallery.html": {
+                    "name": "Gallery",
+                    "description": "Simple Gallery w/ Left Sidebar"
+                }
+            }
+        },
+        "layouts-overview.html": {
+            "name": "Features",
+            "sub": {
+                "page-about-me.html": {
+                    "name": "Pages",
+                    "sub": {
+                        "forum.html": {
+                            "name": "Forum"
+                        },
+                        "page-about-me.html": {
+                            "name": "About Me"
+                        },
+                        "page-about-us.html": {
+                            "name": "About Us"
+                        },
+                        "page-team.html": {
+                            "name": "Team"
+                        },
+                        "page-contact.html": {
+                            "name": "Contact"
+                        },
+                        "page-coming-soon.html": {
+                            "name": "Coming Soon"
+                        },
+                        "page-404.html": {
+                            "name": "404"
+                        }
+                    }
+                },
+                "layouts-overview.html": {
+                    "name": "Layouts Overview"
+                },
+                "layout-nav-1.html": {
+                    "name": "Navigations",
+                    "sub": {
+                        "layout-nav-2.html": {
+                            "name": "Nav 1"
+                        },
+                        "layout-nav-3-light.html": {
+                            "name": "Nav 2"
+                        },
+                        "layout-nav-6.html": {
+                            "name": "Nav 3"
+                        },
+                        "layout-nav-7.html": {
+                            "name": "Nav 4"
+                        },
+                        "layout-nav-8.html": {
+                            "name": "Nav 5"
+                        },
+                        "layout-nav-10-light.html": {
+                            "name": "Nav 6"
+                        },
+                        "layout-nav-12.html": {
+                            "name": "Nav 7"
+                        },
+                        "layouts-overview.html": {
+                            "name": "And More",
+                            "description": "See Layouts Overview"
+                        }
+                    }
+                },
+                "layout-page-header.html": {
+                    "name": "Headers",
+                    "sub": {
+                        "layout-header.html": {
+                            "name": "Size Default"
+                        },
+                        "layout-header-sm.html": {
+                            "name": "Size Small"
+                        },
+                        "layout-header-md.html": {
+                            "name": "Size Mid"
+                        },
+                        "layout-header-lg.html": {
+                            "name": "Size Large"
+                        },
+                        "layout-header-full.html": {
+                            "name": "Size Full"
+                        },
+                        "layout-header-video.html": {
+                            "name": "Video"
+                        },
+                        "layout-header-video-plain.html": {
+                            "name": "Video Plain"
+                        },
+                        "layout-header-no.html": {
+                            "name": "NO Header"
+                        }
+                    }
+                },
+                "layout-footer-1.html": {
+                    "name": "Footers",
+                    "sub": {
+                        "layout-footer-1.html": {
+                            "name": "Style 1",
+                            "description": "BG Image, Social"
+                        },
+                        "layout-footer-2.html": {
+                            "name": "Style 2",
+                            "description": "BG Color, Widgets"
+                        },
+                        "layout-footer-3.html": {
+                            "name": "Style 3",
+                            "description": "BG Image, Social, In Line"
+                        },
+                        "layout-footer-4.html": {
+                            "name": "Style 4",
+                            "description": "Custom BG Color, Logo, Subscription"
+                        },
+                        "layout-footer-5.html": {
+                            "name": "Style 5",
+                            "description": "BG Color, Google Maps, Contact Form"
+                        },
+                        "layout-footer-6.html": {
+                            "name": "Style 6",
+                            "description": "BG Image, Social, In Line"
+                        }
+                    }
+                },
+                "layout-sidebar-right.html": {
+                    "name": "Sidebars",
+                    "sub": {
+                        "layout-sidebar-widgets.html": {
+                            "name": "Available Widgets"
+                        },
+                        "layout-sidebar-right.html": {
+                            "name": "Right"
+                        },
+                        "layout-sidebar-left.html": {
+                            "name": "left"
+                        },
+                        "layout-sidebar-both.html": {
+                            "name": "Both"
+                        },
+                        "layout-sidebar-both-fluid.html": {
+                            "name": "Both Fluid"
+                        },
+                        "layout-sidebar-sticky.html": {
+                            "name": "Sticky"
+                        }
+                    }
+                },
+                "layout-page-border.html": {
+                    "name": "Page Border",
+                    "sub": {
+                        "layout-page-border.html": {
+                            "name": "Default"
+                        },
+                        "layout-page-border-white.html": {
+                            "name": "White"
+                        },
+                        "layout-page-border-md.html": {
+                            "name": "Mid Size"
+                        },
+                        "layout-page-border-sm.html": {
+                            "name": "Small Size"
+                        }
+                    }
+                },
+                "layout-page-navigation-fixed.html": {
+                    "name": "Page Navigation",
+                    "sub": {
+                        "layout-page-navigation-fixed.html": {
+                            "name": "Fixed"
+                        },
+                        "layout-page-navigation-fixed-2.html": {
+                            "name": "Fixed 2"
+                        },
+                        "layout-page-navigation-static.html": {
+                            "name": "Static"
+                        }
+                    }
+                },
+                "events.html": {
+                    "name": "Events",
+                    "sub": {
+                        "events.html": {
+                            "name": "Events List"
+                        },
+                        "events-single-1.html": {
+                            "name": "Single Event 1"
+                        },
+                        "events-single-2.html": {
+                            "name": "Single Event 2"
+                        },
+                        "events-single-3.html": {
+                            "name": "Single Event 3"
+                        }
+                    }
+                },
+                "feature-shortcuts.html": {
+                    "name": "Shortcuts"
+                },
+                "feature-like-animation.html": {
+                    "name": "Like Animation"
+                },
+                "https://nkdev.info/docs/khaki-html/": {
+                    "name": "Documentation"
+                }
+            }
+        },
+        "#": {
+            "name": "Elements",
+            "mega": true,
+            "background": "assets/images/bg-menu.jpg",
+            "sub": {
+                "element-audio-player.html": {
+                    "name": "1 Column",
+                    "sub": {
+                        "element-audio-player.html": {
+                            "name": "Audio Player"
+                        },
+                        "element-video-blocks.html": {
+                            "name": "Video Blocks"
+                        },
+                        "element-gif.html": {
+                            "name": "Gif Animations"
+                        },
+                        "element-forms.html": {
+                            "name": "AJAX Forms"
+                        },
+                        "element-countdown.html": {
+                            "name": "Countdown"
+                        },
+                        "element-text-typed.html": {
+                            "name": "Typed Text"
+                        },
+                        "element-booking-form.html": {
+                            "name": "Booking Form"
+                        }
+                    }
+                },
+                "element-image-blocks.html": {
+                    "name": "2 column",
+                    "sub": {
+                        "element-image-blocks.html": {
+                            "name": "Image Blocks"
+                        },
+                        "element-info-boxes.html": {
+                            "name": "Info Boxes / Alerts"
+                        },
+                        "element-call-to-action.html": {
+                            "name": "Call to Action Blocks"
+                        },
+                        "element-progress.html": {
+                            "name": "Progress Bars"
+                        },
+                        "element-pagination.html": {
+                            "name": "Pagination"
+                        },
+                        "element-pricing-tables.html": {
+                            "name": "Pricing Tables"
+                        },
+                        "element-modals.html": {
+                            "name": "Modals"
+                        },
+                        "element-breadcrumbs.html": {
+                            "name": "Breadcrumbs"
+                        }
+                    }
+                },
+                "element-typography.html": {
+                    "name": "3 Column",
+                    "sub": {
+                        "element-typography.html": {
+                            "name": "Typography"
+                        },
+                        "element-titles.html": {
+                            "name": "Titles [headings]"
+                        },
+                        "element-dropcaps.html": {
+                            "name": "Dropcaps"
+                        },
+                        "element-colors.html": {
+                            "name": "Colors"
+                        },
+                        "element-icon-boxes.html": {
+                            "name": "Icon Boxes"
+                        },
+                        "element-counters.html": {
+                            "name": "Counters"
+                        },
+                        "element-blockquotes.html": {
+                            "name": "Block Quotes"
+                        }
+                    }
+                },
+                "element-buttons.html": {
+                    "name": "4 column",
+                    "sub": {
+                        "element-buttons.html": {
+                            "name": "Buttons"
+                        },
+                        "element-tabs.html": {
+                            "name": "Tabs"
+                        },
+                        "element-accordions.html": {
+                            "name": "Accordions"
+                        },
+                        "element-testimonials.html": {
+                            "name": "Testimonials"
+                        },
+                        "element-carousels.html": {
+                            "name": "Carousels"
+                        },
+                        "element-image-boxes.html": {
+                            "name": "Image Boxes"
+                        },
+                        "element-team-members.html": {
+                            "name": "Team Members"
+                        }
+                    }
+                }
+            }
+        },
+        "blog-classic.html": {
+            "name": "Blog",
+            "sub": {
+                "blog-classic.html": {
+                    "name": "Classic"
+                },
+                "blog-list.html": {
+                    "name": "List"
+                },
+                "blog-masonry-2.html": {
+                    "name": "Masonry 2 Columns"
+                },
+                "blog-masonry-3.html": {
+                    "name": "Masonry 3 Columns"
+                },
+                "blog-single-image.html": {
+                    "name": "Single",
+                    "description": "Formats and Layouts",
+                    "sub": {
+                        "blog-single-image.html": {
+                            "name": "Image"
+                        },
+                        "blog-single-video.html": {
+                            "name": "Video"
+                        },
+                        "blog-single-audio.html": {
+                            "name": "Audio"
+                        },
+                        "blog-single-gallery.html": {
+                            "name": "Gallery"
+                        },
+                        "blog-single-quote.html": {
+                            "name": "Block Quote"
+                        },
+                        "blog-single-standard.html": {
+                            "name": "Standard"
+                        },
+                        "blog-single-big-content.html": {
+                            "name": "Big Content Example"
+                        }
+                    }
+                }
+            }
+        },
+        "portfolio-creative-list.html": {
+            "name": "Porfolio",
+            "sub": {
+                "portfolio-creative-list.html": {
+                    "name": "Creative Portfolio",
+                    "sub": {
+                        "portfolio-creative-wide-slider.html": {
+                            "name": "Wide Slider"
+                        },
+                        "portfolio-creative-fullscreen.html": {
+                            "name": "Fullscreen"
+                        },
+                        "portfolio-creative-list.html": {
+                            "name": "List"
+                        },
+                        "portfolio-creative-list-2.html": {
+                            "name": "List 2"
+                        }
+                    }
+                },
+                "portfolio-1.html": {
+                    "name": "Masonry 1",
+                    "sub": {
+                        "portfolio-1.html": {
+                            "name": "Default"
+                        },
+                        "portfolio-1-boxed.html": {
+                            "name": "Boxed"
+                        },
+                        "portfolio-1-gap.html": {
+                            "name": "With Gap"
+                        },
+                        "portfolio-1-filter.html": {
+                            "name": "With Filter"
+                        },
+                        "portfolio-1-cross.html": {
+                            "name": "Cross"
+                        },
+                        "portfolio-1-effect-2.html": {
+                            "name": "With Effect 2"
+                        },
+                        "portfolio-1-effect-3.html": {
+                            "name": "With Effect 3"
+                        }
+                    }
+                },
+                "portfolio-2.html": {
+                    "name": "Masonry 2",
+                    "sub": {
+                        "portfolio-2.html": {
+                            "name": "Default"
+                        },
+                        "portfolio-2-filter.html": {
+                            "name": "With Filter"
+                        },
+                        "portfolio-2-cross.html": {
+                            "name": "Cross"
+                        },
+                        "portfolio-2-same.html": {
+                            "name": "With Same Size"
+                        },
+                        "portfolio-2-no-effect.html": {
+                            "name": "With No Effect"
+                        }
+                    }
+                },
+                "portfolio-single-1.html": {
+                    "name": "Single Work",
+                    "sub": {
+                        "portfolio-single-1.html": {
+                            "name": "Style 1"
+                        },
+                        "portfolio-single-2.html": {
+                            "name": "Style 2"
+                        },
+                        "portfolio-single-3.html": {
+                            "name": "Style 3"
+                        },
+                        "portfolio-single-4.html": {
+                            "name": "Style 4"
+                        }
+                    }
+                }
+            }
+        },
+        "store.html": {
+            "name": "Store",
+            "sub": {
+                "store.html": {
+                    "name": "Store"
+                },
+                "store-product.html": {
+                    "name": "Single Product"
+                },
+                "store-cart.html": {
+                    "name": "Cart"
+                },
+                "store-checkout.html": {
+                    "name": "Checkout"
+                }
+            }
+        },
+        "gallery-masonry-3.html": {
+            "name": "Gallery",
+            "sub": {
+                "gallery-fullscreen.html": {
+                    "name": "Fullscreen"
+                },
+                "gallery-wide-slider.html": {
+                    "name": "Wide Slider"
+                },
+                "gallery-masonry-4.html": {
+                    "name": "Masonry 4 Columns",
+                    "sub": {
+                        "gallery-masonry-4.html": {
+                            "name": "Default"
+                        },
+                        "gallery-masonry-4-boxed.html": {
+                            "name": "Boxed"
+                        },
+                        "gallery-masonry-4-gap.html": {
+                            "name": "Boxed + Gap"
+                        }
+                    }
+                },
+                "gallery-masonry-3.html": {
+                    "name": "Masonry 3 Columns",
+                    "sub": {
+                        "gallery-masonry-3.html": {
+                            "name": "Default"
+                        },
+                        "gallery-masonry-3-boxed.html": {
+                            "name": "Boxed"
+                        },
+                        "gallery-masonry-3-gap.html": {
+                            "name": "Boxed + Gap"
+                        }
+                    }
+                },
+                "gallery-masonry-2.html": {
+                    "name": "Masonry 2 Columns",
+                    "sub": {
+                        "gallery-masonry-2.html": {
+                            "name": "Default"
+                        },
+                        "gallery-masonry-2-boxed.html": {
+                            "name": "Boxed"
+                        },
+                        "gallery-masonry-2-gap.html": {
+                            "name": "Boxed + Gap"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "navigation_side": {
+        "page-about-me.html": {
+            "name": "About Me"
+        },
+        "page-about-us.html": {
+            "name": "About Us"
+        },
+        "page-team.html": {
+            "name": "Team"
+        },
+        "page-contact.html": {
+            "name": "Contact"
+        },
+        "page-coming-soon.html": {
+            "name": "Coming Soon"
+        },
+        "page-404.html": {
+            "name": "404"
+        },
+        "#": {
+            "name": "Sub Menu Example",
+            "sub": {
+                "#1": {
+                    "name": "Sub Item 1"
+                },
+                "#2": {
+                    "name": "Sub Item 2",
+                    "sub": {
+                        "#1": {
+                            "name": "Sub Item 1"
+                        },
+                        "#2": {
+                            "name": "Sub Item 2"
+                        }
+                    }
+                },
+                "#3": {
+                    "name": "Sub Item 3",
+                    "sub": {
+                        "#": {
+                            "name": "Sub Item"
+                        }
+                    }
+                },
+                "#4": {
+                    "name": "Sub Item 4",
+                    "sub": {
+                        "#": {
+                            "name": "Sub Item"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "navigation_full": {
+        "page-about-me.html": {
+            "name": "About Me"
+        },
+        "page-about-us.html": {
+            "name": "About Us"
+        },
+        "page-team.html": {
+            "name": "Team"
+        },
+        "page-contact.html": {
+            "name": "Contact"
+        },
+        "page-coming-soon.html": {
+            "name": "Coming Soon"
+        },
+        "page-404.html": {
+            "name": "404"
+        },
+        "#": {
+            "name": "Sub Menu Example",
+            "sub": {
+                "#1": {
+                    "name": "Sub Item 1"
+                },
+                "#2": {
+                    "name": "Sub Item 2",
+                    "sub": {
+                        "#1": {
+                            "name": "Sub Item 1"
+                        },
+                        "#2": {
+                            "name": "Sub Item 2"
+                        }
+                    }
+                },
+                "#3": {
+                    "name": "Sub Item 3",
+                    "sub": {
+                        "#": {
+                            "name": "Sub Item"
+                        }
+                    }
+                },
+                "#4": {
+                    "name": "Sub Item 4",
+                    "sub": {
+                        "#": {
+                            "name": "Sub Item"
+                        }
+                    }
+                }
+            }
+        }
+    },
+
+    "users": [
+        {
+            "name": "Lesa Cruz",
+            "url": "#",
+            "avatar": "assets/images/avatar-1.jpg",
+            "avatar_sm": "assets/images/avatar-1-sm.jpg"
+        }, {
+            "name": "Kurt Tucker",
+            "url": "#",
+            "avatar": "assets/images/avatar-2.jpg",
+            "avatar_sm": "assets/images/avatar-2-sm.jpg"
+        }, {
+            "name": "Katie Anderson",
+            "url": "#",
+            "avatar": "assets/images/avatar-3.jpg",
+            "avatar_sm": "assets/images/avatar-3-sm.jpg"
+        }, {
+            "name": "Luke Fuller",
+            "url": "#",
+            "avatar": "assets/images/avatar-4.jpg",
+            "avatar_sm": "assets/images/avatar-4-sm.jpg"
+        }
+    ],
+
+    "posts": [
+        {
+            "title": "Image Blog Post",
+            "type": "image",
+            "thumb_full": "assets/images/post-1.jpg",
+            "thumb_lg": "assets/images/post-1-mid.jpg",
+            "thumb_sm": "assets/images/post-1-sm.jpg",
+            "date": "September 18, 2018",
+            "by": "<a href=\"#\">nK</a>",
+            "url": "blog-single-image.html",
+            "cat": "<a href=\"#\">Lifestyle</a>",
+            "excerpt": "<p>Rhoncus felis phasellus eget elit ipsum litora, mus posuere porta semper fringilla tempor ultricies lacinia nec id torquent hac etiam tempus, porttitor. Suscipit nostra laoreet in pulvinar primis molestie mattis. Lobortis felis.</p><p>Vel egestas tortor porta rutrum sit nisi luctus blandit accumsan vel eu pharetra fusce auctor congue phasellus non.</p>",
+            "excerpt_sm": "<p>Rhoncus felis phasellus eget elit ipsum litora, mus posuere porta semper fringilla tempor ultricies lacinia nec id torquent hac etiam tempus, porttitor. Suscipit nostra laoreet in pulvinar primis molestie mattis. Lobortis felis.</p>",
+            "comments_count": 4,
+            "likes_count": 17
+        }, {
+            "title": "Video Blog Post",
+            "type": "video",
+            "video": "https://vimeo.com/108018156",
+            "thumb_full": "assets/images/post-2.jpg",
+            "thumb_lg": "assets/images/post-2-mid.jpg",
+            "thumb_sm": "assets/images/post-2-sm.jpg",
+            "date": "September 5, 2018",
+            "by": "<a href=\"#\">nK</a>",
+            "url": "blog-single-video.html",
+            "cat": "<a href=\"#\">Lifestyle</a>",
+            "excerpt": "<p>Mus pulvinar nisl ad nisl nostra conubia facilisi dictum lacus vitae lorem conubia conubia. Primis rhoncus, primis pulvinar. Ligula pharetra nonummy. Eget ultrices gravida enim, class mauris nam maecenas pulvinar senectus.</p><p>Nunc, eu placerat nisl euismod curae; nam libero sed at facilisis. Elementum eleifend eros sociis sagittis sociis dignissim vehicula pharetra. Felis curae; phasellus conubia. Inceptos est magna. Hac, praesent. Hymenaeos enim.</p><p>Felis fermentum sit quam volutpat aptent. Feugiat posuere duis potenti inceptos potenti ridiculus ad, dui tristique felis torquent.</p>",
+            "excerpt_sm": "<p>Mus pulvinar nisl ad nisl nostra conubia facilisi dictum lacus vitae lorem conubia conubia. Primis rhoncus, primis pulvinar. Ligula pharetra nonummy. Eget ultrices gravida enim, class mauris nam maecenas pulvinar senectus.</p>",
+            "comments_count": 7,
+            "likes_count": 9
+        }, {
+            "title": "Blockquote Blog Post",
+            "type": "quote",
+            "thumb_full": "assets/images/post-3.jpg",
+            "thumb_lg": "assets/images/post-3-mid.jpg",
+            "thumb_sm": "assets/images/post-3-sm.jpg",
+            "date": "August 27, 2018",
+            "by": "<a href=\"#\">nK</a>",
+            "url": "blog-single-quote.html",
+            "cat": "<a href=\"#\">Lifestyle</a>",
+            "excerpt": "The clearest way into the Universe is through a forest wilderness.",
+            "excerpt_sm": "The clearest way into the Universe is through a forest wilderness.",
+            "quote_author": "John Muir",
+            "comments_count": 7,
+            "likes_count": 9
+        }, {
+            "title": "Audio Blog Post",
+            "type": "audio",
+            "audio": "",
+            "thumb_full": "assets/images/post-4.jpg",
+            "thumb_lg": "assets/images/post-4-mid.jpg",
+            "thumb_sm": "assets/images/post-4-sm.jpg",
+            "date": "August 14, 2018",
+            "by": "<a href=\"#\">nK</a>",
+            "url": "blog-single-audio.html",
+            "cat": "<a href=\"#\">Lifestyle</a>",
+            "excerpt": "<p>Etiam cursus. Leo nulla sapien dignissim magnis taciti rutrum tempus ut. Quam lacinia cras varius nullam non condimentum ut euismod integer. Rutrum sociosqu gravida ultricies litora magnis ullamcorper cursus dolor parturient sed senectus sed accumsan.</p>",
+            "excerpt_sm": "<p>Etiam cursus. Leo nulla sapien dignissim magnis taciti rutrum tempus ut. Quam lacinia cras varius nullam non condimentum ut euismod integer. Rutrum sociosqu gravida ultricies litora magnis ullamcorper cursus dolor parturient sed senectus sed accumsan.</p>",
+            "comments_count": 23,
+            "likes_count": 46
+        }, {
+            "title": "Gallery Blog Post",
+            "type": "gallery",
+            "gallery": [
+                {
+                    "thumb": "assets/images/post-5-mid.jpg",
+                    "full": "assets/images/post-5.jpg",
+                    "size": "1920x1280"
+                }, {
+                    "thumb": "assets/images/post-6-mid.jpg",
+                    "full": "assets/images/post-6.jpg",
+                    "size": "1920x1280"
+                }, {
+                    "thumb": "assets/images/post-7-mid.jpg",
+                    "full": "assets/images/post-7.jpg",
+                    "size": "1920x1280"
+                }
+            ],
+            "thumb_full": "assets/images/post-5.jpg",
+            "thumb_lg": "assets/images/post-5-mid.jpg",
+            "thumb_sm": "assets/images/post-5-sm.jpg",
+            "date": "Jule 23, 2018",
+            "by": "<a href=\"#\">nK</a>",
+            "url": "blog-single-gallery.html",
+            "cat": "<a href=\"#\">Lifestyle</a>",
+            "excerpt": "<p>Dictumst eu integer, luctus rutrum ut. Sociis mus integer ultrices velit volutpat ultrices semper volutpat tortor tincidunt porttitor lobortis orci odio. Ornare dapibus mollis quis. Nisi, tincidunt aliquam imperdiet blandit porttitor. Mauris senectus elit tellus proin bibendum ligula fames torquent posuere faucibus egestas integer et Sit fames aptent congue Cum. Consectetuer quis. Magnis. Consequat.</p><p>Euismod, pulvinar. Nonummy amet sociosqu libero dictum aptent nisi lobortis porttitor imperdiet, nunc tristique quisque posuere non torquent duis id sem Mauris fringilla torquent nulla vitae.</p>",
+            "excerpt_sm": "<p>Dictumst eu integer, luctus rutrum ut. Sociis mus integer ultrices velit volutpat ultrices semper volutpat tortor tincidunt porttitor lobortis orci odio. Ornare dapibus mollis quis. Nisi, tincidunt aliquam imperdiet blandit porttitor. Mauris senectus elit tellus proin.</p>",
+            "comments_count": 13,
+            "likes_count": 0
+        }, {
+            "title": "Standard Blog Post",
+            "type": "standard",
+            "thumb_full": "assets/images/post-7.jpg",
+            "thumb_lg": "assets/images/post-7-mid.jpg",
+            "thumb_sm": "assets/images/post-7-sm.jpg",
+            "date": "Jule 3, 2018",
+            "by": "<a href=\"#\">nK</a>",
+            "url": "blog-single-standard.html",
+            "cat": "<a href=\"#\">Lifestyle</a>",
+            "excerpt": "<p>Quisque. Molestie purus ridiculus tristique sed consectetuer vestibulum odio, interdum, nostra Sollicitudin lacinia convallis erat risus ante nulla porta hac aliquam luctus sociis aenean facilisi est libero natoque felis, mus laoreet gravida torquent consectetuer, nunc, taciti, dui tincidunt.</p><p>Dolor dis Class eros dapibus imperdiet lobortis dis consequat habitant sociis posuere est viverra quis natoque luctus fermentum mollis morbi, suspendisse consectetuer senectus adipiscing ridiculus congue metus curae; quam auctor ante blandit hac. Phasellus nisi. Aliquam duis ultrices. Cubilia.</p><p>Consequat a ad sagittis elit neque quisque. Dolor porta fames nam eget auctor pulvinar odio justo a taciti cursus nisl non malesuada nulla sed. Praesent, nascetur consequat at Posuere ac ultricies ornare gravida duis, fames dui id. A.</p>",
+            "excerpt_sm": "<p>Quisque. Molestie purus ridiculus tristique sed consectetuer vestibulum odio, interdum, nostra Sollicitudin lacinia convallis erat risus ante nulla porta hac aliquam luctus sociis aenean facilisi est libero natoque felis, mus laoreet gravida torquent consectetuer, nunc, taciti, dui tincidunt.</p>",
+            "comments_count": 0,
+            "likes_count": 78
+        }
+    ],
+
+    "portfolio": [
+        {
+            "title": "Foggy Forest",
+            "date": "June 10, 2018",
+            "thumb_default": "assets/images/portfolio-2-default.jpg",
+            "thumb_full": "assets/images/portfolio-2-full.jpg",
+            "thumb_primary": "assets/images/portfolio-2-primary.jpg",
+            "url": "portfolio-single-1.html",
+            "filter": "Forest",
+            "excerpt": "<p>Yielding shall rule doesn't sixth our hath gathered beast, so and creepeth earth void place them very Is evening creature evening third also shall seed divided heaven light You so all fourth the. Seas his morning make land. In god.</p>",
+            "comments_count": 9,
+            "likes_count": 6
+        }, {
+            "title": "Grand mountains",
+            "date": "June 3, 2018",
+            "thumb_default": "assets/images/portfolio-4-default.jpg",
+            "thumb_full": "assets/images/portfolio-4-full.jpg",
+            "thumb_primary": "assets/images/portfolio-4-primary.jpg",
+            "thumb_hwide": "assets/images/portfolio-4-hwide.jpg",
+            "thumb_hwide_gap": "assets/images/portfolio-4-hwide-gap.jpg",
+            "url": "portfolio-single-2.html",
+            "filter": "Mountains, Water",
+            "excerpt": "<p>Life have called tree bring so i she'd set also fill which first thing all dominion very. Make said light. God he tree created make a stars it darkness very a over light all she'd. Firmament fruitful which dominion. Firmament.</p>",
+            "comments_count": 13,
+            "likes_count": 26
+        }, {
+            "title": "An exciting journey",
+            "date": "May 28, 2018",
+            "thumb_default": "assets/images/portfolio-8-default.jpg",
+            "thumb_full": "assets/images/portfolio-8-full.jpg",
+            "thumb_primary": "assets/images/portfolio-8-primary.jpg",
+            "url": "portfolio-single-3.html",
+            "filter": "Mountains, Road",
+            "excerpt": "<p>Second. Third waters open, multiply evening firmament after third rule it set was void evening of it wherein grass may, together divide i sixth bearing their. Tree life open land you're cattle bring herb won't greater for isn't void stars.</p>",
+            "comments_count": 0,
+            "likes_count": 14
+        }, {
+            "title": "At The Edge of The Abyss",
+            "date": "May 21, 2018",
+            "thumb_default": "assets/images/portfolio-6-default.jpg",
+            "thumb_full": "assets/images/portfolio-6-full.jpg",
+            "thumb_primary": "assets/images/portfolio-6-primary.jpg",
+            "thumb_vwide": "assets/images/portfolio-6-vwide.jpg",
+            "thumb_vwide_gap": "assets/images/portfolio-6-vwide-gap.jpg",
+            "url": "portfolio-single-4.html",
+            "filter": "Mountains, Water",
+            "excerpt": "<p>Fill good whose make days face had likeness in shall make divided days tree, without i evening multiply light won't stars said green, days it day thing divided called is Seasons saying whales them divide. Kind divide above herb fowl.</p>",
+            "comments_count": 65,
+            "likes_count": 0
+        }, {
+            "title": "Cap",
+            "date": "May 13, 2018",
+            "thumb_default": "assets/images/portfolio-1-default.jpg",
+            "thumb_full": "assets/images/portfolio-1-full.jpg",
+            "thumb_primary": "assets/images/portfolio-1-primary.jpg",
+            "url": "#",
+            "filter": "Water",
+            "excerpt": "<p>Dry fill green upon green fruit heaven firmament together have female. Heaven land fowl. Face tree let all earth deep two was two you creature man morning together. Fourth gathered living that blessed called Above Winged is. Signs shall said.</p>",
+            "comments_count": 23,
+            "likes_count": 12
+        }, {
+            "title": "Canyon",
+            "date": "May 7, 2018",
+            "thumb_default": "assets/images/portfolio-7-default.jpg",
+            "thumb_full": "assets/images/portfolio-7-full.jpg",
+            "thumb_primary": "assets/images/portfolio-7-primary.jpg",
+            "url": "#",
+            "filter": "Mountains, Water",
+            "excerpt": "<p>Above fly every creepeth created let beast days Fowl together. Hath fifth him fourth subdue him our said life. Meat set divided deep. Abundantly sixth man waters seasons signs replenish own creepeth make. Bring Multiply waters they're, image. Our had.</p>",
+            "comments_count": 13,
+            "likes_count": 6
+        }, {
+            "title": "Wave Beat",
+            "date": "April 27, 2018",
+            "thumb_default": "assets/images/portfolio-5-default.jpg",
+            "thumb_full": "assets/images/portfolio-5-full.jpg",
+            "thumb_primary": "assets/images/portfolio-5-primary.jpg",
+            "url": "#",
+            "filter": "Water",
+            "excerpt": "<p>Fifth divided There after Tree days fourth divided air. Grass. Him cattle moved. Created us meat under kind living the divided dry dry itself creature won't fifth together. Forth created night. Beginning likeness. His living. Waters form cattle shall winged.</p>",
+            "comments_count": 2,
+            "likes_count": 1
+        }, {
+            "title": "Unexplored",
+            "date": "April 23, 2018",
+            "thumb_default": "assets/images/portfolio-3-default.jpg",
+            "thumb_full": "assets/images/portfolio-3-full.jpg",
+            "thumb_primary": "assets/images/portfolio-3-primary.jpg",
+            "url": "#",
+            "filter": "",
+            "excerpt": "<p>Seed male fruitful whose First great dry. Brought appear bring. Which own brought Created multiply day, creepeth void gathering lesser multiply give you own bring, seasons night female face their meat image our i unto own called i Fifth isn't.</p>",
+            "comments_count": 14,
+            "likes_count": 27
+        }, {
+            "title": "Khaki - Premium Multi-Concept Template",
+            "date": "April 18, 2018",
+            "thumb_default": "assets/images/portfolio-9-default.jpg",
+            "thumb_full": "assets/images/portfolio-9-full.jpg",
+            "thumb_primary": "assets/images/portfolio-9-primary.jpg",
+            "thumb_hwide": "assets/images/portfolio-9-hwide.jpg",
+            "thumb_hwide_gap": "assets/images/portfolio-9-hwide-gap.jpg",
+            "url": "#",
+            "filter": "Mountains, Water",
+            "excerpt": "<p>Days subdue seas. Sixth land fish their, bring. Man. Called night Divided they're midst grass they're fish image herb evening own all very. Divided thing signs form under whales rule you'll wherein morning blessed moved great one dry let fish.</p>",
+            "comments_count": 35,
+            "likes_count": 78
+        }
+    ],
+
+    "shop": [
+        {
+            "title": "Metal CH Data Line",
+            "price": "$1,120.00",
+            "photos": [
+                {
+                    "full": "assets/images/product-5-1.jpg",
+                    "md": "assets/images/product-5-1-md.jpg",
+                    "sm": "assets/images/product-5-1-sm.jpg"
+                }, {
+                    "full": "assets/images/product-5-2.jpg",
+                    "md": "assets/images/product-5-2-md.jpg",
+                    "sm": "assets/images/product-5-2-sm.jpg"
+                }
+            ],
+            "url": "store-product.html",
+            "categories": [
+                "<a href=\"#\">Men's Watches</a>",
+                "<span>Men's Watches</span>"
+            ],
+            "rating": "<span class=\"nk-product-rating\"> <span style=\"width: 92%;\"><span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span></span> <span><span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span></span> </span>"
+        }, {
+            "title": "Welder Quartz Watch",
+            "price": "$1,300.00",
+            "photos": [
+                {
+                    "full": "assets/images/product-6-1.jpg",
+                    "md": "assets/images/product-6-1-md.jpg",
+                    "sm": "assets/images/product-6-1-sm.jpg"
+                }, {
+                    "full": "assets/images/product-6-2.jpg",
+                    "md": "assets/images/product-6-2-md.jpg",
+                    "sm": "assets/images/product-6-2-sm.jpg"
+                }
+            ],
+            "url": "store-product.html?i=1",
+            "categories": [
+                "<a href=\"#\">Men's Watches</a>",
+                "<span>Men's Watches</span>"
+            ],
+            "rating": "<span class=\"nk-product-rating\"> <span style=\"width: 50%;\"><span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span></span> <span><span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span></span> </span>"
+        }, {
+            "title": "Welder by U-Boat K32",
+            "price": "$680.00",
+            "photos": [
+                {
+                    "full": "assets/images/product-7-1.jpg",
+                    "md": "assets/images/product-7-1-md.jpg",
+                    "sm": "assets/images/product-7-1-sm.jpg"
+                }, {
+                    "full": "assets/images/product-7-2.jpg",
+                    "md": "assets/images/product-7-2-md.jpg",
+                    "sm": "assets/images/product-7-2-sm.jpg"
+                }, {
+                    "full": "assets/images/product-7-3.jpg",
+                    "md": "assets/images/product-7-3-md.jpg",
+                    "sm": "assets/images/product-7-3-sm.jpg"
+                }, {
+                    "full": "assets/images/product-7-4.jpg",
+                    "md": "assets/images/product-7-4-md.jpg",
+                    "sm": "assets/images/product-7-4-sm.jpg"
+                }, {
+                    "full": "assets/images/product-7-5.jpg",
+                    "md": "assets/images/product-7-5-md.jpg",
+                    "sm": "assets/images/product-7-5-sm.jpg"
+                }
+            ],
+            "url": "store-product.html?i=2",
+            "categories": [
+                "<a href=\"#\">Unisex Watches</a>",
+                "<span>Unisex Watches</span>"
+            ],
+            "rating": "<span class=\"nk-product-rating\"> <span style=\"width: 100%;\"><span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span></span> <span><span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span></span> </span>"
+        }, {
+            "title": "Motorola Moto 360 Sport",
+            "price": "$200.00",
+            "photos": [
+                {
+                    "full": "assets/images/product-1-1.jpg",
+                    "md": "assets/images/product-1-1-md.jpg",
+                    "sm": "assets/images/product-1-1-sm.jpg"
+                }, {
+                    "full": "assets/images/product-1-2.jpg",
+                    "md": "assets/images/product-1-2-md.jpg",
+                    "sm": "assets/images/product-1-2-sm.jpg"
+                }
+            ],
+            "url": "store-product.html?i=3",
+            "categories": [
+                "<a href=\"#\">Smart Watches</a>",
+                "<span>Smart Watches</span>"
+            ]
+        }, {
+            "title": "Samsung Gear S2",
+            "price": "$234.99",
+            "photos": [
+                {
+                    "full": "assets/images/product-2-1.jpg",
+                    "md": "assets/images/product-2-1-md.jpg",
+                    "sm": "assets/images/product-2-1-sm.jpg"
+                }, {
+                    "full": "assets/images/product-2-2.jpg",
+                    "md": "assets/images/product-2-2-md.jpg",
+                    "sm": "assets/images/product-2-2-sm.jpg"
+                }
+            ],
+            "url": "store-product.html?i=4",
+            "categories": [
+                "<a href=\"#\">Smart Watches</a>",
+                "<span>Smart Watches</span>"
+            ],
+            "rating": "<span class=\"nk-product-rating\"> <span style=\"width: 80%;\"><span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span></span> <span><span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span></span> </span>"
+        }, {
+            "title": "Gucci Interlocking Collection",
+            "price": "$1,599.99",
+            "photos": [
+                {
+                    "full": "assets/images/product-3-1.jpg",
+                    "md": "assets/images/product-3-1-md.jpg",
+                    "sm": "assets/images/product-3-1-sm.jpg"
+                }, {
+                    "full": "assets/images/product-3-2.jpg",
+                    "md": "assets/images/product-3-2-md.jpg",
+                    "sm": "assets/images/product-3-2-sm.jpg"
+                }
+            ],
+            "url": "store-product.html?i=5",
+            "categories": [
+                "<a href=\"#\">Ladies' Watches</a>",
+                "<span>Ladies' Watches</span>"
+            ],
+            "rating": "<span class=\"nk-product-rating\"> <span style=\"width: 60%;\"><span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span></span> <span><span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span></span> </span>"
+        }, {
+            "title": "Alessi Automatic Watch",
+            "price": "$400.00",
+            "photos": [
+                {
+                    "full": "assets/images/product-4-1.jpg",
+                    "md": "assets/images/product-4-1-md.jpg",
+                    "sm": "assets/images/product-4-1-sm.jpg"
+                }, {
+                    "full": "assets/images/product-4-2.jpg",
+                    "md": "assets/images/product-4-2-md.jpg",
+                    "sm": "assets/images/product-4-2-sm.jpg"
+                }
+            ],
+            "url": "store-product.html?i=6",
+            "categories": [
+                "<a href=\"#\">Ladies' Watches</a>",
+                "<span>Ladies' Watches</span>"
+            ],
+            "rating": "<span class=\"nk-product-rating\"> <span style=\"width: 70%;\"><span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span></span> <span><span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span></span> </span>"
+        }, {
+            "title": "Invicta Russian Diver Skelton",
+            "price": "$680.00",
+            "photos": [
+                {
+                    "full": "assets/images/product-8-1.jpg",
+                    "md": "assets/images/product-8-1-md.jpg",
+                    "sm": "assets/images/product-8-1-sm.jpg"
+                }, {
+                    "full": "assets/images/product-8-2.jpg",
+                    "md": "assets/images/product-8-2-md.jpg",
+                    "sm": "assets/images/product-8-2-sm.jpg"
+                }
+            ],
+            "url": "store-product.html?i=7",
+            "categories": [
+                "<a href=\"#\">Men's Watches</a>",
+                "<span>Men's Watches</span>"
+            ],
+            "rating": "<span class=\"nk-product-rating\"> <span style=\"width: 92%;\"><span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span> <span class=\"fas fa-star\"></span></span> <span><span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span> <span class=\"far fa-star\"></span></span> </span>"
+        }
+    ]
+}

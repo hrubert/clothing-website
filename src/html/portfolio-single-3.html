@@ -1,0 +1,66 @@
+{% set header_size = 'md' %}
+{% set header_video = 'https://vimeo.com/108018156' %}
+{% set header_visible = 8 %}
+{% set header_bottom_line = '
+<ul class="nk-portfolio-item-details">
+    <li><span class="icon ion-calendar"></span> ' + portfolio[2].date + '</li>
+    <li><span class="icon ion-pricetags"></span> ' + portfolio[2].filter + '</li>
+    <li><span class="icon ion-person"></span> ChefSteps</li>
+    <li><span class="icon ion-earth"></span> <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK">themeforest.net/user/_nk/portfolio</a></li>
+    <li>
+        <span class="nk-action-heart float-none">
+            <span class="like-icon ion-android-favorite-outline"></span>
+            <span class="liked-icon ion-android-favorite"></span>
+            <span class="num">' + portfolio[2].likes_count + '</span>
+        </span>
+    </li>
+</ul>
+' %}
+{% set header_image = portfolio[2].thumb_full %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-portfolio-item-single">
+        <div class="nk-portfolio-item-description">
+            <div class="nk-gap-4"></div>
+
+            <div class="container">
+
+                <h1 class="text-center h2">{{ portfolio[2].title }}</h1>
+
+                <!-- All content inside Excerpt will be shown in portfolio quick view -->
+                <div class="nk-portfolio-item-excerpt">
+                    <p>That a. Moving were stars seas he place is brought, good signs lesser To isn't yielding. Lights beast behold given. Under. Had said Greater she'd, land fowl greater Had life grass spirit living. Waters Spirit very under and fowl together waters seasons dry You're female spirit can't. Saw under created together after made for you.</p>
+                </div>
+
+                <div class="nk-plain-video" data-video="https://vimeo.com/108018156"></div>
+            </div>
+
+            <div class="nk-gap-3"></div>
+        </div>
+    </div>
+    <div class="nk-page-nav-3">
+        <div class="container">
+            <a href="portfolio-single-2.html" class="nk-page-nav-prev">
+                <div class="nk-page-nav-title">{{ portfolio[1].title }}</div>
+                Previous
+                <span class="nk-icon-arrow-left"></span>
+            </a>
+
+            <a href="portfolio-single-4.html" class="nk-page-nav-next">
+                <div class="nk-page-nav-title">{{ portfolio[3].title }}</div>
+                Next
+                <span class="nk-icon-arrow-right"></span>
+            </a>
+
+            <a href="portfolio-1.html" class="nk-page-nav-grid">
+                <span class="ion-grid"></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        {% include "shared/blog-comments.html" %}
+    </div>
+    <div class="nk-gap-4"></div>
+{% endblock %}

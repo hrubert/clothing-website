@@ -1,0 +1,275 @@
+{% set header_title = 'Booking Form' %}
+{% set header_sub_title = 'Template Only' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-gap-4"></div>
+    <div class="container">
+        <div class="text-center">
+            <span class="nk-btn nk-btn-effect-1-bottom nk-btn-color-dark-1" data-toggle="modal" data-target="#nk-booking-modal">
+                <span class="icon">
+                    <span class="ion-android-time"></span>
+                </span>
+                <span>Booking in Modal</span>
+            </span>
+        </div>
+    </div>
+    <div class="nk-gap-4"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="nk-box-2 bg-dark-2 text-white">
+                    <!-- START: Booking Form -->
+                    <form action="#" class="nk-form">
+                        <input name="date" type="text" class="datetimepicker required">
+
+                        <div class="nk-gap-2"></div>
+                        <h3 class="nk-title h4">Service:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <select name="haircut" class="form-control required">
+                                    <option value="" disabled selected>Haircut *</option>
+                                    <option value="1">Brooklyn Fade - $8.12</option>
+                                    <option value="2">Choppy - $12.00</option>
+                                    <option value="3">Pompadour - $6.14</option>
+                                    <option value="4">Undercut - $7.55</option>
+                                    <option value="5">Skater Hight - $10.35</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <select name="shave" class="form-control">
+                                    <option value="" disabled selected>Shave</option>
+                                    <option value="1">Top Knot &amp; Beard - $5.10</option>
+                                    <option value="2">Man Bun &amp; Beard - $6.50</option>
+                                    <option value="3">Thick Beard - $8.75</option>
+                                    <option value="4">Smart Business Beard - $5.00</option>
+                                    <option value="5">Hipster Beard - $6.70</option>
+                                    <option value="6">Winter Beard - $7.00</option>
+                                    <option value="7">Stubble - $5.00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <select name="employee" class="form-control required">
+                            <option value="" disabled selected>Employee</option>
+                            <option value="1">Gregory Walker</option>
+                            <option value="2">Emily Foster</option>
+                            <option value="3">Jack Carlson</option>
+                            <option value="4">Claudia Mckinney</option>
+                        </select>
+
+                        <div class="nk-gap-2"></div>
+                        <h3 class="nk-title h4">Your Details:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control required" name="name" placeholder="Name *" aria-required="true">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="tel" class="form-control required" name="phone" placeholder="Phone *" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <textarea name="notes" rows="5" class="form-control" placeholder="Notes"></textarea>
+
+                        <div class="nk-gap-2"></div>
+                        <button class="nk-btn nk-btn-effect-7-h nk-btn-color-white text-dark-1">
+                            <span class="icon">
+                                <span class="ion-android-time"></span>
+                            </span>
+                            <span>Book Now</span>
+                            <span class="nk-btn-effect-bg bg-main-1"></span>
+                        </button>
+                        &nbsp;&nbsp; <small>We will send you an SMS with the details</small>
+                    </form>
+                    <!-- END: Booking Form -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="nk-box-2 bg-gray-4">
+                    <!-- START: Booking Form -->
+                    <form action="#" class="nk-form nk-form-style-1">
+                        <input name="date" type="text" class="datetimepicker required">
+
+                        <div class="nk-gap-2"></div>
+                        <h3 class="nk-title h4">Service:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <select name="haircut" class="form-control required">
+                                    <option value="" disabled selected>Haircut *</option>
+                                    <option value="1">Brooklyn Fade - $8.12</option>
+                                    <option value="2">Choppy - $12.00</option>
+                                    <option value="3">Pompadour - $6.14</option>
+                                    <option value="4">Undercut - $7.55</option>
+                                    <option value="5">Skater Hight - $10.35</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <select name="shave" class="form-control">
+                                    <option value="" disabled selected>Shave</option>
+                                    <option value="1">Top Knot &amp; Beard - $5.10</option>
+                                    <option value="2">Man Bun &amp; Beard - $6.50</option>
+                                    <option value="3">Thick Beard - $8.75</option>
+                                    <option value="4">Smart Business Beard - $5.00</option>
+                                    <option value="5">Hipster Beard - $6.70</option>
+                                    <option value="6">Winter Beard - $7.00</option>
+                                    <option value="7">Stubble - $5.00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <select name="employee" class="form-control required">
+                            <option value="" disabled selected>Employee</option>
+                            <option value="1">Gregory Walker</option>
+                            <option value="2">Emily Foster</option>
+                            <option value="3">Jack Carlson</option>
+                            <option value="4">Claudia Mckinney</option>
+                        </select>
+
+                        <div class="nk-gap-2"></div>
+                        <h3 class="nk-title h4">Your Details:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control required" name="name" placeholder="Name *" aria-required="true">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="tel" class="form-control required" name="phone" placeholder="Phone *" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <textarea name="notes" rows="5" class="form-control" placeholder="Notes"></textarea>
+
+                        <div class="nk-gap-2"></div>
+                        <button class="nk-btn nk-btn-effect-7-h nk-btn-color-dark-2">
+                            <span class="icon">
+                                <span class="ion-android-time"></span>
+                            </span>
+                            <span>Book Now</span>
+                            <span class="nk-btn-effect-bg bg-main-1"></span>
+                        </button>
+                        &nbsp;&nbsp; <small>We will send you an SMS with the details</small>
+                    </form>
+                    <!-- END: Booking Form -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-4"></div>
+{% endblock %}
+
+{% block after_content %}
+    <!-- START: Booking Modal -->
+    <div class="nk-modal modal fade" id="nk-booking-modal" tabindex="-1" role="dialog" aria-labelledby="nk-booking-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title nk-title" id="nk-booking-modal-label">Book Your Visit</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="ion-android-close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- START: Booking Form -->
+                    <form action="#" class="nk-form nk-form-style-1">
+                        <input name="date" type="text" class="datetimepicker required">
+
+                        <div class="nk-gap-2"></div>
+                        <h3 class="nk-title h4">Service:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <select name="haircut" class="form-control required">
+                                    <option value="" disabled selected>Haircut *</option>
+                                    <option value="1">Brooklyn Fade - $8.12</option>
+                                    <option value="2">Choppy - $12.00</option>
+                                    <option value="3">Pompadour - $6.14</option>
+                                    <option value="4">Undercut - $7.55</option>
+                                    <option value="5">Skater Hight - $10.35</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <select name="shave" class="form-control">
+                                    <option value="" disabled selected>Shave</option>
+                                    <option value="1">Top Knot &amp; Beard - $5.10</option>
+                                    <option value="2">Man Bun &amp; Beard - $6.50</option>
+                                    <option value="3">Thick Beard - $8.75</option>
+                                    <option value="4">Smart Business Beard - $5.00</option>
+                                    <option value="5">Hipster Beard - $6.70</option>
+                                    <option value="6">Winter Beard - $7.00</option>
+                                    <option value="7">Stubble - $5.00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <select name="employee" class="form-control required">
+                            <option value="" disabled selected>Employee</option>
+                            <option value="1">Gregory Walker</option>
+                            <option value="2">Emily Foster</option>
+                            <option value="3">Jack Carlson</option>
+                            <option value="4">Claudia Mckinney</option>
+                        </select>
+
+                        <div class="nk-gap-2"></div>
+                        <h3 class="nk-title h4">Your Details:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control required" name="name" placeholder="Name *" aria-required="true">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="tel" class="form-control required" name="phone" placeholder="Phone *" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <textarea name="notes" rows="5" class="form-control" placeholder="Notes"></textarea>
+
+                        <div class="nk-gap-2"></div>
+                        <button class="nk-btn nk-btn-effect-7-h nk-btn-color-dark-2">
+                            <span class="icon">
+                                <span class="ion-android-time"></span>
+                            </span>
+                            <span>Book Now</span>
+                            <span class="nk-btn-effect-bg bg-main-1"></span>
+                        </button>
+                        &nbsp;&nbsp; <small>We will send you an SMS with the details</small>
+                    </form>
+                    <!-- END: Booking Form -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Booking Modal -->
+{% endblock %}
+
+{% block javascript %}
+    <!-- START: Booking datetimer init -->
+    <script>
+        $('.datetimepicker').datetimepicker({
+            theme: 'nk',
+            startDate: new Date(),
+            minDate: 0, // today
+            maxDate: '+1970/01/15', // next 14 days
+            yearStart: new Date().getFullYear(),
+            yearEnd: new Date().getFullYear(),
+            monthStart: new Date().getMonth(),
+            monthEnd: Math.min(11, new Date().getMonth() + 1),
+            inline: true,
+            disabledWeekDays: [5, 6], // no weekends
+            allowTimes:[
+                '08:00', '09:00', '10:00', '14:00', '15:00', '17:00', '18:00'
+            ],
+            scrollMonth: false,
+            scrollTime: false,
+            scrollInput: false,
+            prevButton: false,
+            nextButton: false,
+            todayButton: false
+        });
+    </script>
+    <!-- END: Booking datetimer init -->
+{% endblock %}

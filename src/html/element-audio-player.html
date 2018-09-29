@@ -1,0 +1,244 @@
+{% set header_title = 'Audio Player' %}
+{% set header_sub_title = 'By default playing hidden playlist. You can select another playlist below.<br>Available shortcuts see here - <a href="feature-shortcuts.html" target="_blank">feature-shortcuts.html</a>' %}
+{% set audio_player = true %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="nk-gap-4"></div>
+        <div class="row vertical-gap align-items-center">
+            <div class="col-md-5">
+                <img class="nk-img-fit" src="assets/images/cover-2.jpg" alt="">
+            </div>
+            <div class="col-md-7">
+                <!--
+                    START: Playlist 1
+
+                    Available classes:
+                        nk-audio-playlist-hidden
+                        nk-audio-playlist-dark
+                        active
+
+                    ID attribute needs to automatically detect playlist after page reload
+                 -->
+                <ul class="nk-audio-playlist" id="playlist-1">
+                    <li data-src="assets/mp3/OctoSound-indie-rock.mp3">
+                        <div class="nk-audio-playlist-title">
+                            <strong>OctoSound</strong> - Indie Rock
+                        </div>
+                        <div class="nk-audio-playlist-duration">
+                            05:34
+                        </div>
+                    </li>
+                    <li data-src="assets/mp3/OctoSound-intense-rock-trailer.mp3">
+                        <div class="nk-audio-playlist-title">
+                            <strong>OctoSound</strong> - Intense Rock Trailer
+                        </div>
+                        <div class="nk-audio-playlist-duration">
+                            05:34
+                        </div>
+                    </li>
+                    <li data-src="assets/mp3/OctoSound-extreme-sport.mp3">
+                        <div class="nk-audio-playlist-title">
+                            <strong>OctoSound</strong> - Extreme Sport
+                        </div>
+                        <div class="nk-audio-playlist-duration">
+                            05:34
+                        </div>
+                    </li>
+                    <li data-src="assets/mp3/OctoSound-the-rock.mp3">
+                        <div class="nk-audio-playlist-title">
+                            <strong>OctoSound</strong> - The Rock
+                        </div>
+                        <div class="nk-audio-playlist-duration">
+                            05:34
+                        </div>
+                    </li>
+                    <li data-src="assets/mp3/OctoSound-drive.mp3">
+                        <div class="nk-audio-playlist-title">
+                            <strong>OctoSound</strong> - Drive
+                        </div>
+                        <div class="nk-audio-playlist-duration">
+                            05:34
+                        </div>
+                    </li>
+                    <li data-src="assets/mp3/OctoSound-sport.mp3">
+                        <div class="nk-audio-playlist-title">
+                            <strong>OctoSound</strong> - Sport
+                        </div>
+                        <div class="nk-audio-playlist-duration">
+                            05:34
+                        </div>
+                    </li>
+                    <li data-src="assets/mp3/OctoSound-powerful.mp3">
+                        <div class="nk-audio-playlist-title">
+                            <strong>OctoSound</strong> - Powerful
+                        </div>
+                        <div class="nk-audio-playlist-duration">
+                            05:34
+                        </div>
+                    </li>
+                    <li data-src="assets/mp3/OctoSound-rocks.mp3">
+                        <div class="nk-audio-playlist-title">
+                            <strong>OctoSound</strong> - Rocks
+                        </div>
+                        <div class="nk-audio-playlist-duration">
+                            05:34
+                        </div>
+                    </li>
+                </ul>
+                <!-- END: Playlist 1  -->
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+
+    <div class="nk-box bg-dark-1 text-white">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="row vertical-gap align-items-center">
+                <div class="col-md-5 order-md-2">
+                    <img class="nk-img-fit" src="assets/images/cover-1.jpg" alt="">
+                </div>
+                <div class="col-md-7">
+                    <!--
+                        START: Playlist 2
+
+                        Available classes:
+                            nk-audio-playlist-hidden
+                            nk-audio-playlist-dark
+                            active
+
+                        ID attribute needs to automatically detect playlist after page reload
+                     -->
+                    <ul class="nk-audio-playlist nk-audio-playlist-dark" id="playlist-2">
+                        <li data-src="assets/mp3/soundroll-fight-no-more.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Fight No More
+                            </div>
+                            <div class="nk-audio-playlist-buttons">
+                                <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK" target="_blank">
+                                    <span class="ion-bag"></span>
+                                </a>
+                                <a href="assets/mp3/soundroll-fight-no-more.mp3" download>
+                                    <span class="fa fa-download"></span>
+                                </a>
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:43
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-driving-in-my-car.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Driving in My Car
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:41
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-total-overdrive.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Total Overdrive
+                            </div>
+                            <div class="nk-audio-playlist-buttons">
+                                <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK" target="_blank">
+                                    <span class="ion-bag"></span>
+                                </a>
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                03:59
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-rock.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Rock
+                            </div>
+                            <div class="nk-audio-playlist-buttons">
+                                <a href="assets/mp3/soundroll-rock.mp3" download>
+                                    <span class="fa fa-download"></span>
+                                </a>
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:41
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-extreme-driving.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Extreme Driving
+                            </div>
+                            <div class="nk-audio-playlist-buttons">
+                                <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK" target="_blank">
+                                    <span class="ion-bag"></span>
+                                </a>
+                                <a href="assets/mp3/soundroll-extreme-driving.mp3" download>
+                                    <span class="fa fa-download"></span>
+                                </a>
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:57
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-wrong-way.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Wrong Way
+                            </div>
+                            <div class="nk-audio-playlist-buttons">
+                                <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK" target="_blank">
+                                    <span class="ion-bag"></span>
+                                </a>
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                05:34
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- END: Playlist 2  -->
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+
+    <div class="nk-gap-4"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="nk-title h3 text-center">Plain Audio Players</h2>
+                <div class="nk-gap-1"></div>
+                <!--
+                    START: Plain Audio
+
+                    Available classes:
+                        nk-audio-plain-dark
+                 -->
+                <div class="nk-audio-plain nk-audio-plain-dark" data-src="assets/mp3/OctoSound-sport.mp3">
+                    <div class="nk-audio-plain-title">
+                        <strong>OctoSound</strong> - Sport
+                        <div class="nk-audio-progress">
+                            <div class="nk-audio-progress-current"></div>
+                        </div>
+                    </div>
+                    <div class="nk-audio-plain-duration">
+                        05:34
+                    </div>
+                </div>
+
+                <div class="nk-gap-1"></div>
+
+                <div class="nk-audio-plain" data-src="assets/mp3/soundroll-total-overdrive.mp3">
+                    <div class="nk-audio-plain-title">
+                        <strong>soundroll</strong> - Total Overdrive
+                        <div class="nk-audio-progress">
+                            <div class="nk-audio-progress-current"></div>
+                        </div>
+                    </div>
+                    <div class="nk-audio-plain-duration">
+                        03:59
+                    </div>
+                </div>
+                <!-- END: Plain Audio  -->
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-4"></div>
+{% endblock %}

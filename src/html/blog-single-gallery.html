@@ -1,0 +1,89 @@
+{% set header_show = false %}
+{% set header_title = posts[4].title %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+    <div class="nk-gap-5"></div>
+    <div class="nk-gap-3"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- START: Post -->
+                <div class="nk-blog-post nk-blog-post-single">
+                    <h1 class="h2">{{ posts[4].title }}</h1>
+                    <div class="nk-post-meta nk-post-meta-top">
+                        <div class="nk-post-date">
+                            {{ posts[4].date }}
+                            <span class="nk-post-by">by {{ posts[4].by | safe }}</span>
+                            <span class="nk-post-category">in {{ posts[4].cat | safe }}</span>
+                        </div>
+                    </div>
+
+                    <!-- START: Post Text -->
+                    <div class="nk-post-text mt-0">
+                        <div class="nk-carousel-3" data-arrows="true" data-size="1" data-autoplay="8000">
+                            <div class="nk-carousel-inner nk-popup-gallery">
+                                {% for galleryItem in posts[4].gallery %}
+                                    <div><div>
+                                        <a href="{{ galleryItem.full }}" class="nk-gallery-item" data-size="{{ galleryItem.size }}"><img src="{{ galleryItem.thumb }}" alt=""></a>
+                                    </div></div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="nk-gap"></div>
+                        {% include "shared/blog-content.html" %}
+                    </div>
+                    <!-- END: Post Text -->
+
+                    <!-- START: Post Meta -->
+                    <div class="nk-post-meta">
+                        <div class="nk-post-meta-right">
+                            <a class="nk-post-comments-count" href="#comments">{{ posts[4].comments_count }}</a>
+                            <span class="nk-action-heart">
+                                <span class="like-icon ion-android-favorite-outline"></span>
+                                <span class="liked-icon ion-android-favorite"></span>
+                                <span class="num">{{ posts[4].likes_count }}</span>
+                            </span>
+                        </div>
+                        <div class="nk-post-tags">
+                            <a href="#">Gallery</a>
+                            <a href="#">Demonstrate</a>
+                            <a href="#">Tags</a>
+                        </div>
+                    </div>
+                    <!-- END: Post Meta -->
+
+                    {% include "shared/blog-author.html" %}
+
+                    <!-- START: posts nav -->
+                    <div class="nk-page-nav-3">
+                        <div class="container">
+                            <a href="{{ posts[3].url }}" class="nk-page-nav-prev">
+                                <div class="nk-page-nav-title">{{ posts[3].title }}</div>
+                                Previous
+                                <span class="nk-icon-arrow-left"></span>
+                            </a>
+
+                            <a href="{{ posts[5].url }}" class="nk-page-nav-next">
+                                <div class="nk-page-nav-title">{{ posts[5].title }}</div>
+                                Next
+                                <span class="nk-icon-arrow-right"></span>
+                            </a>
+
+                            <a href="blog.html" class="nk-page-nav-grid">
+                                <span class="ion-grid"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END: posts nav -->
+
+                    {% include "shared/blog-comments.html" %}
+                </div>
+                <!-- END: Post -->
+
+                <div class="nk-gap-4"></div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

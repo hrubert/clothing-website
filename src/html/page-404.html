@@ -1,0 +1,29 @@
+{% set header_title = 'Ooops... Page not found' %}
+{% set header_title_show = false %}
+{% set header_size = 'full' %}
+{% set header_image = 'assets/images/image-6.jpg' %}
+{% set header_visible = 6 %}
+{% set header_text = '
+    <div class="nk-gap-4"></div>
+    <div class="container">
+        <div class="text-center">
+            <h3 class="nk-title-back op-2">Error 404</h3>
+            <h2 class="nk-title display-4">Page Not Found</h2>
+            <div class="nk-title-sep-icon">
+                <span class="icon"><span class="ion-fireball"></span></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="nk-gap"></div>
+                    <p class="lead">The page you are looking for no longer exists. Perhaps you can return back to the site’s homepage and see if you can find what you are looking for.</p>
+
+                    <div class="nk-gap-1"></div>
+                    <a href="#!" class="nk-btn nk-btn-lg nk-btn-rounded nk-btn-color-white text-dark-1"><span class="icon"><span class="ion-home"></span></span> Go to Homepage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-4"></div>
+' %}
+{% extends 'layouts/layout-1.html' %}

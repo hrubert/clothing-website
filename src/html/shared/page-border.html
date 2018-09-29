@@ -1,0 +1,15 @@
+{% if page_border %}
+<!-- START: Page Border -->
+<!--
+    Additional classes:
+        .nk-page-border-md
+        .nk-page-border-sm
+-->
+<div class="nk-page-border{{ ' nk-page-border-sm' if page_border == 'sm' }}{{ ' nk-page-border-md' if page_border == 'md' }}">
+    <div class="nk-page-border-t{{ ' ' + page_border_class if page_border_class }}"></div>
+    <div class="nk-page-border-r{{ ' ' + page_border_class if page_border_class }}"></div>
+    <div class="nk-page-border-b{{ ' ' + page_border_class if page_border_class }}"></div>
+    <div class="nk-page-border-l{{ ' ' + page_border_class if page_border_class }}"></div>
+</div>
+<!-- END: Page Border -->
+{% endif %}

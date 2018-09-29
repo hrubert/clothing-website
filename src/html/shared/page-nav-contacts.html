@@ -1,0 +1,41 @@
+
+<!--
+    START: Top Contacts
+
+    Additional Classes:
+        .nk-contacts-top-light
+        .nk-contacts-top-transparent
+        .nk-contacts-top-blur
+-->
+<div class="nk-contacts-top{{ ' nk-contacts-top-light' if nav_contacts_light }}{{ ' nk-contacts-top-transparent' if nav_contacts_transparent }}{{ ' nk-contacts-top-blur' if nav_contacts_blur }}">
+    <div class="container">
+        <div class="nk-contacts-left">
+            <div class="nk-navbar{{ ' nk-navbar-light' if nav_contacts_light }}">
+                <ul class="nk-nav">
+                    <li class="nk-drop-item">
+                        <a href="#">EN</a>
+                        <ul class="dropdown">
+                            <li><a href="#">DE</a></li>
+                            <li><a href="#">IT</a></li>
+                            <li><a href="#">RU</a></li>
+                            <li><a href="#">JA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="tel:+37001231078"><span class="nk-contact-icon"><i class="ion-ios-telephone"></i></span> + 3 (700) 123-1078</a></li>
+                    <li><a href="mailto:info@khaki.com"><span class="nk-contact-icon"><i class="ion-ios-email"></i></span> info@khaki.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nk-contacts-right">
+            <div class="nk-navbar{{ ' nk-navbar-light' if nav_contacts_light }}">
+                <ul class="nk-nav">
+                    <li><a href="https://twitter.com/nkdevv" target="_blank" class="nk-contact-icon"><span class="ion-social-twitter"></span></a></li>
+                    <li><a href="https://dribbble.com/_nK" target="_blank" class="nk-contact-icon"><span class="ion-social-dribbble-outline"></span></a></li>
+                    <li><a href="#" class="nk-contact-icon"><span class="ion-social-instagram-outline"></span></a></li>
+                    <li><a href="#" class="nk-contact-icon"><span class="ion-social-pinterest"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: Top Contacts -->

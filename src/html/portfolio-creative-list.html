@@ -1,0 +1,54 @@
+{% set header_title = 'Portfolio List' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <div class="nk-gap-4"></div>
+
+    <div class="container">
+        <div class="nk-portfolio-list">
+
+            {% for i in [0, 1, 2] %}
+                <div class="nk-portfolio-item">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 col-lg-8">
+                            <div class="nk-image-box-1">
+                                <a href="{{ portfolio[i].url }}" class="nk-image-box-link"></a>
+                                <img class="nk-portfolio-image" src="{{ portfolio[i].thumb_default }}" alt="{{ portfolio[i].title }}">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="nk-box-2">
+                                <h2 class="h3"><a href="{{ portfolio[i].url }}" class="nk-portfolio-title">{{ portfolio[i].title }}</a></h2>
+                                <div class="nk-portfolio-links">{{ portfolio[i].date }}</div>
+                                <div class="nk-gap"></div>
+                                {{ portfolio[i].excerpt | safe }}
+                                <div class="nk-gap"></div>
+                                <a href="{{ portfolio[i].url }}" class="nk-btn nk-btn-sm nk-btn-effect-2-right nk-btn-circle nk-btn-outline nk-btn-color-dark-4">
+                                    <span>More Info</span>
+                                    <span class="icon"><i class="ion-ios-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nk-gap-3"></div>
+            {% endfor %}
+
+            <div class="nk-pagination nk-pagination-left">
+                <nav>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a class="nk-pagination-current" href="#">3</a>
+                    <a href="#">4</a>
+                    <span>...</span>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="nk-gap-4"></div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% set header_title = 'Portfolio Wide Slider' %}
+{% set header_show = 3 %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+
+    <div class="nk-carousel-3">
+        <div class="container">
+            <div class="nk-gap-3"></div>
+            <div class="nk-carousel-prev">
+                <div class="nk-carousel-arrow-name"><!-- There Will be a Name of Portfolio Item --></div>
+                Previous
+                <span class="nk-icon-arrow-left"></span>
+            </div>
+            <div class="nk-carousel-next">
+                <div class="nk-carousel-arrow-name"><!-- There Will be a Name of Portfolio Item --></div>
+                Next
+                <span class="nk-icon-arrow-right"></span>
+            </div>
+            <div class="nk-carousel-current">
+                <h3 class="nk-carousel-name h4"><!-- There Will be a Name of Portfolio Item --></h3>
+                <div class="nk-carousel-links"></div>
+            </div>
+            <div class="nk-gap-3"></div>
+        </div>
+
+        <div class="nk-carousel-inner">
+            {% for folio in portfolio %}
+                <div>
+                    <div class="nk-image-box-1 nk-no-effect nk-portfolio-item">
+                        <a href="{{ folio.url }}" class="nk-image-box-link nk-portfolio-quick-view"></a>
+                        <img class="nk-portfolio-image" src="{{ folio.thumb_full }}" alt="{{ folio.title }}">
+                        <h2 class="nk-portfolio-title nk-carousel-item-name"><a href="{{ folio.url }}" class="nk-portfolio-quick-view">{{ folio.title }}</a></h2>
+                        <div class="nk-portfolio-sub-title nk-carousel-item-links">{{ folio.date }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

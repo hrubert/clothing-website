@@ -1,0 +1,91 @@
+{% set custom_css = 'assets/css/custom-typography-music-label.css' %}
+{% set header_title = 'Videos' %}
+{% set header_show = false %}
+{% set nav_logo = 'assets/images/logo-music-label-light.png' %}
+{% set nav_logo_url = 'demo-music-label.html' %}
+{% set nav_light = true %}
+{% set nav_logo_top_light = true %}
+{% set nav_sticky = false %}
+{% set navigation = {
+    "demo-music-label-about.html": {
+        "name": "ABOUT"
+    },
+    "demo-music-label-artists.html": {
+        "name": "ARTISTS"
+    },
+    "demo-music-label-releases.html": {
+        "name": "RELEASES"
+    },
+    "demo-music-label-videos.html": {
+        "name": "VIDEOS"
+    },
+    "demo-music-label-agenda.html": {
+        "name": "AGENDA"
+    },
+    "demo-music-label-news.html": {
+        "name": "NEWS"
+    }
+} %}
+{% set page_boxed = true %}
+{% set footer = 6 %}
+{% set footer_bg = false %}
+{% extends 'layouts/layout-8.html' %}
+
+{% block content %}
+
+    <!-- START: Videos -->
+    <div class="nk-gap-2"></div>
+    <div class="container">
+        <div class="row vertical-gap">
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=xo1VInw-SKc"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=CHV6BjuQOZQ"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=cmSbXsFE3l8"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=bMpFmHSgC4Q"></div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=nfWlot6h_JM"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=WDAd0S92Uko"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=PIh2xe4jnpk"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=pB-5XG-DbAA"></div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=HHP5MKgK0o8"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=UrUJyKsLQeU"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=Io0fBr1XBUA"></div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="nk-plain-video" data-video="https://www.youtube.com/watch?v=fEOyePhElr4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-4"></div>
+    <!-- END: Videos -->
+
+    {% set instagram_template = '<div class="col-4 col-md-2"><a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="nk-img-stretch"></a></div>' %}
+    <!-- START: Instagram -->
+    <div class="nk-box text-center">
+        <div class="nk-instagram row no-gutters multi-column" data-instagram-template='{{ instagram_template | safe }}' data-instagram-quality="md"
+        ></div>
+    </div>
+    <!-- END: Instagram -->
+
+{% endblock %}

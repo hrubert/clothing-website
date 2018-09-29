@@ -1,0 +1,461 @@
+{% set custom_css = 'assets/css/custom-typography-barber.css' %}
+{% set header_title_back = 'Barber Shop' %}
+{% set header_title_back_visible = 3 %}
+{% set header_title = 'Barberia' %}
+{% set header_size = 'md' %}
+{% set header_image = 'assets/images/image-24.jpg' %}
+{% set header_visible = 7 %}
+{% set header_class = 'text-left' %}
+{% set nav_logo = 'assets/images/logo-barber.png' %}
+{% set nav_logo_url = 'demo-barber.html' %}
+{% set nav_side_logo_light = 'assets/images/logo-barber-light.png' %}
+{% set nav_cart = false %}
+{% set nav_search = false %}
+{% set nav_align = 'left' %}
+{% set nav_right_button = '
+    <span class="text-dark-1">
+        <span class="nk-btn nk-btn-effect-1-bottom nk-btn-color-white" data-toggle="modal" data-target="#nk-booking-modal">
+            <span class="icon">
+                <span class="ion-android-time"></span>
+            </span>
+            <span>Booking</span>
+        </span>
+    </span>
+' %}
+{% set nav_side_light = true %}
+{% set nav_side_bg = false %}
+{% set navigation_side = navigation %}
+{% set navigation = {
+    "demo-barber.html": {
+        "name": "Home"
+    },
+    "demo-barber-prices.html": {
+        "name": "Prices"
+    },
+    "demo-barber-find-us.html": {
+        "name": "Find Us"
+    }
+} %}
+{% set page_border = true %}
+{% set footer = 3 %}
+{% set footer_bg = 'assets/images/bg-footer-5.jpg' %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+    <!-- START: Prices -->
+    <div class="nk-box">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+            <div class="row vertical-gap align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="nk-title">Our Prices</h2>
+                    <h3 class="nk-sub-title">Popular hairstyles</h3>
+                    <div class="nk-gap-2"></div>
+                    <div class="nk-pricing-menu">
+                        <div class="nk-gap"></div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Undercut</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $7.55
+                                </div>
+                            </div>
+                            <div class="nk-pricing-sub-title">This 'hipster' haircut with extremely tight sides and back</div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Brooklyn Fade</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $8.12
+                                </div>
+                            </div>
+                            <div class="nk-pricing-sub-title">The hair is cut to the scalp from the temple and dips low in the back</div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Pompadour</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $6.14
+                                </div>
+                            </div>
+                            <div class="nk-pricing-sub-title">A longer version of the classic tapered haircut in which the hair is brushed back</div>
+                        </div>
+                        <div class="nk-gap-2"></div>
+                        <a href="demo-barber-prices.html" class="nk-btn nk-btn-effect-7-h nk-btn-color-dark-2">
+                            <span class="nk-btn-effect-bg bg-main-1"></span>
+                            See More
+                        </a>
+                        <div class="nk-gap"></div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="float-right text-center">
+                        <img src="assets/images/image-26.jpg" class="nk-img-fit-md-down" width="600" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Prices -->
+
+    <!-- START: Team -->
+    <div class="nk-box bg-dark-1 text-white text-center">
+        <div class="nk-gap-5"></div>
+        <h3 class="nk-title-back text-center">Our Team</h3>
+        <h2 class="nk-title text-center">Barbers and Stylists</h2>
+        <div class="nk-gap"></div>
+        <img src="assets/images/title-separator-1-light.png" alt="">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="row vertical-gap">
+                <div class="col-md-6 col-lg-3">
+                    <div class="nk-image-box-1-a">
+                        <img src="assets/images/team-member-1.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-center">
+                            <div>
+                                <div class="nk-widget-social">
+                                    <a href="#"><i class="ion-social-twitter"></i></a>
+                                    <a href="#"><i class="ion-social-instagram-outline"></i></a>
+                                    <a href="#"><i class="ion-social-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-gap-1"></div>
+                    <h3 class="nk-title h4">Gregory Walker</h3>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="nk-image-box-1-a">
+                        <img src="assets/images/team-member-2.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-center">
+                            <div>
+                                <div class="nk-widget-social">
+                                    <a href="#"><i class="ion-social-twitter"></i></a>
+                                    <a href="#"><i class="ion-social-instagram-outline"></i></a>
+                                    <a href="#"><i class="ion-social-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-gap-1"></div>
+                    <h3 class="nk-title h4">Emily Foster</h3>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="nk-image-box-1-a">
+                        <img src="assets/images/team-member-5.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-center">
+                            <div>
+                                <div class="nk-widget-social">
+                                    <a href="#"><i class="ion-social-twitter"></i></a>
+                                    <a href="#"><i class="ion-social-instagram-outline"></i></a>
+                                    <a href="#"><i class="ion-social-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-gap-1"></div>
+                    <h3 class="nk-title h4">Jack Carlson</h3>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="nk-image-box-1-a">
+                        <img src="assets/images/team-member-4.jpg" alt="">
+                        <div class="nk-image-box-overlay nk-image-box-center">
+                            <div>
+                                <div class="nk-widget-social">
+                                    <a href="#"><i class="ion-social-twitter"></i></a>
+                                    <a href="#"><i class="ion-social-instagram-outline"></i></a>
+                                    <a href="#"><i class="ion-social-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-gap-1"></div>
+                    <h3 class="nk-title h4">Claudia Mckinney</h3>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Team -->
+
+    <!-- START: Testimonials -->
+    <div class="nk-box">
+        <div class="nk-gap-5"></div>
+        <div class="container">
+
+            <div class="nk-carousel" data-autoplay="12000">
+                <div class="nk-carousel-inner">
+                    <div><div>
+                        <blockquote class="nk-testimonial-2 bg-gray-2">
+                            <div class="nk-testimonial-photo" style="background-image: url('assets/images/avatar-woman-2.jpg');"></div>
+                            <div class="nk-testimonial-body">
+                                <em>"Female good moving Very thing form earth, for above herb dominion for made fifth. One them. Seas. Appear fourth seas."</em>
+                            </div>
+                            <div class="nk-testimonial-name nk-carousel-item-name h4">Felicia Meyer</div>
+                        </blockquote>
+                    </div></div>
+                    <div><div>
+                        <blockquote class="nk-testimonial-2 bg-gray-2">
+                            <div class="nk-testimonial-photo" style="background-image: url('assets/images/avatar-man-2.jpg');"></div>
+                            <div class="nk-testimonial-body">
+                                <em>"Bring. Isn't years gathered give made moved. Waters sea forth. It. Gathered own abundantly kind can't it, lesser behold, may."</em>
+                            </div>
+                            <div class="nk-testimonial-name nk-carousel-item-name h4">Gavin Hale</div>
+                        </blockquote>
+                    </div></div>
+                    <div><div>
+                        <blockquote class="nk-testimonial-2 bg-gray-2">
+                            <div class="nk-testimonial-photo" style="background-image: url('assets/images/avatar-man-1.jpg');"></div>
+                            <div class="nk-testimonial-body">
+                                <em>"Years heaven. Dominion light and every appear that creeping all. Light gathering don't given made give open, cattle was light."</em>
+                            </div>
+                            <div class="nk-testimonial-name nk-carousel-item-name h4">Antonio Vargas</div>
+                        </blockquote>
+                    </div></div>
+                </div>
+                <div class="nk-carousel-prev">
+                    <div class="nk-carousel-arrow-name"><!-- There Will be a Name of Testimonial Author --></div>
+                    Previous
+                    <span class="nk-icon-arrow-left"></span>
+                </div>
+                <div class="nk-carousel-next">
+                    <div class="nk-carousel-arrow-name"><!-- There Will be a Name of Testimonial Author --></div>
+                    Next
+                    <span class="nk-icon-arrow-right"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="nk-gap-5"></div>
+    </div>
+    <!-- END: Testimonials -->
+
+    <!-- START: Find Us -->
+    <div class="nk-box bg-dark-1 text-white">
+        <div class="bg-map-row row">
+            <div class="col-lg-6 align-self-center">
+                <!-- START: Google Map -->
+                <div id="google-map-contact" class="nk-gmaps nk-gmaps-lg"></div>
+                <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+                <script>
+                    function initializeGmaps() {
+                        var LatLng = {lat: 47.496474, lng: 19.0484679};
+                        var mapCanvas = document.getElementById('google-map-contact');
+                        var mapOptions = {
+                            center      : LatLng,
+                            scrollwheel : false,
+                            zoom        : 14,
+                            mapTypeId   : google.maps.MapTypeId.ROADMAP,
+                            backgroundColor: 'none',
+                            mapTypeId   : 'KhakiStyle'
+                        }
+                        var map = new google.maps.Map(mapCanvas, mapOptions);
+                        var marker = new google.maps.Marker({
+                            position: LatLng,
+                            map: map,
+                            icon: 'assets/images/logo-barber.png',
+                            title: 'Barberia'
+                        });
+
+                        // style from https://snazzymaps.com/style/151/ultra-light-with-labels
+                        var styledMapType = new google.maps.StyledMapType([{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}], { name: 'KhakiStyle' });
+                        map.mapTypes.set('KhakiStyle', styledMapType);
+                    }
+                    if(typeof google !== 'undefined') {
+                        google.maps.event.addDomListener(window, 'load', initializeGmaps);
+                    }
+                </script>
+                <!-- END: Google Map -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 offset-lg-7">
+                    <div class="nk-gap-5"></div>
+                    <div class="nk-gap-2"></div>
+                    <h2 class="nk-title">Find Us</h2>
+                    <h3 class="nk-sub-title">Please call us and take place.</h3>
+                    <div class="nk-gap-1"></div>
+
+                    <p>Divide first yielding so divided was fly be. Spirit, life morning seed seed brought for lesser after, he. Saying yielding moved gathering fruitful a in give they're second greater saying he.</p>
+
+                    <div class="nk-gap"></div>
+                    <ul class="nk-widget-contact">
+                        <li>
+                            <span class="nk-widget-contact-icon">
+                                <i class="ion-ios-email"></i>
+                            </span>
+                            contact@khaki.com
+                        </li>
+                        <li>
+                            <span class="nk-widget-contact-icon">
+                                <i class="ion-ios-telephone"></i>
+                            </span>
+                            + 3 (700) 123 444 10 78
+                        </li>
+                        <li>
+                            <span class="nk-widget-contact-icon">
+                                <i class="ion-ios-home"></i>
+                            </span>
+                            Apáczai Csere János utca 10, Budapest, 1051 Hungary
+                        </li>
+                    </ul>
+                    <div class="nk-gap-2"></div>
+                    <div class="nk-gap-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Find Us -->
+
+    <!-- START: Partners -->
+    <div class="nk-box text-center">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="nk-box-2 nk-box-line">
+                        <a href="#"><img src="assets/images/partner-logo-1-dark.png" alt="" class="nk-img" width="200"></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="nk-box-2 nk-box-line">
+                        <a href="#"><img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img" width="200"></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="nk-box-2 nk-box-line">
+                        <a href="#"><img src="assets/images/partner-logo-3-dark.png" alt="" class="nk-img" width="200"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="nk-box-2 nk-box-line">
+                        <a href="#"><img src="assets/images/partner-logo-4-dark.png" alt="" class="nk-img" width="200"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+    <!-- END: Partners -->
+
+{% endblock %}
+
+{% block after_content %}
+    <!-- START: Booking Modal -->
+    <div class="nk-modal modal fade" id="nk-booking-modal" tabindex="-1" role="dialog" aria-labelledby="nk-booking-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title nk-title" id="nk-booking-modal-label">Book Your Visit</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="ion-android-close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- START: Booking Form -->
+                    <form action="#" class="nk-form nk-form-style-1">
+                        <input name="date" type="text" class="datetimepicker required">
+
+                        <div class="nk-gap-3"></div>
+                        <h3 class="nk-title h6">Service:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <select name="haircut" class="form-control required">
+                                    <option value="" disabled selected>Haircut *</option>
+                                    <option value="1">Brooklyn Fade - $8.12</option>
+                                    <option value="2">Choppy - $12.00</option>
+                                    <option value="3">Pompadour - $6.14</option>
+                                    <option value="4">Undercut - $7.55</option>
+                                    <option value="5">Skater Hight - $10.35</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <select name="shave" class="form-control">
+                                    <option value="" disabled selected>Shave</option>
+                                    <option value="1">Top Knot &amp; Beard - $5.10</option>
+                                    <option value="2">Man Bun &amp; Beard - $6.50</option>
+                                    <option value="3">Thick Beard - $8.75</option>
+                                    <option value="4">Smart Business Beard - $5.00</option>
+                                    <option value="5">Hipster Beard - $6.70</option>
+                                    <option value="6">Winter Beard - $7.00</option>
+                                    <option value="7">Stubble - $5.00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <select name="employee" class="form-control required">
+                            <option value="" disabled selected>Employee</option>
+                            <option value="1">Gregory Walker</option>
+                            <option value="2">Emily Foster</option>
+                            <option value="3">Jack Carlson</option>
+                            <option value="4">Claudia Mckinney</option>
+                        </select>
+
+                        <div class="nk-gap-3"></div>
+                        <h3 class="nk-title h6">Your Details:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control required" name="name" placeholder="Name *" aria-required="true">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="tel" class="form-control required" name="phone" placeholder="Phone *" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <textarea name="notes" rows="5" class="form-control" placeholder="Notes"></textarea>
+
+                        <div class="nk-gap-2"></div>
+                        <button class="nk-btn nk-btn-effect-7-h nk-btn-color-dark-2">
+                            <span class="icon">
+                                <span class="ion-android-time"></span>
+                            </span>
+                            <span>Book Now</span>
+                            <span class="nk-btn-effect-bg bg-main-1"></span>
+                        </button>
+                        &nbsp;&nbsp; <small>We will send you an SMS with the details</small>
+                    </form>
+                    <!-- END: Booking Form -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Booking Modal -->
+{% endblock %}
+
+{% block javascript %}
+    <!-- START: Booking datetimer init -->
+    <script>
+        $('.datetimepicker').datetimepicker({
+            theme: 'nk',
+            startDate: new Date(),
+            minDate: 0, // today
+            maxDate: '+1970/01/15', // next 14 days
+            yearStart: new Date().getFullYear(),
+            yearEnd: new Date().getFullYear(),
+            monthStart: new Date().getMonth(),
+            monthEnd: Math.min(11, new Date().getMonth() + 1),
+            inline: true,
+            disabledWeekDays: [5, 6], // no weekends
+            allowTimes:[
+                '08:00', '09:00', '10:00', '14:00', '15:00', '17:00', '18:00'
+            ],
+            scrollMonth: false,
+            scrollTime: false,
+            scrollInput: false,
+            prevButton: false,
+            nextButton: false,
+            todayButton: false
+        });
+    </script>
+    <!-- END: Booking datetimer init -->
+{% endblock %}

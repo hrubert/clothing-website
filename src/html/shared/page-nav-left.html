@@ -1,0 +1,197 @@
+{% macro submenu(nav) -%}
+    {% for file, item in nav %}
+        <li{% if isActiveMenuItem(file, item, filename) or item.sub %} class="{{ 'active' if isActiveMenuItem(file, item, filename) }}{{ ' nk-drop-item' if item.sub }}"{% endif %}>
+            <a href="{{file | safe}}">
+                {{item.name | safe}}
+                {% if item.description -%}
+                    <span class="nk-item-descr">{{item.description | safe}}</span>
+                {%- endif %}
+            </a>
+            {%- if item.sub -%}
+                <ul class="dropdown">
+                    {{ submenu(item.sub) }}
+                </ul>
+            {%- endif %}
+        </li>
+    {%- endfor %}
+{%- endmacro %}
+
+<!--
+    START: Navbar
+
+    Additional Classes:
+        .nk-navbar-lg
+        .nk-navbar-align-center
+        .nk-navbar-align-right
+        .nk-navbar-overlay-content
+        .nk-navbar-light
+-->
+<nav class="nk-navbar nk-navbar-side nk-navbar-left nk-navbar-lg nk-navbar-align-{{ nav_left_align }} nk-navbar-overlay-content{{ ' nk-navbar-light' if nav_light }}" id="nk-navbar-left">
+    <div class="nano">
+        <div class="nano-content">
+            <div class="nk-nav-table">
+                <div class="nk-nav-row">
+                    {% if nav_logo %}
+                    <a href="#" class="nk-nav-logo">
+                        <img src="{{ nav_logo_light if nav_light else nav_logo }}" alt="" width="100">
+                    </a>
+                    {% endif %}
+
+                    {% if nav_sign or nav_cart or nav_share or nav_search %}
+                    <ul class="nk-nav-icons">
+                        {% if nav_sign %}
+                            <li class="single-icon nk-drop-item">
+                                <a href="#" class="no-link-effect">
+                                    <span class="fa fa-sign-in"></span>
+                                </a>
+                                <div class="dropdown">
+                                    <div class="nk-sign-form">
+                                        <div class="nk-sign-form-container">
+                                            <!-- START: Login Form -->
+                                            <form class="nk-sign-form-login active" action="#">
+                                                <h4>Log In</h4>
+
+                                                <input class="form-control" type="text" placeholder="Username or Email">
+                                                <div class="nk-gap"></div>
+
+                                                <input class="form-control" type="password" placeholder="Password">
+                                                <div class="nk-gap"></div>
+
+                                                <div class="form-check float-left">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input">
+                                                        Remember Me
+                                                    </label>
+                                                </div>
+                                                <button class="nk-btn {{ 'nk-btn-color-dark-1 text-white' if nav_light else 'nk-btn-color-white text-dark-1' }} float-right">Log In</button>
+
+                                                <div class="clearfix"></div>
+                                                <div class="nk-gap"></div>
+                                                <div class="text-right">
+                                                    <a class="nk-sign-form-register-toggle" href="#">Register</a>
+                                                    |
+                                                    <a class="nk-sign-form-lost-toggle" href="#">Lost Password?</a>
+                                                </div>
+                                            </form>
+                                            <!-- END: Login Form -->
+
+                                            <!-- START: Lost Password Form -->
+                                            <form class="nk-sign-form-lost" action="#">
+                                                <h4>Lost Password</h4>
+
+                                                <input class="form-control" type="text" placeholder="Username or Email">
+                                                <div class="nk-gap"></div>
+
+                                                <button class="nk-btn {{ 'nk-btn-color-dark-1 text-white' if nav_light else 'nk-btn-color-white text-dark-1' }} float-right">Get New Password</button>
+
+                                                <div class="clearfix"></div>
+                                                <div class="nk-gap"></div>
+                                                <a class="nk-sign-form-login-toggle float-right" href="#">Back to Log In</a>
+                                            </form>
+                                            <!-- END: Lost Password Form -->
+
+                                            <!-- START: Register Form -->
+                                            <form class="nk-sign-form-register" action="#">
+                                                <h4>Register</h4>
+
+                                                <input class="form-control" type="text" placeholder="Username">
+                                                <div class="nk-gap"></div>
+
+                                                <input class="form-control" type="email" placeholder="Email">
+                                                <div class="nk-gap"></div>
+
+                                                <div>A password will be emailed to you.</div>
+                                                <div class="nk-gap"></div>
+
+                                                <button class="nk-btn {{ 'nk-btn-color-dark-1 text-white' if nav_light else 'nk-btn-color-white text-dark-1' }} float-right">Register</button>
+
+                                                <div class="clearfix"></div>
+                                                <div class="nk-gap"></div>
+                                                <a class="nk-sign-form-login-toggle float-right" href="#">Back to Log In</a>
+                                            </form>
+                                            <!-- END: Register Form -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if nav_cart %}
+                            <li class="single-icon nk-drop-item">
+                                <a href="#" class="no-link-effect">
+                                    <span class="ion-bag"></span>
+                                </a>
+                                <span class="nk-badge{{ ' bg-dark-1 text-white' if nav_light }}">3</span>
+                                <div class="dropdown">
+                                    <div class="nk-widget">
+                                        <div class="nk-widget-store-cart">
+                                            {% for i in [1, 3] %}
+                                                <div class="nk-widget-post">
+                                                    <a href="{{ shop[i].url }}" class="nk-image-box-1 nk-post-image">
+                                                        <img src="{{ shop[i].photos[0].sm }}" alt="{{ shop[i].title }}">
+                                                    </a>
+                                                    <h3 class="nk-post-title">
+                                                        <a href="#" class="float-right"><span class="ion-trash-b"></span></a>
+                                                        <a href="{{ shop[i].url }}">{{ shop[i].title }}</a>
+                                                    </h3>
+                                                    <div class="nk-product-price">{{ '1' if i == 1 else '2' }} &times; {{ shop[i].price }}</div>
+                                                </div>
+                                            {% endfor %}
+
+                                            <div class="nk-widget-store-cart-total">
+                                                <a href="#"><span class="ion-trash-b"></span> Empty Cart</a>
+                                                <span>$1,700.00</span>
+                                            </div>
+
+                                            <div class="nk-widget-store-cart-actions">
+                                                <a class="nk-btn {{ 'nk-btn-color-dark-1 text-white' if nav_light else 'nk-btn-color-white text-dark-1' }}" href="#">
+                                                    <span class="icon"><span class="ion-bag"></span></span> View Cart
+                                                </a>
+                                                <a class="nk-btn {{ 'nk-btn-color-dark-1 text-white' if nav_light else 'nk-btn-color-white text-dark-1' }}" href="#">
+                                                    Checkout
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endif %}
+                        {% if nav_share %}
+                        <li>
+                            <a href="#" class="nk-share-toggle no-link-effect">
+                                <span class="ion-android-share-alt"></span>
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% if nav_search %}
+                        <li>
+                            <a href="#" class="nk-search-toggle no-link-effect">
+                                <span class="nk-icon-search"></span>
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <!--
+                    Additional Classes:
+                        .nk-nav-row-top
+                        .nk-nav-row-center
+                        .nk-nav-row-bottom
+                -->
+                <div class="nk-nav-row nk-nav-row-full nk-nav-row-{{ nav_left_align_v }}">
+                    <ul class="nk-nav" data-nav-mobile="#nk-nav-mobile">
+                        {{ submenu(navigation) }}
+                    </ul>
+                </div>
+                <div class="nk-nav-row">
+                    <div class="nk-nav-social">
+                        <footer>
+                            <a href="http://nkdev.info" target="_blank">nK</a> &copy; 2018. All rights reserved
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- END: Navbar -->

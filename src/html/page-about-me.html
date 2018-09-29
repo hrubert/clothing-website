@@ -1,0 +1,65 @@
+{% set header_title = 'Jerome Hale' %}
+{% set header_title_back = 'About Me' %}
+{% set header_size = 'lg' %}
+{% set header_image = 'assets/images/about-me-1.jpg' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <div class="nk-box bg-dark-1 text-white">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="row md-gap align-items-center">
+                <div class="col-md-6 col-lg-5">
+                    <img class="nk-img" src="assets/images/about-me-2.jpg" alt="Jerome Hale">
+                    <div class="nk-gap-2 d-md-none"></div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2 class="h1 nk-title">Hardcore Developer</h2>
+                    <h3 class="nk-sub-title">My bio and skills</h3>
+                    <div class="nk-gap"></div>
+                    <p>Habitant eleifend posuere habitasse senectus morbi taciti faucibus venenatis porta nam lobortis condimentum facilisi eros, porttitor. Quis feugiat elit est neque vitae. Pharetra molestie.</p>
+                    <p>Ultrices habitasse metus quam quisque etiam velit habitasse ridiculus lacinia. Taciti. Ipsum. Bibendum sollicitudin, mattis platea nulla taciti ullamcorper Tempus nonummy ornare. Est consequat sollicitudin ad amet Dignissim vulputate, ut. Habitasse libero eros habitant.</p>
+
+                    <div class="nk-progress nk-progress-xs nk-count" data-progress="91" data-progress-mask="{$}%">
+                        <div class="nk-progress-title">JavaScript</div>
+                        <div class="nk-progress-line bg-dark-4">
+                            <div style="width: 91%" class="bg-white">
+                                <div class="nk-progress-percent">91%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nk-progress nk-progress-xs nk-count" data-progress="72" data-progress-mask="{$}%">
+                        <div class="nk-progress-title">PHP</div>
+                        <div class="nk-progress-line bg-dark-4">
+                            <div style="width: 72%" class="bg-white">
+                                <div class="nk-progress-percent">72%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nk-progress nk-progress-xs nk-count" data-progress="86" data-progress-mask="{$}%">
+                        <div class="nk-progress-title">Photoshop</div>
+                        <div class="nk-progress-line bg-dark-4">
+                            <div style="width: 86%" class="bg-white">
+                                <div class="nk-progress-percent">86%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nk-progress nk-progress-xs nk-count" data-progress="43" data-progress-mask="{$}%">
+                        <div class="nk-progress-title">Paint</div>
+                        <div class="nk-progress-line bg-dark-4">
+                            <div style="width: 43%" class="bg-white">
+                                <div class="nk-progress-percent">43%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,115 @@
+{% set header_title = 'Blog List' %}
+{% set header_image = 'assets/images/image-28.jpg' %}
+{% set header_class = 'bg-white text-dark-1' %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="nk-gap-4"></div>
+
+        <!-- START: Posts List -->
+        <div class="nk-blog-list">
+
+            {% for post in posts %}
+                <!-- START: Post -->
+                <div class="nk-blog-post">
+                    {% if post.type == 'quote' %}
+                        <div class="nk-post-meta nk-post-meta-top pb-0">
+                            <div class="nk-post-date nk-post-meta-right">
+                                {{ post.date }} <span class="nk-post-by">by {{ post.by | safe }}</span>
+                            </div>
+                        </div>
+                        <div class="nk-post-category">
+                            In {{ post.cat | safe}}
+                        </div>
+                        <h2 class="nk-post-title h3"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+                        <blockquote class="nk-blockquote nk-blockquote-styled">
+                            <div class="bg-image op-6">
+                                <img class="jarallax-img" src="{{ post.thumb_lg }}" alt="">
+                            </div>
+                            <a class="nk-blockquote-cont" href="{{ post.url }}">
+                                <div class="nk-blockquote-icon">“</div>
+                                <em>{{ post.excerpt_sm | safe }}</em>
+                                <div class="nk-blockquote-author">{{ post.quote_author }}</div>
+                            </a>
+                        </blockquote>
+                    {% else %}
+                        <div class="row vertical-gap">
+                            <div class="col-lg-5">
+                                {% if post.type == 'image' or post.type == 'standard' %}
+                                    <a href="{{ post.url }}"><img src="{{ post.thumb_lg }}" alt="" class="nk-img-stretch"></a>
+                                {% elif post.type == 'video' %}
+                                    <div class="nk-plain-video" data-video="{{ post.video }}"></div>
+                                {% elif post.type == 'audio' %}
+                                    <div class="nk-post-audio">
+                                        <a href="{{ post.url }}"><img src="{{ post.thumb_lg }}" alt="" class="nk-img-stretch"></a>
+                                        <div>
+                                            <div class="nk-audio-plain nk-audio-plain-dark" data-src="assets/mp3/OctoSound-sport.mp3">
+                                                <div class="nk-audio-plain-title">
+                                                    <strong>OctoSound</strong> - Sport
+                                                    <div class="nk-audio-progress">
+                                                        <div class="nk-audio-progress-current"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="nk-audio-plain-duration">
+                                                    05:34
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% elif post.type == 'gallery' %}
+                                    <div class="nk-carousel-3" data-arrows="true" data-size="1" data-autoplay="8000">
+                                        <div class="nk-carousel-inner nk-popup-gallery">
+                                            {% for galleryItem in post.gallery %}
+                                                <div><div>
+                                                    <a href="{{ galleryItem.full }}" class="nk-gallery-item" data-size="{{ galleryItem.size }}"><img src="{{ galleryItem.thumb }}" alt=""></a>
+                                                </div></div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="nk-post-meta nk-post-meta-top pb-0">
+                                    <div class="nk-post-date nk-post-meta-right">
+                                        {{ post.date }} <span class="nk-post-by">by {{ post.by | safe }}</span>
+                                    </div>
+                                </div>
+                                <div class="nk-post-category">
+                                    In {{ post.cat | safe}}
+                                </div>
+                                <h2 class="nk-post-title h3"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+                                <div class="nk-post-text">
+                                    {{ post.excerpt_sm | safe }}
+                                </div>
+
+                                <div class="nk-post-continue text-left">
+                                    <a href="{{ post.url }}">Continue Reading <span class="ion-ios-arrow-thin-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                <!-- END: Post -->
+            {% endfor %}
+
+            <!-- START: Pagination -->
+            <div class="nk-pagination nk-pagination-left">
+                <nav>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a class="nk-pagination-current" href="#">3</a>
+                    <a href="#">4</a>
+                    <span>...</span>
+                </nav>
+            </div>
+            <!-- END: Pagination -->
+        </div>
+        <!-- END: Posts List -->
+
+        <div class="nk-gap-4"></div>
+
+    </div>
+{% endblock %}

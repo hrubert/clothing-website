@@ -1,0 +1,50 @@
+{% set header_title = 'Portfolio List 2' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <div class="nk-gap-4"></div>
+
+    <div class="container">
+        <div class="nk-portfolio-list-2">
+            {% for i in [0, 1, 2] %}
+                <div class="nk-portfolio-item{{ ' inverted' if i == 1 }}">
+                    <div class="nk-image-box-1 nk-portfolio-image-box">
+                        <a href="{{ portfolio[i].url }}" class="nk-image-box-link"></a>
+                        <div class="nk-portfolio-image d-none d-lg-block" style="background-image: url('{{ portfolio[i].thumb_default }}');"></div>
+                        <img src="{{ portfolio[i].thumb_default }}" alt="{{ portfolio[i].title }}" class="nk-portfolio-image d-lg-none">
+                    </div>
+                    <div class="nk-portfolio-text-box">
+                        <div>
+                            <h2 class="h3"><a href="{{ portfolio[i].url }}" class="nk-portfolio-title">{{ portfolio[i].title }}</a></h2>
+                            <div class="nk-portfolio-links"><a href="#">{{ portfolio[i].date }}</a></div>
+                            <div class="nk-gap"></div>
+                            {{ portfolio[i].excerpt | safe }}
+                            <div class="nk-gap"></div>
+                            <a href="{{ portfolio[i].url }}" class="nk-btn nk-btn-sm nk-btn-effect-2-right nk-btn-circle nk-btn-outline nk-btn-color-dark-4">
+                                <span>More Info</span>
+                                <span class="icon"><i class="ion-ios-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nk-gap-3"></div>
+            {% endfor %}
+
+            <div class="nk-pagination nk-pagination-center">
+                <nav>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a class="nk-pagination-current" href="#">3</a>
+                    <a href="#">4</a>
+                    <span>...</span>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="nk-gap-4"></div>
+
+{% endblock %}

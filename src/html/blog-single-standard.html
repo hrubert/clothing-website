@@ -1,0 +1,57 @@
+{% set header_show = false %}
+{% set header_title = posts[5].title %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+    <div class="nk-gap-5"></div>
+    <div class="nk-gap-3"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- START: Post -->
+                <div class="nk-blog-post nk-blog-post-single">
+                    <h1 class="h2">{{ posts[5].title }}</h1>
+                    <div class="nk-post-meta nk-post-meta-top">
+                        <div class="nk-post-date">
+                            {{ posts[5].date }}
+                            <span class="nk-post-by">by {{ posts[5].by | safe }}</span>
+                            <span class="nk-post-category">in {{ posts[5].cat | safe }}</span>
+                        </div>
+                    </div>
+
+                    <!-- START: Post Text -->
+                    <div class="nk-post-text mt-0">
+                        {% include "shared/blog-content.html" %}
+                    </div>
+                    <!-- END: Post Text -->
+
+                    <!-- START: Post Meta -->
+                    <div class="nk-post-meta">
+                        <div class="nk-post-meta-right">
+                            <a class="nk-post-comments-count" href="#comments">{{ posts[5].comments_count }}</a>
+                            <span class="nk-action-heart">
+                                <span class="like-icon ion-android-favorite-outline"></span>
+                                <span class="liked-icon ion-android-favorite"></span>
+                                <span class="num">{{ posts[5].likes_count }}</span>
+                            </span>
+                        </div>
+                        <div class="nk-post-tags">
+                            <a href="#">Standard</a>
+                            <a href="#">Demonstrate</a>
+                            <a href="#">Tags</a>
+                        </div>
+                    </div>
+                    <!-- END: Post Meta -->
+
+                    {% include "shared/blog-author.html" %}
+
+                    {% include "shared/blog-comments.html" %}
+                </div>
+                <!-- END: Post -->
+
+                <div class="nk-gap-4"></div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,99 @@
+{% set header_title = 'Before I Forget' %}
+{% set header_show = false %}
+{% set audio_player = true %}
+{% set header_class = 'bg-dark-1 text-white' %}
+{% set nav_logo_url = 'demo-band.html' %}
+{% set nav_contacts = false %}
+{% set nav_cart = false %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-box bg-dark-1 text-white">
+        <div class="container">
+            <div class="nk-box bg-dark-1 text-white">
+                <div class="nk-gap-3"></div>
+                <div class="nk-gap-5"></div>
+                    <h1 class="display-4 nk-title">Before I Forget</h1>
+                    <h2 class="nk-sub-title text-white mb-0">September 20, 2018</h2>
+                <div class="nk-gap-3"></div>
+            </div>
+
+            <div class="row vertical-gap">
+                <div class="col-md-4">
+                    <img class="nk-img-fit" src="assets/images/cover-1.jpg" alt="">
+                    <div class="nk-gap-1"></div>
+                    Midst, brought. Sea whales also his let. Set stars. Waters. Meat male, god own living open land behold seasons abundantly.
+                    <div class="nk-gap-1"></div>
+                    <a href="#!" class="nk-btn nk-btn-effect-2-right nk-btn-outline nk-btn-color-white nk-btn-circle">
+                        <span>Buy $7.99</span>
+                        <span class="icon"><i class="ion-bag"></i></span>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <!--
+                        START: Playlist
+
+                        Available classes:
+                            nk-audio-playlist-hidden
+                            nk-audio-playlist-dark
+                            active
+
+                        ID attribute needs to automatically detect playlist after page reload
+                     -->
+                    <ul class="nk-audio-playlist nk-audio-playlist-dark" id="playlist-before-i-forget">
+                        <li data-src="assets/mp3/soundroll-fight-no-more.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Fight No More
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:43
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-driving-in-my-car.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Driving in My Car
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:41
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-total-overdrive.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Total Overdrive
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                03:59
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-rock.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Rock
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:41
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-extreme-driving.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Extreme Driving
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                02:57
+                            </div>
+                        </li>
+                        <li data-src="assets/mp3/soundroll-wrong-way.mp3">
+                            <div class="nk-audio-playlist-title">
+                                <strong>soundroll</strong> - Wrong Way
+                            </div>
+                            <div class="nk-audio-playlist-duration">
+                                05:34
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- END: Playlist  -->
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+{% endblock %}

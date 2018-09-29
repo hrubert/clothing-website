@@ -1,0 +1,343 @@
+.nk-blog-post {
+    margin-bottom: 65px;
+
+    .nk-blog-isotope & {
+        margin-bottom: 40px;
+    }
+}
+.nk-post-title {
+    margin-bottom: 25px;
+}
+.nk-post-title > a {
+    color: inherit;
+    text-decoration: none;
+    transition: .3s opacity;
+
+    &:hover,
+    &.hover {
+        opacity: .8;
+    }
+}
+
+.nk-post-category {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .9rem;
+    font-style: italic;
+    font-weight: 600;
+    opacity: .8;
+
+    > a {
+        text-decoration: none;
+    }
+}
+
+.nk-post-meta {
+    position: relative;
+    display: block;
+    padding-bottom: 25px;
+    margin-top: 25px;
+    font-size: .9rem;
+    font-style: italic;
+    z-index: 1;
+
+    .nk-post-title + & {
+        margin-top: -15px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid;
+        border-bottom: 1px dotted;
+        opacity: .3;
+    }
+
+    &.nk-post-meta-top {
+        margin-top: 0;
+
+        &::after {
+            content: none;
+        }
+    }
+}
+.nk-post-meta-right {
+    float: right;
+    width: 50%;
+    font-style: normal;
+    text-align: right;
+}
+.nk-post-comments-count {
+    position: relative;
+    display: inline-block;
+    min-width: 20px;
+    height: 18px;
+    padding: 0 8px;
+    margin: 0 13px;
+    font-size: .7rem;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: text-top;
+    background-color: $color_dark_4;
+    opacity: .8;
+    transition: .3s opacity;
+
+    &:hover,
+    &.hover {
+        opacity: 1;
+    }
+
+    &,
+    &:focus,
+    &:hover,
+    &:active {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        bottom: -4px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        vertical-align: middle;
+        border-top: 4px solid $color_dark_4;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        transform: translateX(-50%);
+    }
+}
+
+.nk-post-date {
+    opacity: .8;
+
+    .nk-post-meta-right + & {
+        width: 50%;
+    }
+
+    .nk-header-title & {
+        width: 100%;
+        font-size: .9rem;
+        font-style: italic;
+        text-align: center;
+        opacity: 1;
+    }
+    .nk-header-text & {
+        margin-top: 20px;
+    }
+
+    .nk-post-by {
+        margin-left: 5px;
+        font-weight: 600;
+
+        > a {
+            text-decoration: none;
+        }
+    }
+
+    .nk-post-category {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-left: 5px;
+        font-size: 1em;
+        font-style: inherit;
+        opacity: 1;
+    }
+}
+
+.nk-post-text {
+    margin: 25px 0;
+
+    &::after,
+    &::before {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .pull-right,
+    .pull-left {
+        margin: 15px;
+    }
+    .pull-right {
+        margin-right: 0;
+    }
+    .pull-left {
+        margin-left: 0;
+    }
+
+    > p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.nk-post-continue {
+    display: block;
+    margin: 25px 0;
+    text-align: center;
+
+    > a {
+        display: inline-block;
+        font-style: italic;
+        font-weight: 600;
+        text-decoration: none;
+
+        > span {
+            margin-left: 5px;
+        }
+    }
+}
+
+.nk-post-author {
+    width: 100%;
+    padding: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: $color_gray_2;
+
+    .nk-post-author-photo {
+        img {
+            width: 100px;
+            height: auto;
+            border-radius: 50px;
+        }
+    }
+
+    .nk-post-author-info {
+        width: 100%;
+    }
+
+    .nk-post-author-name {
+        margin: 0;
+        text-decoration: none;
+
+        > a {
+            color: inherit;
+            text-decoration: none;
+            transition: .3s opacity;
+
+            &:hover,
+            &.hover {
+                opacity: .8;
+            }
+        }
+    }
+}
+
+// comments
+$comments_avatar_width: 50px !default;
+.nk-comments {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .nk-comment {
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        // review title
+        h4 {
+            margin-top: 25px;
+        }
+
+        .nk-comment {
+            margin-left: 55px;
+        }
+
+        .nk-comment,
+        + .nk-comment {
+            padding-top: 40px;
+            clear: both;
+        }
+
+        .nk-comment-avatar {
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            z-index: 1;
+
+            img {
+                width: $comments_avatar_width;
+                height: auto;
+                border-radius: $comments_avatar_width / 2;
+            }
+        }
+
+        .nk-comment-name {
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        // comment meta
+        .nk-comment-meta {
+            position: relative;
+            min-height: 70px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+
+            &::after {
+                content: "";
+                display: table;
+                clear: right;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border-bottom: 1px solid;
+                border-bottom: 1px dotted;
+                opacity: .3;
+            }
+
+            .nk-comment-date,
+            .nk-comment-reply {
+                font-size: .9rem;
+                font-style: italic;
+                opacity: .8;
+            }
+            .nk-comment-reply {
+                float: right;
+                margin-left: 15px;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                transition: .3s opacity;
+
+                &:hover,
+                &.hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+
+/* Audio post */
+.nk-post-audio {
+    position: relative;
+
+    > div {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        width: auto;
+    }
+}

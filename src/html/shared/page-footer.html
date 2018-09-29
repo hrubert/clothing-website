@@ -1,0 +1,106 @@
+<!-- START: Footer -->
+<footer class="nk-footer">
+
+    <div class="container">
+        <div class="nk-gap-4"></div>
+        <div class="row vertical-gap">
+            <div class="col-md-3 col-lg-2">
+                <div class="nk-widget">
+                    <div>
+                        <a href="#">
+                            <img class="nk-img-fit" src="{{ footer_logo }}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-4">
+                <div class="nk-widget">
+                    <h4 class="nk-widget-title">Business Hours</h4>
+                    <div>
+                        Monday - Friday: 8:00 to 18:00 <br>
+                        Saturday: 9:00 to 14:00 <br>
+                        Sunday: -
+                    </div>
+                </div>
+                <div class="nk-widget">
+                    <h4 class="nk-widget-title">Get In Touch</h4>
+                    <div>
+                        <ul class="nk-widget-contact">
+                            <li>
+                                <span class="nk-widget-contact-icon">
+                                    <i class="ion-ios-email"></i>
+                                </span>
+                                contact@khaki.com
+                            </li>
+                            <li>
+                                <span class="nk-widget-contact-icon">
+                                    <i class="ion-ios-telephone"></i>
+                                </span>
+                                + 3 (700) 123 444 10 78
+                            </li>
+                            <li>
+                                <span class="nk-widget-contact-icon">
+                                    <i class="ion-ios-home"></i>
+                                </span>
+                                Apáczai Csere János utca 10, Budapest, 1051 Hungary
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="nk-widget">
+                    <h4 class="nk-widget-title">Categories</h4>
+                    <div>
+                        <ul class="nk-widget-categories">
+                            <li>
+                                <a href="#">Business</a>
+                            </li>
+                            <li>
+                                <a href="#">Live News</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nk-widget">
+                    <h4 class="nk-widget-title">Tags Cloud</h4>
+                    <div>
+                        <div class="nk-widget-tags">
+                            <a href="#">Creative</a>
+                            <a href="#">Responsive</a>
+                            <a href="#">Design</a>
+                            <a href="#">Bootstrap</a>
+                            <a href="#">Multi-Concept</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="nk-widget">
+                    <h4 class="nk-widget-title">Latest Works</h4>
+                    <div>
+                        {% for i in [0, 1, 2] %}
+                            <div class="nk-widget-post">
+                                <a href="{{ portfolio[i].url }}" class="nk-image-box-1 nk-post-image">
+                                    <img src="{{ portfolio[i].thumb_default }}" alt="">
+                                </a>
+                                <h3 class="nk-post-title"><a href="{{ portfolio[i].url }}">{{ portfolio[i].title }}</a></h3>
+                                <div class="nk-post-meta-date">{{ portfolio[i].date }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+
+    <div class="nk-copyright">
+        <div class="container text-center">
+            <a href="http://nkdev.info" target="_blank">nK</a> &copy; 2018. All rights reserved
+        </div>
+    </div>
+</footer>
+<!-- END: Footer -->

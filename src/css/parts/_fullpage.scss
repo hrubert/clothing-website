@@ -1,0 +1,67 @@
+.nk-fullpage {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    .nk-fullpage-item {
+        position: relative;
+        display: table;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        background-position: 50% 50%;
+        background-size: cover;
+
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+.nk-fullpage-nav {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s visibility, .3s opacity, .3s transform;
+    transform: translateY(-50%) translateX(100%);
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    > li {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        font-size: 0;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 4px;
+            left: 4px;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .2);
+            transition: .2s transform;
+            transform: scale(.4);
+        }
+        &:hover::after {
+            transform: scale(.6);
+        }
+        &.active::after {
+            transform: scale(1);
+        }
+    }
+}

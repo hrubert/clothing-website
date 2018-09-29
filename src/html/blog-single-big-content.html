@@ -1,0 +1,86 @@
+{% set header_show = false %}
+{% set header_title = "Big Content in Blog Post" %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="nk-gap-5"></div>
+                <div class="nk-gap-3"></div>
+
+                <!-- START: Post -->
+                <div class="nk-blog-post nk-blog-post-single">
+                    <blockquote class="nk-blockquote nk-blockquote-styled mt-0">
+                        <div class="bg-image op-6">
+                            <img class="jarallax-img" src="{{ posts[2].thumb_lg }}" alt="">
+                        </div>
+                        <a class="nk-blockquote-cont" href="{{ posts[2].url }}">
+                            <div class="nk-blockquote-icon">“</div>
+                            <em>{{ posts[2].excerpt | safe }}</em>
+                            <div class="nk-blockquote-author">{{ posts[2].quote_author }}</div>
+                        </a>
+                    </blockquote>
+
+                    <div class="nk-post-meta nk-post-meta-top">
+                        <div class="nk-post-date">
+                            {{ posts[2].date }}
+                            <span class="nk-post-by">by {{ posts[2].by | safe }}</span>
+                            <span class="nk-post-category">in {{ posts[2].cat | safe }}</span>
+                        </div>
+                    </div>
+
+                    <!-- START: Post Text -->
+                    <div class="nk-post-text mt-0">
+                        {% include "shared/blog-content-big.html" %}
+                    </div>
+                    <!-- END: Post Text -->
+
+                    <!-- START: Post Meta -->
+                    <div class="nk-post-meta">
+                        <div class="nk-post-meta-right">
+                            <a class="nk-post-comments-count" href="#comments">{{ posts[2].comments_count }}</a>
+                            <span class="nk-action-heart">
+                                <span class="like-icon ion-android-favorite-outline"></span>
+                                <span class="liked-icon ion-android-favorite"></span>
+                                <span class="num">{{ posts[2].likes_count }}</span>
+                            </span>
+                        </div>
+                        <div class="nk-post-tags">
+                            <a href="#">Big Content</a>
+                            <a href="#">Demonstrate</a>
+                            <a href="#">Tags</a>
+                        </div>
+                    </div>
+                    <!-- END: Post Meta -->
+
+                    {% include "shared/blog-author.html" %}
+
+                    {% include "shared/blog-comments.html" %}
+                </div>
+                <!-- END: Post -->
+
+                <div class="nk-gap-4"></div>
+            </div>
+            <div class="col-lg-4">
+                <!--
+                    START: Sidebar
+
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+
+                    Additional Attributes:
+                        data-offset-top - add top offset to sticky sidebar
+                -->
+                <aside class="nk-sidebar nk-sidebar-right nk-sidebar-sticky" data-offset-top="20">
+                    <div class="nk-gap-4"></div>
+                    {% include "shared/sidebar-blog.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

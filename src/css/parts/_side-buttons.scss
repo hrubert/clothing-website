@@ -1,0 +1,98 @@
+.nk-side-buttons {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    transition: .2s transform ease-in-out, .3s margin-bottom;
+    transform: translateX(70px) translateY(60%);
+    z-index: 100;
+    will-change: transform;
+
+    &.nk-side-buttons-left {
+        right: auto;
+        left: 0;
+        padding-right: 15px;
+        padding-left: 20px;
+    }
+
+    // prevent collision with audio player
+    .nk-audio-player-main:hover ~ &,
+    .nk-audio-player-main.nk-audio-player-pin ~ & {
+        margin-bottom: $audio_player_height;
+    }
+    @media #{$media_xs} {
+        .nk-audio-player-main:hover ~ & {
+            margin-bottom: 0;
+        }
+        .nk-audio-player-main.nk-audio-player-pin ~ &,
+        .nk-audio-player-main.nk-audio-player-pin:hover ~ & {
+            margin-bottom: $audio_player_mobile_height;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        > li {
+            display: inline-block;
+            text-align: center;
+
+            + li {
+                margin-left: 15px;
+            }
+
+            > a,
+            > span {
+                display: block;
+                padding: 10px;
+                font-size: 20px;
+                color: rgba(#fff, .7);
+                background-color: darken($color_dark_1, 5%);
+                box-shadow: 0 2px 20px 0 rgba(#000, .08);
+                transition: .2s color ease-in-out;
+                will-change: color;
+
+                > span {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                }
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    // show icons on hover
+    &.nk-side-buttons-visible,
+    &:hover,
+    &.hover {
+        transform: translateX(70px) translateY(0) translate3d(0, 0, 0);
+    }
+    @media #{$media_xs} {
+        transform: translateX(70px) translateY(0) translate3d(0, 0, 0);
+    }
+
+    &.nk-side-buttons-left,
+    &.nk-side-buttons-show-scroll-top {
+        transform: translateX(0) translateY(60%);
+
+        &.nk-side-buttons-visible,
+        &:hover,
+        &.hover {
+            transform: translateX(0) translateY(0) translate3d(0, 0, 0);
+        }
+        @media #{$media_xs} {
+            transform: translateX(0) translateY(0) translate3d(0, 0, 0);
+        }
+    }
+}

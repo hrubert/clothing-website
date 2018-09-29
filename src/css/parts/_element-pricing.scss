@@ -1,0 +1,300 @@
+/* Style 1 */
+.nk-pricing-1 {
+    position: relative;
+    height: calc(100% - 90px);
+    padding: 60px;
+    margin-right: 40px;
+    margin-bottom: 90px;
+    background-color: #fff;
+    box-shadow: 19px 18px 44px 10px rgba(0, 0, 0, .1);
+
+    .nk-pricing-price {
+        margin-bottom: 1rem;
+        font-family: $font_headings;
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    .nk-pricing-title {
+        margin: 0;
+        font-family: inherit;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: lighten(#000, 50%);
+    }
+    .nk-divider {
+        opacity: .2;
+    }
+
+    .nk-pricing-features {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        > li + li {
+            margin-top: 14px;
+        }
+    }
+
+    .nk-pricing-cover {
+        position: absolute;
+        display: block;
+        top: 20px;
+        right: -40px;
+        bottom: -90px;
+        left: 20px;
+        background-color: $color_main_1;
+        transition: .3s transform;
+        transform: translate(0, 0);
+        z-index: -1;
+    }
+    .nk-pricing-button {
+        position: absolute;
+        display: block;
+        bottom: -90px;
+        left: 20px;
+        width: 100%;
+        height: 90px;
+        padding-left: 60px - 20px;
+        font-size: 1.2rem;
+        line-height: 90px;
+        color: #fff;
+        text-decoration: none;
+        transition: .3s transform;
+        transform: translate(0, 0);
+        z-index: 1;
+    }
+
+    &:hover,
+    &.hover {
+        .nk-pricing-cover,
+        .nk-pricing-button {
+            transform: translate(-2px, -2px);
+        }
+    }
+}
+
+
+/* Style 2 */
+.nk-pricing-2 {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba($color_dark_1, .1);
+
+    .nk-pricing-header {
+        position: relative;
+        padding: 60px 0;
+        padding-bottom: 100px;
+        overflow: hidden;
+        color: #fff;
+        text-align: center;
+        background-color: $color_dark_1;
+    }
+    .nk-pricing-body {
+        position: relative;
+        padding: 60px 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #fff;
+            transition: .3s transform;
+            transform: skewY(-5deg) translateY(-50%);
+        }
+    }
+    &:hover,
+    &.hover {
+        .nk-pricing-body::before {
+            transform: skewY(-5deg) translateY(-40%);
+        }
+    }
+
+    .nk-pricing-price {
+        margin-bottom: .5rem;
+        font-family: $font_headings;
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+
+    .nk-pricing-currency,
+    .nk-pricing-period {
+        font-family: $font_body;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .nk-pricing-currency {
+        vertical-align: top;
+    }
+
+    .nk-pricing-title {
+        margin: 0;
+        font-family: inherit;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .nk-pricing-features {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        list-style: none;
+
+        > li + li {
+            margin-top: 20px;
+        }
+    }
+
+    .nk-pricing-button {
+        width: 70%;
+        max-width: 220px;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+/* Style 3 */
+.nk-pricing-3 {
+    position: relative;
+    height: 100%;
+    padding: 0 30px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba($color_dark_1, .05);
+
+    .nk-pricing-title {
+        margin: 0;
+        font-family: inherit;
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    .nk-pricing-price {
+        font-family: $font_headings;
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+    .nk-pricing-currency,
+    .nk-pricing-period {
+        font-family: $font_body;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .nk-pricing-currency {
+        vertical-align: top;
+    }
+
+    .nk-pricing-features {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        > li + li {
+            margin-top: 20px;
+        }
+    }
+
+    .nk-pricing-button {
+        width: 100%;
+        max-width: 220px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    // padding and separator for all blocks
+    .nk-pricing-title,
+    .nk-pricing-price,
+    .nk-pricing-features,
+    .nk-pricing-button {
+        position: relative;
+        padding: 40px 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            bottom: 0;
+            width: 100%;
+            border-bottom: 1px solid;
+            opacity: .1;
+        }
+    }
+    .nk-pricing-button::after {
+        content: none;
+    }
+}
+
+
+/* Style Menu */
+.nk-pricing-menu {
+    position: relative;
+    padding: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 50px 0 rgba($color_dark_1, .1);
+    z-index: 1;
+
+    &.no-shadow {
+        box-shadow: 0 0 0 1px rgba($color_dark_1, .1);
+    }
+
+    .nk-pricing-menu-item {
+        + .nk-pricing-menu-item {
+            margin-top: 35px;
+        }
+    }
+
+    .nk-pricing-header {
+        display: table;
+
+        > * {
+            display: table-cell;
+            width: 1%;
+            white-space: nowrap;
+            vertical-align: baseline;
+        }
+
+        .nk-pricing-title-dots {
+            position: relative;
+            width: 98%;
+
+            &::after {
+                content: "";
+                display: block;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin-right: 7px;
+                margin-left: 7px;
+                border-bottom: 2px dotted;
+                opacity: .2;
+            }
+        }
+    }
+
+    .nk-pricing-price {
+        font-weight: 600;
+    }
+
+    .nk-pricing-title {
+        margin: 0;
+    }
+
+    .nk-pricing-sub-title {
+        margin-top: 5px;
+        font-size: .9rem;
+        opacity: .6;
+    }
+}

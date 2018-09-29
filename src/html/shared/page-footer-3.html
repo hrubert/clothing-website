@@ -1,0 +1,46 @@
+<!-- START: Footer -->
+<!--
+    Additional Classes:
+        .nk-footer-parallax
+        .nk-footer-parallax-opacity
+        .nk-footer-parallax-blur
+-->
+<footer class="nk-footer{{ ' nk-footer-parallax' if footer_parallax }}{{ ' nk-footer-parallax-opacity' if footer_parallax_opacity }}{{ ' nk-footer-parallax-blur' if footer_parallax_blur }}">
+    {% if footer_bg %}
+    <div class="bg-image">
+        <img class="jarallax-img" src="{{ footer_bg }}" alt="">
+    </div>
+    {% endif %}
+
+    <div class="container">
+        <div class="nk-gap-4"></div>
+        <div class="row align-items-center">
+            <div class="col-md-4 order-md-2">
+                <div class="nk-footer-logo">
+                    <a href="#">
+                        <img src="{{ footer_logo }}" alt="" width="70">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 order-md-1">
+                <div class="nk-gap-3 d-md-none"></div>
+                <div class="nk-footer-social">
+                    <a href="#"><i class="ion-social-twitter"></i></a>
+                    <a href="#"><i class="ion-social-instagram-outline"></i></a>
+                    <a href="#"><i class="ion-social-dribbble-outline"></i></a>
+                    <a href="#"><i class="ion-social-pinterest"></i></a>
+                </div>
+                <div class="nk-gap-3 d-md-none"></div>
+            </div>
+            <div class="col-md-4 order-md-3">
+                <div class="nk-copyright-2">
+                    <div class="container text-center text-md-right">
+                        <a href="http://nkdev.info" target="_blank">nK</a> &copy; 2018. All rights reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+</footer>
+<!-- END: Footer -->

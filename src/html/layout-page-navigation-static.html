@@ -1,0 +1,56 @@
+{% set header_title = 'Page Navigation Static' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-gap-4"></div>
+    <div class="nk-page-nav-3">
+        <div class="container">
+            <a href="portfolio-single-3.html" class="nk-page-nav-prev">
+                <div class="nk-page-nav-title">{{ portfolio[2].title }}</div>
+                Previous
+                <span class="nk-icon-arrow-left"></span>
+            </a>
+
+            <div class="nk-page-nav-next disabled">
+                <div class="nk-page-nav-title">No More</div>
+                Next
+                <span class="nk-icon-arrow-right"></span>
+            </div>
+
+            <a href="#" class="nk-page-nav-grid">
+                <span class="ion-grid"></span>
+            </a>
+        </div>
+    </div>
+    <div class="nk-gap-4"></div>
+
+    <div class="nk-box bg-dark-1 text-white">
+        <div class="nk-gap-4"></div>
+        <div class="nk-page-nav-3">
+            <div class="container">
+                <div class="nk-page-nav-prev disabled">
+                    <div class="nk-page-nav-title">No More</div>
+                    Previous
+                    <span class="nk-icon-arrow-left"></span>
+                </div>
+
+                <a href="#" class="nk-page-nav-next">
+                    <div class="nk-page-nav-title">{{ portfolio[1].title }}</div>
+                    Next
+                    <span class="nk-icon-arrow-right"></span>
+                </a>
+
+                <a href="#" class="nk-page-nav-grid">
+                    <span class="ion-grid"></span>
+                </a>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+
+    <div class="nk-gap-4"></div>
+    <div class="container">
+        See pagination examples here - <a href="element-pagination.html">element-pagination.html</a>.
+    </div>
+    <div class="nk-gap-4"></div>
+{% endblock %}

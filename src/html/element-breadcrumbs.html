@@ -1,0 +1,35 @@
+{% set header_title = 'Breadcrumbs' %}
+{% set header_bottom_line = '
+<div class="nk-header-text-bottom">
+    <div class="nk-breadcrumbs text-center">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Elements</a></li>
+            <li><span>Breadcrumbs</span></li>
+        </ul>
+    </div>
+</div>
+' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-breadcrumbs bg-dark-1 text-white">
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Elements</a></li>
+                <li><span>Breadcrumbs</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nk-breadcrumbs text-right">
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Elements</a></li>
+                <li><span>Breadcrumbs</span></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

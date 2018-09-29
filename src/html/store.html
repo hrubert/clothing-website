@@ -1,0 +1,102 @@
+{% set header_title = 'Our Store' %}
+{% set header_size = 'sm' %}
+{% set header_image = 'assets/images/image-12.jpg' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 order-lg-2">
+                <div class="nk-gap-4"></div>
+
+                <div class="nk-store">
+
+                    <!-- START: Sort Order -->
+                    <div class="nk-store-order">
+                        <form action="#" class="nk-form nk-form-style-1">
+                            <select name="orderby" class="form-control">
+                                <option value="menu_order" selected="selected">Default sorting</option>
+                                <option value="popularity">Sort by popularity</option>
+                                <option value="rating">Sort by average rating</option>
+                                <option value="date">Sort by newness</option>
+                                <option value="price">Sort by price: low to high</option>
+                                <option value="price-desc">Sort by price: high to low</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="nk-store-count">
+                        Showing 1–9 of 55 results
+                    </div>
+                    <!-- END: Sort Order -->
+
+                    <div class="nk-gap-2"></div>
+
+                    <!-- START: Products List -->
+                    <div class="row no-gutters">
+                        {% for product in shop %}
+                            <div class="col-sm-6 col-md-4">
+
+                                <!-- START: Product -->
+                                <div class="nk-product">
+                                    <a href="{{ product.url }}" class="nk-product-image" style="background-image: url('{{ product.photos[1].md }}');">
+                                        <img src="{{ product.photos[0].md }}" alt="{{ product.title }}" class="nk-img-stretch">
+                                    </a>
+                                    <div class="nk-product-category">
+                                        In {{ product.categories[0] | safe}}
+                                    </div>
+                                    <h2 class="nk-product-title h5"><a href="{{ product.url }}">{{ product.title }}</a></h2>
+                                    {{ product.rating | safe }}
+                                    <div class="nk-product-price">{{ product.price }}</div>
+
+                                    <div class="nk-product-button">
+                                        <div>
+                                            <a href="{{ product.url }}" class="nk-product-quick-view">
+                                                <span class="icon"><i class="ion-eye"></i></span>
+                                            </a>
+                                            <a href="#">
+                                                <span class="icon"><i class="ion-bag"></i></span> Add to Cart
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END: Product -->
+
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <!-- END: Products List -->
+
+                    <div class="nk-gap-2"></div>
+
+                    <!-- START: Pagination -->
+                    <div class="nk-pagination nk-pagination-left">
+                        <nav>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a class="nk-pagination-current" href="#">3</a>
+                            <a href="#">4</a>
+                            <span>...</span>
+                        </nav>
+                    </div>
+                    <!-- END: Pagination -->
+                </div>
+
+                <div class="nk-gap-4"></div>
+            </div>
+            <div class="col-lg-4">
+                <!--
+                    START: Sidebar
+
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+                -->
+                <aside class="nk-sidebar nk-sidebar-left">
+                    {% include "shared/sidebar-store.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+    </div>
+{% endblock %}

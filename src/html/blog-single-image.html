@@ -1,0 +1,96 @@
+{% set header_title = posts[0].title %}
+{% set header_text = '
+<div class="nk-post-date">
+    ' + posts[0].date + '
+    <span class="nk-post-by">by ' + posts[0].by + '</span>
+    <span class="nk-post-category">in ' + posts[0].cat + '</span>
+</div>
+' %}
+{% set header_image = posts[0].thumb_full %}
+{% set header_size = 'md' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="nk-gap-4"></div>
+
+                <!-- START: Post -->
+                <div class="nk-blog-post nk-blog-post-single">
+                    <!-- START: Post Text -->
+                    <div class="nk-post-text mt-0">
+                        <img class="nk-img-stretch" src="{{ posts[0].thumb_full }}" alt="">
+                        <div class="nk-gap"></div>
+                        {% include "shared/blog-content.html" %}
+                    </div>
+                    <!-- END: Post Text -->
+
+                    <!-- START: Post Meta -->
+                    <div class="nk-post-meta">
+                        <div class="nk-post-meta-right">
+                            <a class="nk-post-comments-count" href="#comments">{{ posts[0].comments_count }}</a>
+                            <span class="nk-action-heart">
+                                <span class="like-icon ion-android-favorite-outline"></span>
+                                <span class="liked-icon ion-android-favorite"></span>
+                                <span class="num">{{ posts[0].likes_count }}</span>
+                            </span>
+                        </div>
+                        <div class="nk-post-tags">
+                            <a href="#">Image</a>
+                            <a href="#">Demonstrate</a>
+                            <a href="#">Tags</a>
+                        </div>
+                    </div>
+                    <!-- END: Post Meta -->
+
+                    {% include "shared/blog-author.html" %}
+
+                    {% include "shared/blog-comments.html" %}
+                </div>
+                <!-- END: Post -->
+
+                <div class="nk-gap-4"></div>
+            </div>
+            <div class="col-lg-4">
+                <!--
+                    START: Sidebar
+
+                    Additional Classes:
+                        .nk-sidebar-left
+                        .nk-sidebar-right
+                        .nk-sidebar-sticky
+
+                    Additional Attributes:
+                        data-offset-top - add top offset to sticky sidebar
+                -->
+                <aside class="nk-sidebar nk-sidebar-right nk-sidebar-sticky" data-offset-top="20">
+                    {% include "shared/sidebar-blog.html" %}
+                </aside>
+                <!-- END: Sidebar -->
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block after_content %}
+    <!-- START: posts nav -->
+    <div class="nk-page-nav">
+        <div class="nk-page-nav-prev disabled">
+            <div class="icon">
+                <span class="ion-ios-arrow-left"></span>
+            </div>
+        </div>
+        <a href="{{ posts[1].url }}" class="nk-page-nav-next">
+            <div class="icon">
+                <span class="ion-ios-arrow-right"></span>
+            </div>
+            <div class="nk-page-nav-title">{{ posts[1].title }}</div>
+            <div class="nk-page-nav-img">
+                <div style="background-image: url('{{ posts[1].thumb_sm }}');"></div>
+            </div>
+        </a>
+    </div>
+    <!-- END: posts nav -->
+{% endblock %}

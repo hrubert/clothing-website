@@ -1,0 +1,301 @@
+{% set custom_css = 'assets/css/custom-typography-barber.css' %}
+{% set header_title_back = 'Barber Shop' %}
+{% set header_title_back_visible = 3 %}
+{% set header_title = 'Prices' %}
+{% set header_size = 'sm' %}
+{% set header_image = 'assets/images/image-24.jpg' %}
+{% set header_visible = 7 %}
+{% set header_class = 'text-left' %}
+{% set nav_logo = 'assets/images/logo-barber.png' %}
+{% set nav_logo_url = 'demo-barber.html' %}
+{% set nav_side_logo_light = 'assets/images/logo-barber-light.png' %}
+{% set nav_cart = false %}
+{% set nav_search = false %}
+{% set nav_align = 'left' %}
+{% set nav_right_button = '
+    <span class="text-dark-1">
+        <span class="nk-btn nk-btn-effect-1-bottom nk-btn-color-white" data-toggle="modal" data-target="#nk-booking-modal">
+            <span class="icon">
+                <span class="ion-android-time"></span>
+            </span>
+            <span>Booking</span>
+        </span>
+    </span>
+' %}
+{% set nav_side_light = true %}
+{% set nav_side_bg = false %}
+{% set navigation_side = navigation %}
+{% set navigation = {
+    "demo-barber.html": {
+        "name": "Home"
+    },
+    "demo-barber-prices.html": {
+        "name": "Prices"
+    },
+    "demo-barber-find-us.html": {
+        "name": "Find Us"
+    }
+} %}
+{% set page_border = true %}
+{% set footer = 3 %}
+{% set footer_bg = 'assets/images/bg-footer-5.jpg' %}
+{% extends 'layouts/layout-3.html' %}
+
+{% block content %}
+
+    <!-- START: Prices -->
+    <div class="nk-box">
+        <div class="nk-gap-4"></div>
+        <div class="container">
+            <div class="row vertical-gap">
+                <div class="col-lg-6">
+                    <h2 class="nk-title">Haircut</h2>
+                    <div class="nk-gap-2"></div>
+                    <div class="nk-pricing-menu">
+                        <div class="nk-gap"></div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Brooklyn Fade</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $8.12
+                                </div>
+                            </div>
+                            <div class="nk-pricing-sub-title">The hair is cut to the scalp from the temple and dips low in the back</div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Choppy</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $12.00
+                                </div>
+                            </div>
+                            <div class="nk-pricing-sub-title">When the work day is over, transform your hair into this seductive, unkempt style</div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Pompadour</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $6.14
+                                </div>
+                            </div>
+                            <div class="nk-pricing-sub-title">Thick hair benefits from having longer layers along the top and sides to hold hair down. Keep it neat and controlled with a high-polished finish</div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Undercut</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $7.55
+                                </div>
+                            </div>
+                            <div class="nk-pricing-sub-title">This 'hipster' haircut with extremely tight sides and back</div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Skater Hight</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $10.35
+                                </div>
+                            </div>
+                            <div class="nk-pricing-sub-title">Feel the breeze in your hair with this dual mode haircut that’s spiked-up and dressed-down</div>
+                        </div>
+                        <div class="nk-gap"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="nk-gap-2 d-lg-none"></div>
+                    <h2 class="nk-title">Shave</h2>
+                    <div class="nk-gap-2"></div>
+                    <div class="nk-pricing-menu">
+                        <div class="nk-gap"></div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Top Knot &amp; Beard</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $5.10
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Man Bun &amp; Beard</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $6.50
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Thick Beard</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $8.75
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Smart Business Beard</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $5.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Hipster Beard</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $6.70
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Winter Beard</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $7.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-pricing-menu-item">
+                            <div class="nk-pricing-header">
+                                <h3 class="nk-pricing-title h5">Stubble</h3>
+                                <div class="nk-pricing-title-dots"></div>
+                                <div class="nk-pricing-price">
+                                    $5.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nk-gap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nk-gap-4"></div>
+    </div>
+    <!-- END: Prices -->
+
+{% endblock %}
+
+{% block after_content %}
+    <!-- START: Booking Modal -->
+    <div class="nk-modal modal fade" id="nk-booking-modal" tabindex="-1" role="dialog" aria-labelledby="nk-booking-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title nk-title" id="nk-booking-modal-label">Book Your Visit</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="ion-android-close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- START: Booking Form -->
+                    <form action="#" class="nk-form nk-form-style-1">
+                        <input name="date" type="text" class="datetimepicker required">
+
+                        <div class="nk-gap-3"></div>
+                        <h3 class="nk-title h6">Service:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <select name="haircut" class="form-control required">
+                                    <option value="" disabled selected>Haircut *</option>
+                                    <option value="1">Brooklyn Fade - $8.12</option>
+                                    <option value="2">Choppy - $12.00</option>
+                                    <option value="3">Pompadour - $6.14</option>
+                                    <option value="4">Undercut - $7.55</option>
+                                    <option value="5">Skater Hight - $10.35</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <select name="shave" class="form-control">
+                                    <option value="" disabled selected>Shave</option>
+                                    <option value="1">Top Knot &amp; Beard - $5.10</option>
+                                    <option value="2">Man Bun &amp; Beard - $6.50</option>
+                                    <option value="3">Thick Beard - $8.75</option>
+                                    <option value="4">Smart Business Beard - $5.00</option>
+                                    <option value="5">Hipster Beard - $6.70</option>
+                                    <option value="6">Winter Beard - $7.00</option>
+                                    <option value="7">Stubble - $5.00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <select name="employee" class="form-control required">
+                            <option value="" disabled selected>Employee</option>
+                            <option value="1">Gregory Walker</option>
+                            <option value="2">Emily Foster</option>
+                            <option value="3">Jack Carlson</option>
+                            <option value="4">Claudia Mckinney</option>
+                        </select>
+
+                        <div class="nk-gap-3"></div>
+                        <h3 class="nk-title h6">Your Details:</h3>
+                        <div class="nk-gap"></div>
+                        <div class="row vertical-gap">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control required" name="name" placeholder="Name *" aria-required="true">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="tel" class="form-control required" name="phone" placeholder="Phone *" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="nk-gap-1"></div>
+                        <textarea name="notes" rows="5" class="form-control" placeholder="Notes"></textarea>
+
+                        <div class="nk-gap-2"></div>
+                        <button class="nk-btn nk-btn-effect-7-h nk-btn-color-dark-2">
+                            <span class="icon">
+                                <span class="ion-android-time"></span>
+                            </span>
+                            <span>Book Now</span>
+                            <span class="nk-btn-effect-bg bg-main-1"></span>
+                        </button>
+                        &nbsp;&nbsp; <small>We will send you an SMS with the details</small>
+                    </form>
+                    <!-- END: Booking Form -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: Booking Modal -->
+{% endblock %}
+
+{% block javascript %}
+    <!-- START: Booking datetimer init -->
+    <script>
+        $('.datetimepicker').datetimepicker({
+            theme: 'nk',
+            startDate: new Date(),
+            minDate: 0, // today
+            maxDate: '+1970/01/15', // next 14 days
+            yearStart: new Date().getFullYear(),
+            yearEnd: new Date().getFullYear(),
+            monthStart: new Date().getMonth(),
+            monthEnd: Math.min(11, new Date().getMonth() + 1),
+            inline: true,
+            disabledWeekDays: [5, 6], // no weekends
+            allowTimes:[
+                '08:00', '09:00', '10:00', '14:00', '15:00', '17:00', '18:00'
+            ],
+            scrollMonth: false,
+            scrollTime: false,
+            scrollInput: false,
+            prevButton: false,
+            nextButton: false,
+            todayButton: false
+        });
+    </script>
+    <!-- END: Booking datetimer init -->
+{% endblock %}

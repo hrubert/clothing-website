@@ -1,0 +1,50 @@
+{% set header_title = 'Portfolio 2' %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+
+    <div class="nk-gap-4"></div>
+
+    <div class="container">
+        <div class="nk-isotope nk-isotope-gap nk-isotope-3-cols">
+
+            {% for folio in portfolio %}
+                <div class="nk-portfolio-item nk-isotope-item">
+                    <div class="nk-image-box-1-a">
+                        <img class="nk-portfolio-image" src="{{ folio.thumb_default }}" alt="{{ folio.title }}">
+                        <div class="nk-image-box-overlay nk-image-box-center">
+                            <div>
+                                <a href="{{ folio.url }}" class="nk-image-box-icon-btn nk-portfolio-quick-view"><span class="ion-eye"></span></a>
+                                <a href="{{ folio.url }}" class="nk-image-box-icon-btn"><span class="fa fa-link"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nk-image-box-bottom-info">
+                        <h2 class="nk-portfolio-title nk-post-title h4"><a href="{{ folio.url }}">{{ folio.title }}</a></h2>
+                        <div class="nk-post-meta">
+                            <div class="nk-post-meta-right">
+                                <a class="nk-post-comments-count" href="{{ folio.url }}{{ '#comments' if folio.url != '#' }}">{{ folio.comments_count }}</a>
+                                <span class="nk-action-heart">
+                                    <span class="like-icon ion-android-favorite-outline"></span>
+                                    <span class="liked-icon ion-android-favorite"></span>
+                                    <span class="num">{{ folio.likes_count }}</span>
+                                </span>
+                            </div>
+                            <div class="nk-post-date">
+                                {{ folio.date }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+        <div class="nk-pagination nk-pagination-center">
+            <a href="#!" class="nk-btn nk-btn-sm nk-btn-circle nk-btn-color-dark-1">Load More ...</a>
+        </div>
+    </div>
+
+    <div class="nk-gap-4"></div>
+
+{% endblock %}

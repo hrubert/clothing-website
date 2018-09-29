@@ -1,0 +1,39 @@
+<!-- START: Navigation Toggler -->
+<ul class="nk-nav-toggler-right">
+    {% if nav_full %}
+    <li class="single-icon">
+        <a href="#" class="nk-navbar-full-toggle{{ ' ' + nav_toggler_class if nav_toggler_class }}">
+            <span class="nk-icon-burger">
+                <span class="nk-t-1"></span>
+                <span class="nk-t-2"></span>
+                <span class="nk-t-3"></span>
+            </span>
+        </a>
+    </li>
+    {% endif %}
+    {% if nav_side %}
+    <li class="single-icon">
+        <a href="#" data-nav-toggle="#nk-side"{{ ' class="' + nav_toggler_class + '"' | safe if nav_toggler_class }}>
+            <span class="nk-icon-burger">
+                <span class="nk-t-1"></span>
+                <span class="nk-t-2"></span>
+                <span class="nk-t-3"></span>
+            </span>
+        </a>
+    </li>
+    {% endif %}
+</ul>
+{% if nav_mobile and nav %}
+<ul class="nk-nav-toggler-left">
+    <li class="single-icon d-lg-none">
+        <a href="#" data-nav-toggle="#nk-nav-mobile"{{ ' class="' + nav_toggler_class + '"' | safe if nav_toggler_class }}>
+            <span class="nk-icon-burger">
+                <span class="nk-t-1"></span>
+                <span class="nk-t-2"></span>
+                <span class="nk-t-3"></span>
+            </span>
+        </a>
+    </li>
+</ul>
+{% endif %}
+<!-- END: Navigation Toggler -->

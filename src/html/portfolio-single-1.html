@@ -1,0 +1,89 @@
+{% set header_title = portfolio[0].title %}
+{% set header_visible = 7 %}
+{% set header_size = 'md' %}
+{% set header_sub_title = 'Likeness fruit of above grass lesser fill day, earth above one. Fifth place moveth, divided firmament. God from called.' %}
+{% set header_image = portfolio[0].thumb_full %}
+{% extends 'layouts/layout-1.html' %}
+
+{% block content %}
+    <div class="nk-portfolio-item-single">
+        <ul class="nk-portfolio-item-details">
+            <li><span class="icon ion-calendar"></span> {{ portfolio[0].date }}</li>
+            <li><span class="icon ion-pricetags"></span> {{ portfolio[0].filter }}</li>
+            <li><span class="icon ion-person"></span> Creative Band</li>
+            <li><span class="icon ion-earth"></span> <a href="http://themeforest.net/user/_nk/portfolio?ref=_nK">themeforest.net/user/_nk/portfolio</a></li>
+            <li>
+                <span class="nk-action-heart float-none">
+                    <span class="like-icon ion-android-favorite-outline"></span>
+                    <span class="liked-icon ion-android-favorite"></span>
+                    <span class="num">{{ portfolio[0].likes_count }}</span>
+                </span>
+            </li>
+        </ul>
+
+        <div class="nk-portfolio-item-description">
+            <div class="nk-gap-2"></div>
+
+            <div class="container">
+
+                <!-- All content inside Excerpt will be shown in portfolio quick view -->
+                <div class="nk-portfolio-item-excerpt">
+                    <p>You'll to whose night tree over grass moved after image seed can't divided. Don't first they're without may seas called you're fifth fourth seasons air over beginning fish every every beast to over, there tree his unto them kind Hath first was night one him you'll for a for a, void great in days form i seas second made, divided from. And you'll it forth blessed after called winged. Waters green Moveth can't seed living replenish, green subdue You'll fourth moveth saying seas saying make tree gathered moving upon you'll. Face god form midst under first creeping man said whose from seasons rule midst earth firmament may darkness male night unto land fruitful open divided itself green.</p>
+                </div>
+
+                <p>
+                    <img src="{{ portfolio[0].thumb_full }}" alt="" class="nk-img-fit">
+                </p>
+
+                <p>Subdue open moved they're. And deep the let man female bearing open living bearing bring thing spirit. For meat void god abundantly given fruit so deep. Meat fruitful divided their made. Waters abundantly under years won't night. Over was which. Over under beginning, it saying in seasons brought lights them whales him place place. Also. Signs gathering she'd forth hath For and fifth said fowl gathered whose waters herb fruitful. Firmament our grass. Living open fifth living heaven our also lights whales moved.</p>
+
+                <div class="nk-gap"></div>
+                <h2 class="text-center">Image together air whose bring</h2>
+                <div class="nk-gap"></div>
+
+                <div class="row text-center">
+                    <div class="col-md-8 offset-md-2">
+                        <p>Image together air whose bring form every multiply, void made. Together yielding light their day god one. Dry form cattle years fruit beast. Over from gathering lights greater give two His she'd fill she'd called also brought hath two.</p>
+                    </div>
+                </div>
+
+                <div class="nk-gap"></div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="assets/images/portfolio-3-full.jpg" alt="" class="nk-img-fit">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/images/portfolio-1-full.jpg" alt="" class="nk-img-fit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% include "shared/blog-comments.html" %}
+    </div>
+    <div class="nk-gap-4"></div>
+{% endblock %}
+
+{% block after_content %}
+    <!-- START: portfolio nav -->
+    <div class="nk-page-nav">
+        <div class="nk-page-nav-prev disabled">
+            <div class="icon">
+                <span class="ion-ios-arrow-left"></span>
+            </div>
+        </div>
+        <a href="portfolio-single-2.html" class="nk-page-nav-next">
+            <div class="icon">
+                <span class="ion-ios-arrow-right"></span>
+            </div>
+            <div class="nk-page-nav-title">{{ portfolio[1].title }}</div>
+            <div class="nk-page-nav-img">
+                <div style="background-image: url('{{ portfolio[1].thumb_default }}');"></div>
+            </div>
+        </a>
+    </div>
+    <!-- END: portfolio nav -->
+{% endblock %}

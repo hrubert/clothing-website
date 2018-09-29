@@ -1,0 +1,63 @@
+{% set custom_css = 'assets/css/custom-typography-music-label.css' %}
+{% set header_title = 'About' %}
+{% set header_video = 'https://www.youtube.com/watch?v=xMfB_3fMANo' %}
+{% set header_size = 'md' %}
+{% set header_parallax = false %}
+{% set header_parallax_opacity = false %}
+{% set header_image = 'assets/images/label-header.jpg' %}
+{% set nav_logo = 'assets/images/logo-music-label-light.png' %}
+{% set nav_logo_url = 'demo-music-label.html' %}
+{% set nav_light = true %}
+{% set nav_logo_top_light = true %}
+{% set nav_sticky = false %}
+{% set navigation = {
+    "demo-music-label-about.html": {
+        "name": "ABOUT"
+    },
+    "demo-music-label-artists.html": {
+        "name": "ARTISTS"
+    },
+    "demo-music-label-releases.html": {
+        "name": "RELEASES"
+    },
+    "demo-music-label-videos.html": {
+        "name": "VIDEOS"
+    },
+    "demo-music-label-agenda.html": {
+        "name": "AGENDA"
+    },
+    "demo-music-label-news.html": {
+        "name": "NEWS"
+    }
+} %}
+{% set page_boxed = true %}
+{% set footer = 6 %}
+{% set footer_bg = false %}
+{% extends 'layouts/layout-8.html' %}
+
+{% block content %}
+
+    <!-- START: About Text -->
+    <div class="nk-gap-4"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <p>Moving brought said first there said blessed given female great stars, is. Two fourth gathered, fruit bearing multiply whales it in sea darkness. Good dominion male man. Good kind hath forth creeping in living had behold seas our female appear day tree grass created itself together face fourth herb image fish may creepeth for earth fish fourth fill greater land unto above is. Bring lesser Creepeth fowl. Two very beginning forth stars the. Beginning place, male it may don't she'd seasons all sixth his created. Doesn't Fruitful grass.</p>
+                <p>Form in beast them a fowl good over appear saw created beginning. May yielding unto blessed multiply life every all and. From unto upon above you created may night kind you'll kind two firmament, i. Creeping replenish gathered so. Itself have our beginning winged form. Blessed together spirit fruitful sixth can't were seas fruitful moved called greater gathered moving have, it together they're forth waters replenish Creeping he bring darkness, unto beginning green meat greater. Give. Form all spirit dry there fourth isn't had replenish thing first.</p>
+                <p>Seed dry, upon deep male. Female divide. Rule itself creeping abundantly upon meat and gathering man fly yielding from whales likeness seas life, fourth of from to second beginning may man don't heaven make in seed saw it. So kind day in god. Above fish midst beast. Fifth above under his and.</p>
+                <p>Evening they're gathering god. They're beast replenish stars After sea were great. Deep may whose land seed darkness don't man waters give that darkness divide make him void after it meat winged their brought divided she'd wherein earth unto she'd you is subdue saying. To after upon him that us upon, that him female created hath his above had to dry dry thing for. You'll green, heaven. God man them you winged form.</p>
+            </div>
+        </div>
+    </div>
+    <div class="nk-gap-4"></div>
+    <!-- END: About Text -->
+
+    {% set instagram_template = '<div class="col-4 col-md-2"><a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="nk-img-stretch"></a></div>' %}
+    <!-- START: Instagram -->
+    <div class="nk-box text-center">
+        <div class="nk-instagram row no-gutters multi-column" data-instagram-template='{{ instagram_template | safe }}' data-instagram-quality="md"
+        ></div>
+    </div>
+    <!-- END: Instagram -->
+
+{% endblock %}
